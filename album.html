@@ -1,121 +1,346 @@
 <!DOCTYPE html>
 <html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+body {
+  background-color: #878787;
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
 * {
   box-sizing: border-box;
 }
-
-body {
-  background-color: #878787;
-  margin: 0;
-  font-family: Arial;
+/*
+.row > .column {
+  padding: 1 1px;
 }
 
-/* The grid: Four equal columns that floats next to each other */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+*/
+.row { 
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding : 0 4px;
+ }
+
 .column {
   float: left;
-  width: 20%;
-  padding: 10px;
+  width: 25%;
+  padding: 0 2px;
 }
 
-/* Style the images inside the grid */
+.columns {
+  float: left;
+  width: 10%;
+  padding: 0 2px;
+}
+
 .column img {
-  opacity: 0.8; 
-  cursor: pointer; 
+    margin-top: 8px;
+    vertical-align: middle;
 }
 
-.column img:hover {
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #000000;
+  margin: auto;
+  padding: 0;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+ <!-- display: none; -->
+  display: grid;
+  height: 100%;
+}
+
+{
+            margin: 0;
+            padding: 0;
+        }
+        .imgbox {
+            display: grid;
+            height: 100%;
+        }
+        .center-fit {
+            max-width: 100%;
+            max-height: 90vh;
+            margin: auto;
+        }
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #878787/* #f2f2f2 */;
+  font-size: 10px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+img {
+  margin-bottom: -4px;
+  object-fit: contain;
+}
+
+.caption-container {
+  text-align: right;
+  background-color: black;
+  padding: 2px 16px;
+  color: #878787;
+  font-size:10px;
+}
+
+.demo {
+  opacity: 0.6;
+  width: 15%;
+}
+
+.active,
+.demo:hover {
   opacity: 1;
 }
 
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+img.hover-shadow {
+  transition: 0.3s;
 }
 
-/* The expanding image container */
-.container {
-  position: relative;
-  display: none;
-}
-
-/* Expanding image text */
-#imgtext {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
-  color: #878787;
-  font-size: 10px;
-}
-
-/* Closable button inside the expanded image */
-.closebtn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  color: #898989;
-  font-size: 35px;
-  cursor: pointer;
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 </style>
-</head>
 <body>
 
-<div style="text-align:center">
-  <h2>My pictures</h2>
-  <p>Click on the image to expand:</p>
+<div style="text-align:center"><h2>My album</h2>
+<p>Click on the image for full view and info!</p>
 </div>
 
-<!-- The four columns -->
 <div class="row">
   <div class="column">
-    <img src="images/moon_3.jpeg" alt="Moon #1 @Szczecin - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/xmaslights_1.jpeg" alt="Xmas lights #1 @home, Szczecin - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div> 
-<div class="column">
-    <img src="images/moon_2.jpeg" alt="Moon #2 @Rovarè - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/moon_1.jpeg" alt="Moon #3 @Rovarè - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/autumn_1.jpeg" alt="Autumn #1 @Szczecin - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sunset_1.jpeg" alt="Sunset #1 @Rovarè - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div>
-  <div class="column">
-    <img src="images/sunset_2.jpeg" alt="Sunset #2 @Szczecin - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div> 
-  <div class="column">
-    <img src="images/fox_oslo.jpg" alt="Fox @Oslo - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div> 
-  <div class="column">
-    <img src="images/xmaslights_2.jpg" alt="Xmas lights #2 @Bassano - &copy PC" style="width:100%" onclick="myFunction(this);">
-  </div> 
+    <img src="/Users/paolocremonese/Desktop/web-page/images/autumn_1.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor"> 
+    <img src="/Users/paolocremonese/Desktop/web-page/images/moon_3.jpeg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    </div>
+    
+    <div class="column">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/moon_2.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_1.jpeg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/sunset_2.jpeg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/fox_oslo.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/moon_1.jpeg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    </div>
+
+    <div class="column">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_2.jpg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="/Users/paolocremonese/Desktop/web-page/images/sunset_1.jpeg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    </div>
+
 </div>
 
-<div class="container">
-  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-  <img id="expandedImg" style="width:100%">
-  <div id="imgtext"></div>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/autumn_1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/moon_2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 10</div>
+      <img class="center-fit"src="/Users/paolocremonese/Desktop/web-page/images/sunset_2.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">4 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_2.jpg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">5 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/moon_3.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">6 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_1.jpeg" style="width:100%">
+    </div>
+    
+    <div class="mySlides">
+      <div class="numbertext">7 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/fox_oslo.jpg" style="width:100%">
+    </div>
+  
+    <div class="mySlides">
+      <div class="numbertext">8 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/sunset_1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 10</div>
+      <img class="center-fit" src="/Users/paolocremonese/Desktop/web-page/images/moon_1.jpeg" style="width:100%">
+    </div>
+
+
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/autumn_1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="autumn #1, 11/2020 @Szczecin - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/moon_2.jpeg" style="width:100%" onclick="currentSlide(2)" alt="moon #1, 01/2020  @Rovarè - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/sunset_2.jpeg" style="width:100%" onclick="currentSlide(3)" alt="sunset #1, 11/2020  @Szczecin - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_2.jpg" style="width:100%" onclick="currentSlide(4)" alt="xmas lights #1, 12/2019  @Bassano - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/moon_3.jpeg" style="width:100%" onclick="currentSlide(5)" alt="moon #2, 11/2020  @Szczecin - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/xmaslights_1.jpeg" style="width:100%" onclick="currentSlide(6)" alt="xmas lights, 12/2020 #2 @Szczecin - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/fox_oslo.jpg" style="width:100%" onclick="currentSlide(7)" alt="fox, 03/2020  @Oslo - &copy PC">
+    </div>
+     <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/sunset_1.jpeg" style="width:100%" onclick="currentSlide(8)" alt="sunset #2, 01/2021 @Rovarè - &copy PC">
+    </div>
+    <div class="columns">
+      <img class="demo cursor" src="/Users/paolocremonese/Desktop/web-page/images/moon_1.jpeg" style="width:100%" onclick="currentSlide(9)" alt="moon #3, 01/2021 @Rovarè - &copy PC">
+    </div>
+
+  </div>
 </div>
 
 <script>
-function myFunction(imgs) {
-  var expandImg = document.getElementById("expandedImg");
-  var imgText = document.getElementById("imgtext");
-  expandImg.src = imgs.src;
-  imgText.innerHTML = imgs.alt;
-  expandImg.parentElement.style.display = "block";
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
 }
 </script>
-
+    
 </body>
 </html>
+
