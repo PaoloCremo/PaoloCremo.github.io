@@ -33,7 +33,7 @@ body, html {
 .parallax2 {
   /* The image used */
   background-image: url("images/autumn_1.jpeg");
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
 
 
@@ -146,6 +146,13 @@ button:hover, a:hover {
    background-size: cover;
  }
 
+/* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    background-attachment: scroll;
+  }
+}
+
 </head>
 </style>
 <body>
@@ -181,7 +188,8 @@ button:hover, a:hover {
 Hello World! </br>
     Website under construction ... </br>
     I am learning html and writing it, it could take a while. </br>
-    Some personal information can be found <a style="color:white" href="personal_info.html">here</a>. </br>
+    (It's not working great on mobile, sorry.) </br>
+    Some information about my career can be found <a style="color:white" href="personal_info.html">here</a>. </br>
 </p>
     </br>
 </div>
@@ -194,7 +202,7 @@ Hello World! </br>
 <p style="font-family:Antonio;font-size:30px">
 <!-- <td valign="top"><img style="float:right;margin:25px" src="images/DSC_6888.jpg" width="300" alt="" /></td> -->
 <b style="font-size:35px">About me</b></br>
-Hello everyone! I'm Paolo, I am a PhD student at Szczecin university in Poland. 
+I'm Paolo, I am a PhD student at Szczecin university in Poland. 
 The group I am working in is very theoretical, but I like data, observation and this stuff! 
 <td valign="top"><img class="al" src="images/io_cile.jpg" width="300" alt="" /></td>
 In fact, I graduated in astronomy in Padova, after a year in Stockholm with the Erasmus project.
@@ -222,7 +230,15 @@ I love reading, random stuff, usually. If you're curious, you can find a (not co
 </center>
 </div>
 
-<div class="parallax2"></div>
+<div class="parallax2">
+</br>
+<!-- <div class="container"> -->
+  <div style="margin:240px 0 200px 0;text-align:center">
+  <button style="font-family:Antonio;font-size:50px;color:#FF5733;width:13%">
+  <a style="color:#FF5733" href="blog.html">my Blog</a>
+  </button>
+  </div>
+</div>
 
 </body>
 </html>
