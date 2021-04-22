@@ -1,31 +1,148 @@
+<!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>PC-webpage</title>
 <style>
-body {
-  background-color: black;
-
+body, html {
+  height: 100%;
 }
+
+.parallax {
+  /* The image used */
+  background-image: url("images/sfondo.png");
+  background-color: rgba(255,255,255,0.2);
+  background-blend-mode: lighten;
+
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  max-width: 300px; 
+  background-size: cover;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  background-color: rgba(255, 0, 0, 0.2);;
+}
+
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: black;
+  background-color: rgba(255, 0, 0, 0.2);
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.container2 {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.bg {                                                                               
+   /* The image used */
+   background-image: url("images/autumn_1.jpeg");
+   background-color: rgba(255,255,255,0.9);
+   background-blend-mode: lighten;
+
+   /* Full height */
+   height: 100%; 
+ 
+   /* Center and scale the image nicely */
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
+
 </style>
 </head>
-
 <body>
+
+<!--<h2 style="text-align:center">User Profile Card</h2>-->
+
+<div class="parallax">
+<div class="card">
+    <div class="container">
+  <h1 style="font-size:60px;color:black">Paolo Cremonese</h1>
+  <p class="title">PhD student in <a style="font-size:18px;color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
+  <p><a style="font-size:20px;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
+  </div>
+    <div class="container2">
+  <div style="margin: 24px 0;bottom:1px">
+    <a href="https://twitter.com/paolo_cre"><i class="fa fa-twitter"></i></a>  
+    <a href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
+    <a href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
+    <a href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
+    <a href="https://t.me/paul_crem"><i class="fa fa-telegram"></i></a>
+    <a href="https://www.facebook.com/paolo.cremonese.12"><i class="fa fa-facebook"></i></a> 
+  </div>
+  <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
+</div>
+</div>
+</div>
+
 <center>
-    <p style='color:white'>Hello World! </br>
+<div style="background-color:#FA8072">
+</br>
+Hello World! </br>
     Website under construction ... </br>
-    Some personal information can be found <a href="personal_info.html">here</a> .
-    </p> </br>
+    Some personal information can be found <a href="personal_info.html">here</a>. </br>
     </br>
-   <!-- <td valign="top"><img href="images/DSC_6888.jpg" width="300" alt="" /></td> -->
-    <td valign="top"><img src="images/DSC_6888.jpg" width="300" alt="" /></td>
-   <p style='color:grey'> I'm Paolo! </br>
-  </br>
-  <a href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
- </br>
- Also, I like to take photos, even though I am not a photographer.  </br>
-   <a href="album.html">Here</a>, you can take a look at some of my pictures! </br>
-   I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
-</p>
+    <td valign="top"><img src="images/DSC_6888.jpg" width="300" alt="" /></td> </br>
+    I'm Paolo! </br>
+    </br>
+    <a href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
+     </br>
+    Also, I like to take photos, even though I am not a photographer.  </br>
+    <a href="album.html">Here</a>, you can take a look at some of my pictures! </br>
+    I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
+</br>
+</div>
+</center>
+
+<div class="parallax"></div>
+
 </body>
 </html>
