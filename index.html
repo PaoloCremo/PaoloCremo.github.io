@@ -1,17 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
+<title>Paolo Cremonese</title>
+<link rel="icon" href= "images/io_mex.jpg"> 
+<!-- type="image/x-icon"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body, html {
   height: 100%;
 }
-
+/* font-family: 'Antonio', sans-serif; */
 .parallax {
   /* The image used */
   background-image: url("images/sfondo.png");
   background-color: rgba(255,255,255,0.2);
+  background-blend-mode: lighten;
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax2 {
+  /* The image used */
+  background-image: url("images/autumn_1.jpeg");
+  background-color: rgba(255,255,255,0.2);
+  background-blend-mode: lighten;
+
+
+  /* Full height */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.parallax3 {
+  /* The image used */
+  background-image: url("images/sunset_3.jpeg");
+  background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
 
 
@@ -36,9 +75,20 @@ body, html {
 }
 
 .title {
+  font-family: Antonio;
   color: grey;
-  font-size: 18px;
+  font-size: 20px;
 }
+
+img.al {
+            float: right;
+            margin: 30px;
+        }
+
+DIV.containerB {
+    min-height: 10em;
+    display: table-cell;
+    vertical-align: middle }
 
 button {
   border: none;
@@ -53,9 +103,9 @@ button {
   font-size: 18px;
 }
 
-a {
+a.ico {
   text-decoration: none;
-  font-size: 22px;
+  font-size: 40px;
   color: black;
 }
 
@@ -96,8 +146,8 @@ button:hover, a:hover {
    background-size: cover;
  }
 
-</style>
 </head>
+</style>
 <body>
 
 <!--<h2 style="text-align:center">User Profile Card</h2>-->
@@ -105,18 +155,18 @@ button:hover, a:hover {
 <div class="parallax">
 <div class="card">
     <div class="container">
-  <h1 style="font-size:60px;color:black">Paolo Cremonese</h1>
-  <p class="title">PhD student in <a style="font-size:18px;color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
-  <p><a style="font-size:20px;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
+  <h1 style="font-family:Zen Dots;font-size:50px;color:black">Paolo Cremonese</h1>
+  <p class="title">PhD student in <a style="color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
+  <p><a style="font-family:Antonio;font-size:24px;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
   </div>
     <div class="container2">
   <div style="margin: 24px 0;bottom:1px">
-    <a href="https://twitter.com/paolo_cre"><i class="fa fa-twitter"></i></a>  
-    <a href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
-    <a href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
-    <a href="https://t.me/paul_crem"><i class="fa fa-telegram"></i></a>
-    <a href="https://www.facebook.com/paolo.cremonese.12"><i class="fa fa-facebook"></i></a> 
+    <a class="ico" href="https:///com/paolo_cre"><i class="fa fa-twitter"></i></a>  
+    <a class="ico" href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
+    <a class="ico" href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
+    <a class="ico" href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
+    <a class="ico" href="https://t.me/paul_crem"><i class="fa fa-telegram"></i></a>
+    <a class="ico" href="https://www.facebook.com/paolo.cremonese.12"><i class="fa fa-facebook"></i></a> 
   </div>
   <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
 </div>
@@ -124,25 +174,55 @@ button:hover, a:hover {
 </div>
 
 <center>
-<div style="background-color:#FA8072">
+<!-- FA8072 - FC9B90 - FF9999 --> 
+<div style="background-color:#FF9999;color:white">
 </br>
+<p style="font-family:Zen Dots;font-size:25px">
 Hello World! </br>
     Website under construction ... </br>
-    Some personal information can be found <a href="personal_info.html">here</a>. </br>
+    I am learning html and writing it, it could take a while. </br>
+    Some personal information can be found <a style="color:white" href="personal_info.html">here</a>. </br>
+</p>
     </br>
-    <td valign="top"><img src="images/DSC_6888.jpg" width="300" alt="" /></td> </br>
-    I'm Paolo! </br>
-    </br>
-    <a href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
-     </br>
-    Also, I like to take photos, even though I am not a photographer.  </br>
-    <a href="album.html">Here</a>, you can take a look at some of my pictures! </br>
-    I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
-</br>
 </div>
 </center>
 
-<div class="parallax"></div>
+<div class="parallax3">
+<!-- <div style="background-color:#FA8072"> -->
+</br>
+<div style="margin: 50px 300px 50px 300px">
+<p style="font-family:Antonio;font-size:30px">
+<!-- <td valign="top"><img style="float:right;margin:25px" src="images/DSC_6888.jpg" width="300" alt="" /></td> -->
+<b style="font-size:35px">About me</b></br>
+Hello everyone! I'm Paolo, I am a PhD student at Szczecin university in Poland. 
+The group I am working in is very theoretical, but I like data, observation and this stuff! 
+<td valign="top"><img class="al" src="images/io_cile.jpg" width="300" alt="" /></td>
+In fact, I graduated in astronomy in Padova, after a year in Stockholm with the Erasmus project.
+<a style="color:black" href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
+</br>
+I like to travel, quite a lot. <!--I've been to England, Spain, Sweden (and Lapland!), Romania, Mexico, Chile, USA...and can't wait for the next one. --> 
+I particularly fell in love with Portugal and large part of America (Mexico, USA, Chile). </br>
+I love reading, random stuff, usually. If you're curious, you can find a (not complete but updated) list <a style="color:black" href="https://www.goodreads.com/review/list/51537115-paolo-cremonese?ref=nav_mybooks&shelf=read">here</a>. 
+</p>
+</div>
+</div>
+
+<!-- <div class="parallax2"></div> -->
+
+<div style="background-color:#ffc266">
+<center>
+</br>
+<p style="font-family:Zen Dots;font-size:25px">
+    Also, I like to take photos, even though I am not a photographer.  </br>
+    <a style="color:black" href="album.html">Here</a>, you can take a look at some of my pictures! </br>
+    I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
+    All the pictures you see here, are taken by me. </br>
+</p>
+</br>
+</center>
+</div>
+
+<div class="parallax2"></div>
 
 </body>
 </html>

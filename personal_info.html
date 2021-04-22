@@ -1,42 +1,68 @@
 <html>
 <head>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <style>
+/* color: #d9d9d9; */
 body {
-  background-color: #505050;
-  color: white;
+  background-color: white;
+  color: black;
+  margin: 50px 250px 140px 250px;
 }
 a:link {
-  color: #d9d9d9;
+  color: #595959;
   background-color: transparent;
   text-decoration: none;
 }
 a:visited {
-  color: #d9d9d9;
+  color: #595959;
   background-color: transparent;
   text-decoration: none;
 }
+
+img.al {
+            float: left;
+            margin: 30px;
+        }
+
 </style>
 </head>
 
+<body>
+<div style="font-family:Antonio;text-align:center;font-size:35px"><h1> Personal info </h1></div>
+<!-- <img src="images/DSC_6888.jpg"  align="left" width="250"  alt="photo" /> -->
+<p style="margin:-15px 90px 15px 90px;color:#666666"> 
+This page is specifically about my career. You can see my interests, pubblication, old experiences and my skill. You can also find a summary of all of this in the PDF version of my <a target="_blank" href="files/Curriculum_Vitae.pdf">CV</a>.
+</p>
+<b id="opening" style="font-size:20px">Hello everyone! I am a Ph.D. student at Szczecin University, in the <a href="http://cosmo.usz.edu.pl" >cosmology group</a>. </b>
 
-<img src="images/DSC_6888.jpg"  align="right" width="250"  alt="photo" />
-<b id="opening" style="font-size:20px">Hello everyone! I am a Ph.D. student @Szczecin University, in the <a href="http://cosmo.usz.edu.pl" >cosmology group</a>. </b>
+<p><b>Go to</b> : 
+<a target="_blank" href="files/Curriculum_Vitae.pdf">Curriculum Vitae (PDF)</a> |
+<a href="#contacts">Contacts</a> | 
+<a href="#Research">Research interests</a> |
+<a href="#pub">Pubblication</a> |
+<a href="#ment">Mention</a> |
+<a href="#CS">Computer skill</a> |
+<a href="#int">Interests</a> |
+</p>
 
-<h4>Go to</h4>
-<a href="#contacts">Contacts</a><br>
-<a href="#Research">Research interests</a><br>
-<a href="#pub">Pubblication</a> <br>
-<a target="_blank" href="files/Curriculum_Vitae.pdf">Curriculum Vitae (PDF)</a>
+<img class="al" src="images/DSC_6888.jpg" width="200"  alt="photo" />
 
 <h3 id="contacts">Contacts</h3>
 <ul>
-<li> e-mail: paolo.cremonese [at] usz.edu.pl </li>
-<!-- linkedin: <a target="_blank" href="https://www.linkedin.com/in/paolo-cremonese/">in/paolo-cremonese</a> -->
-<li>
-<a target="_blank" href="https://www.linkedin.com/in/paolo-cremonese/"><img src="https://bit.ly/2kwUlpA" width="20"></a> &nbsp; <a target="_blank" href="https://www.linkedin.com/in/paolo-cremonese/">in/paolo-cremonese</a>
+<li> 
+<i class="fa fa-envelope"></i> -  <a href="mailto:cremonesep25@gmail.com">cremonesep25 [at] gmail.com</a> </br>
+<i class="fa fa-envelope"></i> - <a href="mailto:paolo.cremonese@usz.edu.pl">paolo.cremonese [at] usz.edu.pl</a>
 </li>
 <li>
-<a target="_blank" href="https://twitter.com/paolo_cre"><img src="https://seeklogo.net/wp-content/uploads/2015/11/twitter-logo.png" width="20"></a> &nbsp; <a target="_blank" href="https://twitter.com/paolo_cre">@paolo_cre</a>
+<i class="fa fa-twitter"></i> - <a href="https://twitter.com/paolo_cre"> @paolo_cre</a>
+</li>
+<li>
+<i class="fa fa-linkedin"></i> -  <a href="https://www.linkedin.com/in/paolo-cremonese/"> in/paolo-cremonese</a>
+</li>
+<li>
+<i class="fa fa-telegram"></i> -  <a href="https://www.t.me/paul_crem"> @paul_crem</a>
 </li>
 </ul>
 
@@ -63,7 +89,7 @@ a:visited {
 </li>
 </ul>
 
-<p><strong>Mention:</strong></p>
+<p id="ment"><strong>Mention:</strong></p>
 <ul>
 <li>
 <p>Dr. <a target="_blank" href="https://www.sunnyvagnozzi.com/">S. Vagnozzi</a>, in his weekly <a target="_blank" href="https://www.sunnyvagnozzi.com/blog">blog</a> about new interesting article in ArXiv, published a <a target="_blank" href="https://www.sunnyvagnozzi.com/blog/top-arxiv-week-15-2021">summary</a> of my third paper - <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.0755</a></p>
@@ -74,13 +100,13 @@ a:visited {
 </ul>
 
 
-<h3>Computer skills</h3>
+<h3 id="CS">Computer skills</h3>
 <ul>
-<li>intermediate:&nbsp;OpenOffice, Linux, Microsoft Windows, Mathematica</li>
+<li>intermediate:&nbsp;OpenOffice, Linux, Microsoft Windows, Mathematica, Html</li>
 <li>advanced: Python, latex</li>
 </ul>
 
-<h3>Interests</h3>
+<h3 id="int">Interests</h3>
 <ul>
 <li><strong>Travelling</strong><br />Discover and live new cultures and countries is for sure one of my goal for the present and the&nbsp; future.</li>
 <li><strong>Data analysis</strong><br />Besides my academic work, I like to study and be informed about machine learning and data science in general.</li>
@@ -90,4 +116,5 @@ a:visited {
 <li><strong>Technologies</strong><br />I am interested in all technologies regarding both my field of study and not, and I try to keep informed on this topic as much as I can.</li>
 </ul>
 <a href="#opening">Go back to the top.</a>
+</body>
 </html>
