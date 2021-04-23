@@ -12,15 +12,16 @@
 <style>
 body, html {
   height: 100%;
+  margin:0;
 }
 /* font-family: 'Antonio', sans-serif; */
 .parallax {
   /* The image used */
   background-image: url("images/sfondo.png");
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
-
-  /* Full height */
+  
+  /* Full height */  
   height: 110%;
 
   /* Create the parallax scrolling effect */
@@ -28,11 +29,14 @@ body, html {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /*background-size: 8em 8em;
+  height: 8em;
+  width: 8em;*/
 }
 
 .parallax2 {
   /* The image used */
-  background-image: url("images/autumn_1.jpeg");
+  background-image: url("images/autumn_1_LQ.jpeg");
   background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
 
@@ -49,7 +53,7 @@ body, html {
 
 .parallax3 {
   /* The image used */
-  background-image: url("images/sunset_3.jpeg");
+  background-image: url("images/sunset_3_LQ.jpeg");
   background-color: rgba(255,255,255,0.3);
   background-blend-mode: lighten;
 
@@ -95,7 +99,7 @@ button {
   border: none;
   outline: 0;
   display: inline-block;
-  padding: 8px;
+  padding: 0.6vw;
   color: black;
   background-color: rgba(255, 0, 0, 0.2);
   text-align: center;
@@ -153,12 +157,24 @@ button:hover, a:hover {
     background-attachment: scroll;
   }
 } */
+/*#foo {
+    position: absolute;
+    bottom: 1vh;
+    right: 1vw;
+    font-size: 0.8vw;
+    color: white;
+    text-align: right;
+  }*/
 
+div.foo {
+    font-size: 0.8vw;
+    color: #D7DBDD;
+    font-size:0.8vw; 
+    text-align: right;
+  }
 </head>
 </style>
 <body>
-
-<!--<h2 style="text-align:center">User Profile Card</h2>-->
 
 <div class="parallax">
 <div class="card">
@@ -180,6 +196,8 @@ button:hover, a:hover {
   <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
 </div>
 </div>
+</br>
+<div class="foo" style="margin:94vh 1vw 1vh 5vw"><div>Atacama desert, San Pedro de Atacama, Chile - 04/2019 - &copy PC </div></div>
 </div>
 
 <center>
@@ -198,12 +216,9 @@ Hello World! </br>
 </center>
 
 <div class="parallax3">
-<!-- <div style="background-color:#FA8072"> -->
 </br>
-<!-- <div style="margin: 50px 300px 50px 300px"> -->
-<div style="margin: 2% 18% 7% 18%">
+<div style="margin: 2vh 15vw 7vh 17vw">
 <p style="font-family:Antonio;font-size:2.2vw">
-<!-- <td valign="top"><img style="float:right;margin:25px" src="images/DSC_6888.jpg" width="300" alt="" /></td> -->
 <b style="font-size:3vw">About me</b></br>
 I was born in Italy, in 1992. Specifically in Treviso, a small town in the north-east of Italy.  
 Currently, I live in Szczecin since October 2018, a town in the north-west of Poland, where I'm studying to be PhD in astrophysics. 
@@ -217,6 +232,7 @@ I particularly fell in love with Portugal and large part of America (Mexico, USA
 I love reading, random stuff, usually. If you're curious, you can find a (not complete but updated) list <a style="color:black" href="https://www.goodreads.com/review/list/51537115-paolo-cremonese?ref=nav_mybooks&shelf=read">here</a>. 
 </p>
 </div>
+<div class="foo" style="margin:-5vh 1vw 0 0">Zakopane, Poland - 02/2021 - &copy PC </div>
 </div>
 
 <!-- <div class="parallax2"></div> -->
@@ -238,11 +254,12 @@ I love reading, random stuff, usually. If you're curious, you can find a (not co
 </br>
 <!-- <div class="container"> -->
 <!--  <div style="margin:240px 0 200px 0;text-align:center"> -->
-  <div style="margin:16% 0 0 0;text-align:center">
-  <button style="font-family:Antonio;font-size:50px;color:#FF5733;width:13%">
+  <div style="margin:45vh 1vw 0 5vw;text-align:center">
+  <button style="font-family:Antonio;font-size:4vw;color:#FF5733;width:13%">
   <a style="color:#FF5733" href="blog.html">my Blog</a>
   </button>
   </div>
+<div class="foo" style="margin:44vh 1vw 0 0"><div>Szczecin, Poland - 04/2019 - &copy PC </div></div>
 </div>
 
 </body>
