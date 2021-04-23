@@ -1,3 +1,108 @@
+<!DOCTYPE html>
 <html>
-Coming soon...
+<head>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+<style>
+#main {
+  min-width: 100%;
+  width: 100%;
+}
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("images/zakopane.jpeg");
+  height: 40%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+ /* position: relative;*/
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: 0.5s;
+/*  font-family: Zen Dots;
+  font-size: 3vw;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+  text-align: center;
+  color: #ffad33;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-family: Zen Dots;
+  font-size: 50px; /*3.5vw;*/
+  padding: 5vh 0 4vh 0;
+}
+
+.hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 1vh 1.5vw;
+  color: black;
+  background-color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  font-family: Antonio;
+}
+
+.hero-text button:hover {
+  background-color: #555;
+  color: white;
+}
+
+p.ti {
+   font-size:1.5vw;
+  }
+</style>
+</head>
+<body>
+
+<div id="header" class="hero-image">
+    my blog
+<!--    <button>Comment</button> or what I say to my computer -->
+</div>
+
+<!--background-color:#D37F0C; -->
+
+<div style="margin:400px 20% 5% 20%;font-family:Antonio;font-size:30px">
+  <h1 style="text-align:center"> Coming soon...</h1>
+<!--  <h2>
+    <span style="font-size:30px;color:grey">B#1 - </span>
+    How I thought about it
+    <span style="font-size:20px;color:grey"> - April the 23rd, 2021</span>
+  </h2>
+  <p> Summary </p>
+-->
+</div>
+
+
+<script>
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    document.getElementById("header").style.height = "5%";
+    document.getElementById("header").style.fontSize = "40px";
+  
+  } else {
+    document.getElementById("header").style.height = "40%";
+    document.getElementById("header").style.fontSize = "50px";
+  }
+}
+</script>
+
+</body>
 </html>

@@ -13,6 +13,7 @@
 body, html {
   height: 100%;
   margin:0;
+  scroll-behavior: smooth;
 }
 /* font-family: 'Antonio', sans-serif; */
 .parallax {
@@ -70,7 +71,7 @@ body, html {
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
-  max-width: 6vw; 
+  max-width: 200px; 
   background-size: cover;
   margin: auto;
   text-align: center;
@@ -108,6 +109,19 @@ button {
   font-size: 1.5vw;
 }
 
+button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 0.6vw;
+  color: white;
+  background-color: rgba(255, 250,250, 0.2);
+  text-align: center;
+  cursor: pointer;
+  width: 20%;
+  font-size: 1.5vw;
+}
+
 a.ico {
   text-decoration: none;
   font-size: 3vw;
@@ -120,7 +134,7 @@ button:hover, a:hover {
 
 .container {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -177,89 +191,90 @@ div.foo {
 <body>
 
 <div class="parallax">
-<div class="card">
+  <div class="card">
     <div class="container">
-  <h1 style="font-family:Zen Dots;font-size:4.4vw;color:black">Paolo Cremonese</h1>
-  <p class="title">PhD student in <a style="color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
-  <p><a style="font-family:Antonio;font-size:2.7vw;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
-  </div>
+      <h1 style="font-family:Zen Dots;font-size:4.5vw;color:black">Paolo Cremonese</h1>
+      <p class="title">PhD student in <a style="color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
+      <p><a style="font-family:Antonio;font-size:2.7vw;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
+      </br>
+      </br>
+      </br>
+      <a href="#career" style="font-family:Zen Dots"><button2>career</button2></a> 
+      <a href="#abtme" style="font-family:Zen Dots"><button2>about me</button2></a> 
+      <a href="#pics" style="font-family:Zen Dots"><button2>album</button2></a> 
+      <a href="#blog" style="font-family:Zen Dots"><button2>blog</button2></a> 
+    </div>
     <div class="container2">
-  <!-- <div style="margin: 24px 0;bottom:1px"> -->
-  <div style="margin: 1% 0;bottom:0%">
-    <a class="ico" href="https:///com/paolo_cre"><i class="fa fa-twitter"></i></a>  
-    <a class="ico" href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
-    <a class="ico" href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
-    <a class="ico" href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
-    <a class="ico" href="https://t.me/paul_crem"><i class="fa fa-telegram"></i></a>
-    <a class="ico" href="https://www.facebook.com/paolo.cremonese.12"><i class="fa fa-facebook"></i></a> 
+      <div style="margin: 1% 0;bottom:0%">
+        <a class="ico" href="https:///com/paolo_cre"><i class="fa fa-twitter"></i></a>  
+        <a class="ico" href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
+        <a class="ico" href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
+        <a class="ico" href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
+        <a class="ico" href="https://t.me/paul_crem"><i class="fa fa-telegram"></i></a>
+        <a class="ico" href="https://www.facebook.com/paolo.cremonese.12"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
+    </div>
   </div>
-  <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
-</div>
-</div>
-</br>
-<div class="foo" style="margin:94vh 1vw 1vh 5vw"><div>Atacama desert, San Pedro de Atacama, Chile - 04/2019 - &copy PC </div></div>
+  </br>
+  <div class="foo" style="margin:94vh 1vw 1vh 5vw"><div>Atacama desert, San Pedro de Atacama, Chile - 04/2019 - &copy PC </div></div>
 </div>
 
 <center>
-<!-- FA8072 - FC9B90 - FF9999 --> 
-<div style="background-color:#FF9999;color:white">
-</br>
-<p style="font-family:Zen Dots;font-size:25px">
-Hello World! </br>
-    Website under construction ... </br>
-    I am learning html and writing it, it could take a while. </br>
-    (It's not working great on mobile, sorry) </br>
-    Some information about my career can be found <a style="color:white" href="personal_info.html">here</a>. </br>
-</p>
+  <div id="career" style="background-color:#FF9999;color:white">
     </br>
-</div>
+    <p style="font-family:Zen Dots;font-size:25px"> 
+      Hello World! </br>
+      Website under construction ... </br>
+      I am learning html and writing it, it could take a while. </br>
+      (It's not working great on mobile, sorry) </br>
+      Some information about my career can be found <a style="color:white" href="personal_info.html">here</a>. </br>
+    </p>
+    </br>
+  </div>
 </center>
 
-<div class="parallax3">
-</br>
-<div style="margin: 2vh 15vw 7vh 17vw">
-<p style="font-family:Antonio;font-size:2.2vw">
-<b style="font-size:3vw">About me</b></br>
-I was born in Italy, in 1992. Specifically in Treviso, a small town in the north-east of Italy.  
-Currently, I live in Szczecin since October 2018, a town in the north-west of Poland, where I'm studying to be PhD in astrophysics. 
-<td valign="top"><img class="al" src="images/io_cile.jpg" width="30%" alt="" /></td>
-The group I am working in is very theoretical, but I prefer data and observation! 
-In fact, I graduated in astronomy in Padova in the September of 2017, after a year in Stockholm with the Erasmus project, where I worked on my master thesis.
-<a style="color:black" href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
-</br>
-I like to travel, quite a lot. <!--I've been to England, Spain, Sweden (and Lapland!), Romania, Mexico, Chile, USA...and can't wait for the next one. --> 
-I particularly fell in love with Portugal and large part of America (Mexico, USA, Chile). </br>
-I love reading, random stuff, usually. If you're curious, you can find a (not complete but updated) list <a style="color:black" href="https://www.goodreads.com/review/list/51537115-paolo-cremonese?ref=nav_mybooks&shelf=read">here</a>. 
-</p>
-</div>
-<div class="foo" style="margin:-5vh 1vw 0 0">Zakopane, Poland - 02/2021 - &copy PC </div>
+<div id="abtme" class="parallax3">
+  </br>
+  <div style="margin: 2vh 15vw 7vh 17vw">
+    <p style="font-family:Antonio;font-size:2.2vw">
+      <b style="font-size:3vw">About me</b></br>
+      I was born in Italy, in 1992. Specifically in Treviso, a small town in the north-east of Italy.  
+      Currently, I live in Szczecin since October 2018, a town in the north-west of Poland, where I'm studying to be PhD in astrophysics. 
+      <td valign="top"><img class="al" src="images/io_cile.jpg" width="30%" alt="" /></td>
+      The group I am working in is very theoretical, but I prefer data and observation! 
+      In fact, I graduated in astronomy in Padova in the September of 2017, after a year in Stockholm with the Erasmus project, where I worked on my master thesis.
+      <a style="color:black" href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
+      </br>
+      I like to travel, quite a lot. <!--I've been to England, Spain, Sweden (and Lapland!), Romania, Mexico, Chile, USA...and can't wait for the next one. --> 
+      I particularly fell in love with Portugal and large part of America (Mexico, USA, Chile). </br>
+      I love reading, random stuff, usually. If you're curious, you can find a (not complete but updated) list <a style="color:black" href="https://www.goodreads.com/review/list/51537115-paolo-cremonese?ref=nav_mybooks&shelf=read">here</a>. 
+    </p>
+  </div>
+  <div class="foo" style="margin:-5vh 1vw 0 0">Zakopane, Poland - 02/2021 - &copy PC </div>
 </div>
 
-<!-- <div class="parallax2"></div> -->
-
-<div style="background-color:#ffc266">
-<center>
-</br>
-<p style="font-family:Zen Dots;font-size:25px">
-    Also, I like to take photos, even though I am not a photographer.  </br>
-    <a style="color:black" href="album.html">Here</a>, you can take a look at some of my pictures! </br>
-    I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
-    All the pictures you see here, are taken by me. </br>
-</p>
-</br>
-</center>
+<div id="pics" style="background-color:#ffc266">
+  <center>
+    </br>
+    <p style="font-family:Zen Dots;font-size:25px">
+      Also, I like to take photos, even though I am not a photographer.  </br>
+      <a style="color:black" href="album.html">Here</a>, you can take a look at some of my pictures! </br>
+      I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
+      All the pictures you see here, are taken by me. </br>
+    </p>
+    </br>
+  </center>
 </div>
 
 <div class="parallax2">
-</br>
-<!-- <div class="container"> -->
-<!--  <div style="margin:240px 0 200px 0;text-align:center"> -->
-  <div style="margin:45vh 1vw 0 5vw;text-align:center">
-  <button style="font-family:Antonio;font-size:4vw;color:#FF5733;width:13%">
-  <a style="color:#FF5733" href="blog.html">my Blog</a>
-  </button>
+  </br>
+  <div id="blog" style="margin:45vh 1vw 0 5vw;text-align:center">
+    <button style="font-family:Antonio;font-size:4vw;color:#FF5733;width:13%">
+      <a style="color:#FF5733" href="blog.html">my Blog</a>
+    </button>
   </div>
-<div class="foo" style="margin:44vh 1vw 0 0"><div>Szczecin, Poland - 04/2019 - &copy PC </div></div>
+  <div class="foo" style="margin:44vh 1vw 0 0"><div>Szczecin, Poland - 04/2019 - &copy PC </div></div>
 </div>
 
 </body>
