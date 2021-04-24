@@ -23,7 +23,7 @@ body, html {
   background-blend-mode: lighten;
   
   /* Full height */  
-  height: 110%;
+  height: 105%;
 
   /* Create the parallax scrolling effect */
   background-attachment: fixed;
@@ -82,10 +82,10 @@ body, html {
 .title {
   font-family: Antonio;
   color: grey;
-  font-size: 2.5vw;
+  font-size: 3vh; /* 2.5vw */
 }
 
-img.al {
+figure.al {
             float: right;
             margin: 4%;
         }
@@ -106,7 +106,7 @@ button {
   text-align: center;
   cursor: pointer;
   width: 100%;
-  font-size: 1.5vw;
+  font-size: 2.5vh;/*1.5vw;*/
 }
 
 button2 {
@@ -119,12 +119,12 @@ button2 {
   text-align: center;
   cursor: pointer;
   width: 20%;
-  font-size: 1.5vw;
+  font-size: 1.8vh; /*1.5vw*/
 }
 
 a.ico {
   text-decoration: none;
-  font-size: 3vw;
+  font-size: 4vh;/*3vw;*/
   color: black;
 }
 
@@ -134,8 +134,9 @@ button:hover, a:hover {
 
 .container {
     position: absolute;
-    top: 45%;
+    top: 50%;
     left: 50%;
+   /* width: 60%;/*100vw;*/
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
@@ -143,7 +144,7 @@ button:hover, a:hover {
 
 .container2 {
     position: absolute;
-    top: 90%;
+    top: 92%;
     left: 50%;
     -moz-transform: translateX(-50%) translateY(-50%);
     -webkit-transform: translateX(-50%) translateY(-50%);
@@ -183,7 +184,7 @@ button:hover, a:hover {
 div.foo {
     font-size: 0.8vw;
     color: #D7DBDD;
-    font-size:0.8vw; 
+    font-size:1.6vh;/*0.8vw;*/ 
     text-align: right;
   }
 </head>
@@ -191,22 +192,24 @@ div.foo {
 <body>
 
 <div class="parallax">
-  <div class="card">
-    <div class="container">
-      <h1 style="font-family:Zen Dots;font-size:4.5vw;color:black">Paolo Cremonese</h1>
-      <p class="title">PhD student in <a style="color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
-      <p><a style="font-family:Antonio;font-size:2.7vw;color:grey" href="https://usz.edu.pl">Szczecin University</a></p>
+<!--  <div class="card"> -->
+    <div class="container"> <!-- 4.5vw -->
+      <h1 style="font-family:Zen Dots;font-size:5.4vh;color:black;text-align:center">Paolo Cremonese</h1>
+      <p class="title" style="text-align:center">PhD student in <a style="color:grey" href="http://cosmo.usz.edu.pl">cosmology</a></br> </p>
+      <p style="text-align:center"><a style="font-family:Antonio;font-size:3.2vh;color:grey" href="https://usz.edu.pl">Szczecin University</a></p> <!--2.7vw -->
       </br>
       </br>
       </br>
+      <center>
       <a href="#career" style="font-family:Zen Dots"><button2>career</button2></a> 
-      <a href="#abtme" style="font-family:Zen Dots"><button2>about me</button2></a> 
+      <a href="#abtme" style="font-family:Zen Dots"><button2>me</button2></a> 
       <a href="#pics" style="font-family:Zen Dots"><button2>album</button2></a> 
       <a href="#blog" style="font-family:Zen Dots"><button2>blog</button2></a> 
+      </center>
     </div>
     <div class="container2">
       <div style="margin: 1% 0;bottom:0%">
-        <a class="ico" href="https:///com/paolo_cre"><i class="fa fa-twitter"></i></a>  
+        <a class="ico" href="https://www.twitter.com/paolo_cre"><i class="fa fa-twitter"></i></a>  
         <a class="ico" href="https://github.com/PaoloCremo"><i class="fa fa-github"></i></a> 
         <a class="ico" href="https://www.instagram.com/pablo_cremo/?hl=it"><i class="fa fa-instagram"></i></a>
         <a class="ico" href="https://www.linkedin.com/in/paolo-cremonese/"><i class="fa fa-linkedin"></i></a>
@@ -215,9 +218,9 @@ div.foo {
       </div>
       <p><a href="mailto:cremonesep25@gmail.com"><button><b>Contact</b></button></p></a>
     </div>
-  </div>
+<!--  </div> -->
   </br>
-  <div class="foo" style="margin:94vh 1vw 1vh 5vw"><div>Atacama desert, San Pedro de Atacama, Chile - 04/2019 - &copy PC </div></div>
+  <div class="foo" style="margin:95vh 1vw 1vh 5vw"><div>Atacama desert, San Pedro de Atacama, Chile - 04/2019 - &copy PC </div></div>
 </div>
 
 <center>
@@ -236,12 +239,15 @@ div.foo {
 
 <div id="abtme" class="parallax3">
   </br>
-  <div style="margin: 2vh 15vw 7vh 17vw">
-    <p style="font-family:Antonio;font-size:2.2vw">
-      <b style="font-size:3vw">About me</b></br>
+  <div style="font-family:Antonio;font-size:2.2vw;margin: 2vh 15vw 7vh 17vw">
+    <b style="font-size:3vw">About me</b></br>
+    <figure class="al">
+       <img src="images/io_cile.jpg" width="200vw" alt="" /> <!-- 150vw -->
+       <figcaption style="text-align:center;font-family:Zen Dots;font-size:1vw;color:white">me in Chile</figcaption>
+    </figure>
+    <p style="">
       I was born in Italy, in 1992. Specifically in Treviso, a small town in the north-east of Italy.  
-      Currently, I live in Szczecin since October 2018, a town in the north-west of Poland, where I'm studying to be PhD in astrophysics. 
-      <td valign="top"><img class="al" src="images/io_cile.jpg" width="30%" alt="" /></td>
+      I live in Szczecin since October 2018, a town in the north-west of Poland, where I'm studying to be PhD in astrophysics. 
       The group I am working in is very theoretical, but I prefer data and observation! 
       In fact, I graduated in astronomy in Padova in the September of 2017, after a year in Stockholm with the Erasmus project, where I worked on my master thesis.
       <a style="color:black" href="files/Curriculum_Vitae.pdf">Here</a>, you can take a look at my CV. </br>
@@ -269,9 +275,9 @@ div.foo {
 
 <div class="parallax2">
   </br>
-  <div id="blog" style="margin:45vh 1vw 0 5vw;text-align:center">
-    <button style="font-family:Antonio;font-size:4vw;color:#FF5733;width:13%">
-      <a style="color:#FF5733" href="blog.html">my Blog</a>
+  <div id="blog" style="margin:45vh 1vw 0 3vw;text-align:center">
+    <button style="border:none;background:none;font-family:Antonio;color:#FF5733;width:25vh">
+      <a style="color:#FF5733;font-size:8vh" href="blog.html">my Blog</a>
     </button>
   </div>
   <div class="foo" style="margin:44vh 1vw 0 0"><div>Szczecin, Poland - 04/2019 - &copy PC </div></div>
