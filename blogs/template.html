@@ -1,2 +1,249 @@
 <html>
+<head>
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+<style>
+/* color: #d9d9d9; */
+body {
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+h3 {
+  font-size: 27px;
+  color:grey;
+  text-align: center;
+  }
+
+ul li{
+  font-size: 18px;
+  }
+
+p {
+  font-size: 20px;
+  font-family: Open Sans;
+  text-align:justify;
+  }
+
+a:link {
+  color: #595959;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #595959;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+img.al {
+            float: left;
+            margin: 5%;
+       }
+
+img.portrait {
+  width: 200px;
+}
+
+img.lands {
+  width: 300px;
+}
+
+.header {
+  padding: 10px;
+  text-align: center;
+  background: black;
+  width: 100%;
+  top: 0;
+  color: white;
+  font-size: 30px;
+  font-family: Knewave;
+}
+
+figure.al {
+  float:left;
+  margin: 0 3% 0 0;
+  }
+
+figure.ar {
+  float:right;
+  margin: 0 0 0 3%;
+  }
+
+nav {
+  float: left;
+  position: fixed;
+  max-width: 10%;
+/*  height: 50%;  only for demonstration, should be removed */
+  background: none;
+  padding: 0 3px 20px 10px;
+  color: black;
+  margin: 0 0 -30px 0;
+  bottom: 0;
+  text-align:left;
+}
+
+button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+/*  padding: 0.6vw; */
+  width: 160px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding:2px;
+  font-size: 5vh; /*1.5vw*/
+  text-align:center;
+}
+
+figcaption{
+    font-size: 15px;
+    }
+
+div.main {
+  /*margin: 50px 27vw 200px 27vw;*/
+  margin: 50px 30vw 200px 30vw;
+}
+
+@media only screen and (max-device-width: 700px) {
+  p {
+    text-align:left;
+    }
+}
+
+/* put button on bottom on mobile - 1366px */
+@media only screen and (max-device-width: 1366px) {
+
+  div.main{
+    margin:50px 8vw 200px 8vw;
+  }
+  
+  button2 {
+/*    padding: 5px; */
+    width:17%;
+    background-color: rgba(44, 62, 80, 0.6);
+    font-size: 2vh;
+    color:white;
+    }
+
+  nav {
+    background-image: url("../images/space.jpg");
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: lighten;
+    /* 
+  https://wallup.net/space-stars-40/ 
+  https://wallup.net/wp-content/uploads/2016/01/168595-space-stars.jpg 
+  */
+    background-position: 50% 45%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    float: bottom;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    text-align:center;
+    padding: -10px 0 10px 0;
+ }
+
+  img.portrait
+    {
+    width: 300px;
+    }
+  
+  img.lands
+    {
+    width: 400px;
+    }
+
+  figure.al {
+    margin: 0 5% 0 0 ;
+    }
+  
+  figure.ar {
+    margin: 0 0 0 5%;
+    }
+
+  figcaption{
+    font-size: 20px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav id="footer" > 
+  <p style="text-align:center"> <!--style="font-size:3vw"> -->
+    <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
+    <a href="../index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
+    <a href="../personal_info.html" style="font-family:Zen Dots"><button2>career</button2></a>
+    <a href="../album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
+    <a href="../blog.html" style="font-family:Zen Dots"><button2>blog</button2></a> 
+  </p>
+</nav>
+
+<div class="header"><h1>How I thougth about it </h1>
+  <p style="color:#666666;font-size:20px;font-family:Zen Dots;text-align:center"> 
+    Blog #1 - April the 23rd, 2021
+  </p>
+</div>
+
+<div class="main" style="font-family:Antonio"> 
+  
+  <h3>#intro</h3>
+    <figure class="al">
+      <img class="portrait" src="../images/io_cile.jpg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey"></br>me in Chile</figcaption>
+    </figure>
+    <p>
+      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <h3>#plotTwist</h3>
+   <figure class="ar">
+      <img class="lands" src="../images/autumn_1_LQ.jpeg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey"></br>leaf in Szczecin</figcaption>
+   </figure>
+   <p>
+      Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+
+      The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+    </p>
+    
+  <h3>#grandFinale</h3>
+  <p>
+    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+    </br>
+  </p>
+  <p style="text-align:center"><b>And so it ended!</b></p>
+  
+  </br>
+  </br>
+  
+  <div style="text-align:right">
+    <button style="font-size:3vh;display:inline-block;border:none" type="button" onClick="clicks++;updateClickCount();" id="push">
+      <i style="display:inline-block" class="fa fa-heart"></i>   
+    </button>
+    <i style="display:inline-block" class="mdi-action-favorite red-text text-lighten-1"></i> 
+    <a style="font-size:2.5vh;display:inline-block;text-decoration:none" href="javascript:updateClickCount()">
+      <div style="display:inline-block" id="clickCount">0</div> likes
+    </a>
+  </div>
+</div>
+
+<script>
+var clicks = 0;
+        function updateClickCount() {
+            document.getElementById("clickCount").innerHTML = clicks;
+        }
+</script>
+
+</body>
 </html>
