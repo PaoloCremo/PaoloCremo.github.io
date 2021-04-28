@@ -61,10 +61,19 @@ a.ico {
   </a>
 &nbsp
 
+<a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'https://www.reddit.com/submit?url='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-reddit"></i>
+  </a>
+&nbsp
+
   <a class="ico"target="blank "href="#" 
     onclick="
       window.open(
-        'mailto:?subject=I found an article you could like from https://paolocremo.github.io/blog.html;body='+encodeURIComponent(location.href) ); 
+        'mailto:?subject=I found an article you could like from https://paolocremo.github.io/blog.html&amp;body='+encodeURIComponent(location.href) ); 
       return false;">
       <i class="fa fa-envelope"></i>
   </a>
