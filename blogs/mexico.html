@@ -3,6 +3,14 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 </head>
 
+<style>
+a.ico {
+  text-decoration: none;
+  font-size: 3.5vh;/*3vw;*/
+  color: black;
+}
+</style>  
+  
 <body >
 
   <center style="font-size:40px;padding:100px">
@@ -12,6 +20,55 @@
     </br>
     <a href="../blog.html">Go back</a>
   </center>
+
+  <div style="text-align:center">
+    <p style="font-size:30px">Share on :</p>
+    </br>
+    <a class="ico" target="blank" href="#" 
+      onclick="
+        window.open(
+          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)/*, 
+        'facebook-share-dialog', 
+        'width=626,height=436'*/); 
+        return false;">
+        <i class="fa fa-facebook"></i>
+    </a>
+&nbsp
+   <a class="ico"target="blank "href="#" 
+     onclick="
+      window.open(
+        'https://twitter.com/intent/tweet?text=&url='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-twitter"></i>
+   </a>
+&nbsp
+
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'https://telegram.me/share/url?text=&url='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-telegram"></i>
+  </a>
+
+&nbsp
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'whatsapp://send?text='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-whatsapp"></i>
+  </a>
+&nbsp
+
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'mailto:?subject=I found an article you could like from https://paolocremo.github.io/blog.html;body='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-envelope"></i>
+  </a>
+  </div>
 
 </body>
 </html>
