@@ -178,7 +178,6 @@ button:hover, a:hover {
 /* Turn off parallax scrolling for tablets and phones. Increase the pixels if needed */
 /* @media only screen and (max-device-width: 1366px) {
   .parallax {
-    background-attachment: scroll;
   }
 } */
 
@@ -189,6 +188,13 @@ div.foo {
     text-align: right;
   }
 
+@media only screen and (max-device-width: 1366px) {
+  .parallax {
+    /* The image used */
+    background-image: url("images/sfondo_LQ.png");
+    /* background-attachment: scroll;*/
+  }
+}
 </head>
 </style>
 
