@@ -2,6 +2,7 @@
 <head>
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <style>
 /* color: #d9d9d9; */
@@ -12,8 +13,25 @@ body {
 /*  margin: 5.5vh 16vw 14vh 16vw;*/
 }
 
+.app_top {
+    display: table-cell;
+}
+.app_top img {
+    float: left;
+}
+
+.box {
+  float: left;
+  height: 20px;
+  width: 20px;
+  margin-bottom: 15px;
+  border: 1px solid black;
+  clear: both;
+}
+
 h3 {
   font-size: 1.6vw;
+  font-family: Antonio;
   }
 ul li{
   font-size: 1.4vw;
@@ -90,11 +108,40 @@ p.nav {
   }
 
 div.main {
-  margin: 5.5vh 16vw 14vh 16vw
+  margin: 5.5vh 25vw 14vh 25vw /*16 before*/
   }
+
+.cskill {
+  width: 60%;
+  background-color: #ddd;
+  }
+
+.skills {
+  text-align: right;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  color: white;
+  font-size: 15px;
+}
+
+p {
+  font-size:20px;
+}
+
+/*.html {width: 90%; background-color: red;}*/
 
 @media only screen and (max-device-width: 1366px) {
   
+  .cskill {
+    width: 55%;
+  }
+
+  .skills {
+    padding-top: 0.4vh;
+    padding-bottom: 0.4vh;
+    font-size:30px;
+  }
+
   div.main {
     margin: 5vh 10vw 12vh 10vw;
   }
@@ -137,6 +184,10 @@ div.main {
   p.nav {
     font-size:3vh;
     }
+  
+  p {
+    font-size:1.5vh;
+  }
 }
 
 </style>
@@ -170,6 +221,8 @@ div.main {
     <a href="#Research">Research interests</a> |
     <a href="#pub">Pubblication</a> |
     <a href="#ment">Mention</a> |
+    <a href="#conferences">Conferences &amp; school</a> |
+    <a href="#workexp">Work Experience</a> |
     <a href="#CS">Computer skill</a> |
     <a href="#int">Interests</a> 
   </p>
@@ -180,7 +233,7 @@ div.main {
   </figure>
 
   <h3 id="contacts">Contacts</h3>
-  <ul>
+  <ul style="font-size:20px">
     <li> 
       <i class="fa fa-envelope"></i> -  <a href="mailto:cremonesep25@gmail.com">cremonesep25 [at] gmail.com</a> </br>
       <i class="fa fa-envelope"></i> - <a href="mailto:paolo.cremonese@usz.edu.pl">paolo.cremonese [at] usz.edu.pl</a>
@@ -195,14 +248,25 @@ div.main {
       <i class="fa fa-telegram"></i> -  <a href="https://www.t.me/paul_crem"> @paul_crem</a>
     </li>
   </ul>
-
+  
   <h3 id="Research">Research interests</h3>
+    <div id="chartContainer" style="height: 350px; width: 65%;text-align:left"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <!--    
+  <ul style="margin:110px 0 150px 0;text-align:center">
+    <li style="color:blue">Gravitational Waves</li> 
+    <li style="color:red"> Gravitational Lensing </li>
+    <li> Data Analysis </li>
+    <li> Multi-messenger astrophysics </li>
+    <li> Deep Learning </li>
+  </ul>
+ <h3 id="Research">Research interests</h3>
   <ul>
-    <li>multi-messenger astrophysics</li>
-    <li>data analysis</li>
     <li>gravitational waves</li>
     <li>gravitational lensing</li>
-  </ul>
+    <li>data analysis</li>
+    <li>multi-messenger astrophysics</li>
+  </ul> -->
 
   <h3 id="pub">Pubblication</h3>
   <p><strong>On line list</strong>:&nbsp;<a target="_blank" href="https://arxiv.org/search/?query=Paolo+Cremonese&amp;searchtype=all&amp;source=header">arXiv</a> -&nbsp;<a target="_blank" href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20P.Cremonese.">INSPIRE</a></p>
@@ -211,20 +275,31 @@ div.main {
     <li>
       <p> 
         <em>Breaking the mass-sheet degeneracy with gravitational wave interference in lensed events</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a>
+        <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a>,
+        <span style="font-size:1.2vw">
+           with J.M. Ezquiaga and V. Salzano
+          - submitted to <em>PRD</em>
+        </span>
       </p>
     </li>
     <li>
       <p> 
         <em>High accuracy on H&#8320; measurements from gravitational wave lensing events</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a>
+        <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a>,
+        <span style="font-size:1.2vw">
+          with V. Salzano
+          -  published in <a href="https://doi.org/10.1016/j.dark.2020.100517"><em>Phys.Dark Univ. 28 (2020) 100517</em>
+        </span>
       </p>
     </li>
     <li>
       <p> 
         <em>The lensing time delay between gravitational and electromagnetic waves</em> - 
         <a target="_blank" href="https://arxiv.org/abs/1808.05886">arXiv:1808.05886</a>, 
-        a reviewed copy of the master thesis work. 
+        <span style="font-size:1.2vw">
+          with E. Mortsell
+          - a reviewed copy of the master thesis work. 
+        </span>
       </p>
     </li>
   </ul>
@@ -243,14 +318,165 @@ div.main {
     </li>
   </ul>
 
+  <h3 id="conferences">Conferences &amp; doctoral school</h3>
+ 
+  <ul>
+    <p>
+    <li>
+      <b><a href="https://grams-815673.wixsite.com/gravityworkshop" style="color:black">Current challenges in gravitational physics</a></b></br> 
+      <em>online</em></br>
+      April 21-28, 2021
+    </li>	
+    </br>
+    <li>
+       <b><a href="https://ibericos2021.math.tecnico.ulisboa.pt/" style="color:black">Ibericos 2021</a></b></br> 
+       <em>online</em></br>
+       March 29-April 1, 2021</br>
+       <u>Talk given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.0755</a></u>
+    </li>	
+    </br>
+    <li>
+      <b><a href="https://indico.fis.ucm.es/event/11/" style="color:black">IPARCOS Scholl on Gravitational Waves</a></b></br> 
+      <em>Universidad Compultense de Madrid, Spain</em></br>
+      18-20 December, 2019
+    </li>	
+    </br>
+    <li>
+      <b><a href="https://indico.physi.uni-heidelberg.de/event/103/" style="color:black">XIII Tonale Winter School on Cosmology</a></b></br> 
+      <em>Passo del Tonale, Italy</em></br>
+      9-13 December, 2019
+    </li>	
+    </br>
+    <li>
+       <b><a href="https://voices.uchicago.edu/cosmiccontroversies/" style="color:black">Cosmoc controveries</a></b></br> 
+       <em>The University of Chicago, USA</em></br>
+       5-8 October, 2019</br>
+       <u><a target="blank" href="files/chicago_poster.pdf">Poster</a> presented based on <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a></u>
+    </li>
+    </br>
+    <li>
+      <b><a href="https://indico.cern.ch/event/773241/overview" style="color:black">The 6th Conference of the Polish Society on Relativity</a></b></br> 
+      <em>Szczecin University, Poland</em></br>
+      23-26 September, 2019
+      <u>Mermber of organizing commitee</u>
+    </li>
+    </p>
+  </ul>
+
+  <h3 id="education">Education</h3>
+  
+  <div class="app_top">
+    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Uniwersytet_Szczeci%C5%84ski.png/220px-Uniwersytet_Szczeci%C5%84ski.png" style="width:30%" />
+    <p style="margin:0 0 0 170px">
+    <em>2018-present</em></br>
+    <b>Szczecin University</b></br>
+    Ph.D. in cosmology</br> 
+    <u>Advisor</u>: V. Salzano
+    </p>
+  </div> 
+  </br> 
+  <div style="margin-left:15px" class="app_top">
+    <div style="width:15%">
+    <img src="https://upload.wikimedia.org/wikipedia/it/e/ee/Logo_Universit%C3%A0_Padova.png" style="width:80%" />
+    <img src="https://armacad.info/images/organizations/530/logo_15edc7053145a38b.png" style="width:80%;margin-top:10px" />
+    </div>
+    <p style="margin:0 0 0 170px">
+    <em>2015-2017</em></br>
+    <b>Università degli studi di Padova</b> &amp;</br> 
+    <b>Stockholm University</b></br>
+    M.Sc. in Astronomy</br>
+    <u>Advisors</u>: E. Mortsell and S. Matarrese</br>
+    <u>Thesis</u>: Delay in arrival time between Gravitational Waves and Electromagnetic signal due to Gravitational Lensing
+    </p>
+  </div>
+  </br> 
+  <div class="app_top">
+    <img src="https://armacad.info/images/organizations/530/logo_15edc7053145a38b.png" style="width:15%" />
+    <p style="margin:0 0 0 170px">
+    <em>2016-2017</em></br>
+    <b>Stockholm University</b></br>
+    Erasmus 
+    </p>
+  </div>
+  </br> 
+  <div class="app_top">
+    <img src="https://upload.wikimedia.org/wikipedia/it/e/ee/Logo_Universit%C3%A0_Padova.png" style="width:14%" />
+    <p style="margin:0 0 0 170px">
+    <em>2011-2015</em></br>
+    <b>Università degli studi di Padova</b></br> 
+    B.Sc. in Astronomy</br> 
+    <u>Advisor</u>: A. Pizzella</br>
+    <u>Thesis</u>: Dark matter in spiral galaxies 
+    </p>
+  </div>
+  
+
+  <h3 id="workexp">Work experience</h3>
+
+  <div class="app_top">
+    <img src="https://media-exp1.licdn.com/dms/image/C510BAQG_trwDwyiQKw/company-logo_200_200/0/1519873870098?e=2159024400&v=beta&t=3xMy48O4JEWA89magmKVr1pxHjx0oaxu40YtKkoVIS4" style="width:30%" />
+    <p style="margin:0 0 0 170px">
+    <em>2018</em></br>
+    <b><a href="https://www.dbagroup.it/en/" style="color:black" target="blank" >DBA group</a></b> </br> 
+    Interniship as data scientist</br> 
+    </p>
+  </div>
 
   <h3 id="CS">Computer skills</h3>
-  <ul>
-    <li>intermediate:&nbsp;OpenOffice, Linux, Microsoft Windows, Mathematica, Html</li>
-    <li>advanced: Python, latex</li>
+  <ul style="font-family:Antonio;margin:0 0 0 -30px;list-style-type:none">
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:80%;background-color:#DC7633">80%&nbsp</div>
+      </div>
+      &nbsp Python
+    </li>
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:75%;background-color:#2ECC71">75%&nbsp</div>
+      </div>
+      &nbsp Latex
+    </li>
+<!--    <li>&nbsp</li> -->
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:50%;background-color:#85C1E9">50%&nbsp</div>
+      </div>
+      &nbsp Apple Keynotes 
+    </li>
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:35%;background-color:#A569BD">35%&nbsp</div>
+      </div>
+      &nbsp Linux 
+    </li> 
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:30%;background-color:#E74C3C">30%&nbsp</div>
+      </div>
+      &nbsp Mathematica 
+    </li>
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:25%;background-color:#5DADE2">25%&nbsp</div>
+      </div>
+      &nbsp Microsoft Windows 
+    </li>
+    <li>
+      <div class="cskill" style="display:inline-block">
+        <div class="skills" style="width:20%;background-color:#58D68D">20%&nbsp</div> 
+      </div>
+      &nbsp HTML
+    </li>
+      
+
+<!--    <li>intermediate:&nbsp;OpenOffice, Linux, Microsoft Windows, Mathematica, Html</li>
+<li>advanced: Python, latex</li> -->
   </ul>
 
   <h3 id="int">Interests</h3>
+<div id="chartContainer2" style="height: 700px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!--  
   <ul>
     <li><strong>Travelling</strong><br />Discover and live new cultures and countries is for sure one of my goal for the present and the&nbsp; future.</li>
     <li><strong>Data analysis</strong><br />Besides my academic work, I like to study and be informed about machine learning and data science in general.</li>
@@ -259,7 +485,103 @@ div.main {
     <li><strong>Books</strong><br />Reading has always been vital to me. To learn always new stuff and plunge into books is my thing.</li>
     <li><strong>Technologies</strong><br />I am interested in all technologies regarding both my field of study and not, and I try to keep informed on this topic as much as I can.</li>
   </ul>
+  -->
+  </br>
+  </br>
   <a style="font-size:1.4vw" href="#opening">Go back to the top.</a>
 </div>
+
+
+<script>
+
+window.onload = function() {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+/*	title: {
+		text: "Research interests"
+	},*/
+        legend:{
+		cursor: "pointer",
+		itemclick: explodePie,
+                horizontalAlign: "center",
+                fontSize: 20
+        },
+	data: [{
+		type: "pie",
+		startAngle: 190,
+	/*	yValueFormatString: "##0.00\"%\"",*/
+		yValueFormatString: "##0\"%\"",
+		indexLabel: "{label} {y}",
+	        indexLabelFontSize: 20,
+	   	/*showInLegend: true,*/
+        	indexLegend: "{l}",
+        	legendText: "{label}",
+		dataPoints: [
+			{y: 30, label: "Gravitational Waves"},
+			{y: 25, label: "Gravitational lensing"},
+			{y: 20, label: "Data Analysis"},
+			{y: 10, label: "Deep learning"},
+			{y: 15, label: "Multi-messenger astrophysics"},
+		]
+	}]
+});
+
+chart.render();
+
+/*
+}
+window.onload = function () {
+*/
+var chart2 = new CanvasJS.Chart("chartContainer2", {
+	animationEnabled: true,
+/*	title:{
+		text: "Email Categories",
+		horizontalAlign: "left"
+	},*/
+    legend:{
+		cursor: "pointer",
+		itemclick: explodePie,
+        horizontalAlign: "center",
+        fontSize: 20
+    },
+	data: [{
+		type: "doughnut",
+		startAngle: 170,
+//		innerRadius: 60,
+		indexLabelFontSize: 17,
+		indexLabel: "{name}",
+	        indexLabelFontSize: 30,
+		toolTipContent: "<b>{name}</b>: {y}%",
+		toolTipContentFontSize: 30,
+       		showInLegend: true,
+       		indexLegend: "{l}",
+      		legendText: "{name}: {l}",
+       		dataPoints: [
+			{ y: 30, name: "Travelling",  l: "Discover and live new cultures and countries is for sure one of my goal for the present and the  future"},
+			{ y: 20, name: "Technologies", l:"I am interested in all technologies regarding both my field of study and not, and I try to keep informed on this topic as much as I can. I like also programming"},
+			{ y: 15, name: "Data analysis",  l: "Besides my academic work, I like to study and be informed about machine learning and data science in general"},
+			{ y: 15, name: "Sports", l:"I played football for many years in a team, and I still play it sometimes. I also love lots of other sport and physical activities, one in particular is cycling" },
+			{ y: 10, name: "Books", l:"Reading has always been vital to me. To learn always new stuff and plunge into books is my thing"},
+			{ y: 10, name: "Piano", l:"I took piano lessons for several years, since I was a kid, and it is still a special thing for me"},
+		]
+	}]
+});
+
+chart2.render();
+
+}
+
+function explodePie (e) {
+	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+	} else {
+		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+	}
+	e.chart.render();
+
+}
+
+</script>
 </body>
 </html>
