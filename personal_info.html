@@ -4,6 +4,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 <style>
 /* color: #d9d9d9; */
 body {
@@ -130,8 +131,16 @@ p {
 
 /*.html {width: 90%; background-color: red;}*/
 
+div.chart {
+  height: 150px;
+}
+
 @media only screen and (max-device-width: 1366px) {
-  
+ 
+  div.chart {
+    height: 240px;
+  }
+
   .cskill {
     width: 55%;
   }
@@ -250,9 +259,47 @@ p {
   </ul>
   
   <h3 id="Research">Research interests</h3>
-    <div id="chartContainer" style="height: 350px; width: 65%;text-align:left"></div>
+  
+  <div class="chart "style="float:left">
+  <!--  <canvas id="myChart" style="width:80%;max-width:500px;height:300px;float:left"></canvas>-->
+  <canvas id="myChart" style=""></canvas>
+  </div>
+
+  <ul style="list-style-type:none">
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#b91d47;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> Gravitational Waves
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#00aba9;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> Gravitational Lensing 
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#2b5797;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> Data Analysis 
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#e8c3b9;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> Multi-Messenger Astrophysics
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#1e7145;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> Deep Learning
+    </li>
+
+  </ul>
+
+
+
+  <!--    <div id="chartContainer" style="height: 350px; width: 65%;text-align:left"></div>
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <!--    
+  
+ 
   <ul style="margin:110px 0 150px 0;text-align:center">
     <li style="color:blue">Gravitational Waves</li> 
     <li style="color:red"> Gravitational Lensing </li>
@@ -501,56 +548,20 @@ p {
 <script>
 
 window.onload = function() {
-
-var chart = new CanvasJS.Chart("chartContainer", {
-	animationEnabled: true,
-/*	title: {
-		text: "Research interests"
-	},*/
-        legend:{
-		cursor: "pointer",
-		itemclick: explodePie,
-                horizontalAlign: "center",
-                fontSize: 20
-        },
-	data: [{
-		type: "pie",
-		startAngle: 190,
-	/*	yValueFormatString: "##0.00\"%\"",*/
-		yValueFormatString: "##0\"%\"",
-		indexLabel: "{label} {y}",
-	        indexLabelFontSize: 20,
-	   	/*showInLegend: true,*/
-        	indexLegend: "{l}",
-        	legendText: "{label}",
-		dataPoints: [
-			{y: 30, label: "Gravitational Waves"},
-			{y: 25, label: "Gravitational lensing"},
-			{y: 20, label: "Data Analysis"},
-			{y: 10, label: "Deep learning"},
-			{y: 15, label: "Multi-messenger astrophysics"},
-		]
-	}]
-});
-
-chart.render();
-
-/*
-}
-window.onload = function () {
-*/
 var chart2 = new CanvasJS.Chart("chartContainer2", {
 	animationEnabled: true,
-/*	title:{
+	/*
+	title:{
 		text: "Email Categories",
 		horizontalAlign: "left"
-	},*/
-    legend:{
+	},
+	*/
+    	legend:{
 		cursor: "pointer",
 		itemclick: explodePie,
-        horizontalAlign: "center",
-        fontSize: 20
-    },
+	        horizontalAlign: "center",
+        	fontSize: 20
+   	 },
 	data: [{
 		type: "doughnut",
 		startAngle: 170,
@@ -587,6 +598,35 @@ function explodePie (e) {
 	e.chart.render();
 
 }
+
+var xValues = ["Gravitational Waves", "Gravitational lensing", "Data Analysis", "Multi-messenger astrophysics", "Deep learning"];
+
+var yValues = [30, 25, 20, 15, 10];
+var barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "doughnut",
+  data: {  
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+      },
+  options: {
+    legend:{
+      display:false,
+      position: "bottom"
+      },
+  }
+});
+Chart.defaults.global.defaultFontSize = 14;
 
 </script>
 </body>
