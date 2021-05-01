@@ -6,12 +6,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 <style>
-/* color: #d9d9d9; */
+
 body {
   background-color: white;
   color: black;
   margin: 0 !important;
-/*  margin: 5.5vh 16vw 14vh 16vw;*/
 }
 
 .app_top {
@@ -129,14 +128,21 @@ p {
   font-size:20px;
 }
 
-/*.html {width: 90%; background-color: red;}*/
 
 div.chart {
   height: 150px;
 }
 
+span.label{
+  font-size:17px;
+}
+
 @media only screen and (max-device-width: 1366px) {
  
+  span.label{
+    font-size:10px;
+  }
+
   div.chart {
     margin-top: 70px;
     height: 180px;
@@ -262,7 +268,6 @@ div.chart {
   <h3 id="Research">Research interests</h3>
   
   <div class="chart "style="float:left">
-  <!--  <canvas id="myChart" style="width:80%;max-width:500px;height:300px;float:left"></canvas>-->
   <canvas id="myChart" style=""></canvas>
   </div>
 
@@ -295,27 +300,7 @@ div.chart {
 
   </ul>
 
-
-
-  <!--    <div id="chartContainer" style="height: 350px; width: 65%;text-align:left"></div>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-  
- 
-  <ul style="margin:110px 0 150px 0;text-align:center">
-    <li style="color:blue">Gravitational Waves</li> 
-    <li style="color:red"> Gravitational Lensing </li>
-    <li> Data Analysis </li>
-    <li> Multi-messenger astrophysics </li>
-    <li> Deep Learning </li>
-  </ul>
- <h3 id="Research">Research interests</h3>
-  <ul>
-    <li>gravitational waves</li>
-    <li>gravitational lensing</li>
-    <li>data analysis</li>
-    <li>multi-messenger astrophysics</li>
-  </ul> -->
-
+  </br>
   <h3 id="pub">Pubblication</h3>
   <p><strong>On line list</strong>:&nbsp;<a target="_blank" href="https://arxiv.org/search/?query=Paolo+Cremonese&amp;searchtype=all&amp;source=header">arXiv</a> -&nbsp;<a target="_blank" href="https://inspirehep.net/literature?sort=mostrecent&size=25&page=1&q=a%20P.Cremonese.">INSPIRE</a></p>
   <p><strong>List:</strong></p>
@@ -484,7 +469,6 @@ div.chart {
       </div>
       &nbsp Latex
     </li>
-<!--    <li>&nbsp</li> -->
     <li>
       <div class="cskill" style="display:inline-block">
         <div class="skills" style="width:50%;background-color:#85C1E9">50%&nbsp</div>
@@ -521,25 +505,48 @@ div.chart {
       </div>
       &nbsp C
     </li>
- 
-
-<!--    <li>intermediate:&nbsp;OpenOffice, Linux, Microsoft Windows, Mathematica, Html</li>
-<li>advanced: Python, latex</li> -->
   </ul>
 
   <h3 id="int">Interests</h3>
-<div id="chartContainer2" style="height: 700px; width: 100%;"></div>
-<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-<!--  
-  <ul>
-    <li><strong>Travelling</strong><br />Discover and live new cultures and countries is for sure one of my goal for the present and the&nbsp; future.</li>
-    <li><strong>Data analysis</strong><br />Besides my academic work, I like to study and be informed about machine learning and data science in general.</li>
-    <li><strong>Sports</strong><br />I played football for many years in a team, and I still play it sometimes. I also love lots of other sport and physical activities, one in particular is cycling.</li>
-    <li><strong>Piano</strong><br />I took piano lessons for several years, since I was a kid, and it is still a special thing for me.</li>
-    <li><strong>Books</strong><br />Reading has always been vital to me. To learn always new stuff and plunge into books is my thing.</li>
-    <li><strong>Technologies</strong><br />I am interested in all technologies regarding both my field of study and not, and I try to keep informed on this topic as much as I can.</li>
+
+  <div class="chart "style="width:60%;float:right;margin:0 0 65px 0">
+  <canvas id="myChart2" style=""></canvas>
+  </div>
+
+  <ul style="list-style-type:none">
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#0074D9;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> <b>Travelling</b>: <span class="label">discover and live new cultures and coutries is for sure one of my goal for the present and the future</span>
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#3D9970;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> <b>Technologies</b>: <span class="label">I am interested in all technogies regarding both my field of study and not. I try to keep informed on this topic as much as I can. I like very much programming 
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#39CCCC;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg><b> Data Analysis </b>: <span class="label">besides my academic work, I like to study and be informed about machine learning and data science in general</span>
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#85144b;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> <b>Sports</b>: <span class="label">I played football for many years in a team, and I still play it sometimes. I also love lots of other sport and physical activities, one in particular is cycling</span> 
+    </li>
+    <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#FF851B;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> <b>Books</b>: <span class="label">reading has always been vital to me. To learn always new stuff and plunge into books is my thing</span>
+    </li>
+   <li>
+  <svg width="20" height="20">
+  <rect width="20" height="20" style="fill:#DDDDDD;stroke-width:0;stroke:rgb(0,0,0)" />
+  </svg> <b>Piano</b>: <span class="label">I took piano lessons for several years, since I was a kid, and it is still a special thing for me</span>
+    </li>
+
   </ul>
-  -->
+
   </br>
   </br>
   <a style="font-size:1.4vw" href="#opening">Go back to the top.</a>
@@ -547,58 +554,6 @@ div.chart {
 
 
 <script>
-
-window.onload = function() {
-var chart2 = new CanvasJS.Chart("chartContainer2", {
-	animationEnabled: true,
-	/*
-	title:{
-		text: "Email Categories",
-		horizontalAlign: "left"
-	},
-	*/
-    	legend:{
-		cursor: "pointer",
-		itemclick: explodePie,
-	        horizontalAlign: "center",
-        	fontSize: 20
-   	 },
-	data: [{
-		type: "doughnut",
-		startAngle: 170,
-//		innerRadius: 60,
-		indexLabelFontSize: 17,
-		indexLabel: "{name}",
-	        indexLabelFontSize: 30,
-		toolTipContent: "<b>{name}</b>: {y}%",
-		toolTipContentFontSize: 30,
-       		showInLegend: true,
-       		indexLegend: "{l}",
-      		legendText: "{name}: {l}",
-       		dataPoints: [
-			{ y: 30, name: "Travelling",  l: "Discover and live new cultures and countries is for sure one of my goal for the present and the  future"},
-			{ y: 20, name: "Technologies", l:"I am interested in all technologies regarding both my field of study and not, and I try to keep informed on this topic as much as I can. I like also programming"},
-			{ y: 15, name: "Data analysis",  l: "Besides my academic work, I like to study and be informed about machine learning and data science in general"},
-			{ y: 15, name: "Sports", l:"I played football for many years in a team, and I still play it sometimes. I also love lots of other sport and physical activities, one in particular is cycling" },
-			{ y: 10, name: "Books", l:"Reading has always been vital to me. To learn always new stuff and plunge into books is my thing"},
-			{ y: 10, name: "Piano", l:"I took piano lessons for several years, since I was a kid, and it is still a special thing for me"},
-		]
-	}]
-});
-
-chart2.render();
-
-}
-
-function explodePie (e) {
-	if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
-	} else {
-		e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
-	}
-	e.chart.render();
-
-}
 
 var xValues = ["Gravitational Waves", "Gravitational lensing", "Data Analysis", "Multi-messenger astrophysics", "Deep learning"];
 
@@ -628,6 +583,36 @@ new Chart("myChart", {
   }
 });
 Chart.defaults.global.defaultFontSize = 14;
+
+var xValues2 = ["Travelling", "Technologies", "Data Analysis", "Sports", "Books", "Piano"];
+
+var yValues2 = [30, 20, 15, 15, 10, 10];
+/*  https://clrs.cc/  */
+var barColors2 = [
+  "#0074D9",
+  "#3D9970",
+  "#39CCCC",
+  "#85144b",
+  "#FF851B",
+  "#DDDDDD",
+];
+
+new Chart("myChart2", {
+  type: "doughnut",
+  data: {  
+      labels: xValues2,
+      datasets: [{
+        backgroundColor: barColors2,
+        data: yValues2
+        }]
+      },
+  options: {
+    legend:{
+      display:false,
+      position: "bottom"
+      },
+  }
+});
 
 </script>
 </body>
