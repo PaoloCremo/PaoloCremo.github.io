@@ -1,5 +1,6 @@
 <html>
 <head>
+<link rel="icon" href= "https://image.flaticon.com/icons/png/512/1604/1604478.png"> 
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
@@ -11,6 +12,9 @@ body {
   background-color: white;
   color: black;
   margin: 0 !important;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 .app_top {
@@ -137,7 +141,8 @@ span.label{
   font-size:17px;
 }
 
-@media only screen and (max-device-width: 1366px) {
+/*@media only screen and (max-device-width: 1366px) { */
+@media only screen and (max-device-width: 1360px) {
  
   span.label{
     font-size:10px;
@@ -222,14 +227,14 @@ span.label{
 
 <div class="main">
   
-  <div style="font-family:Antonio;text-align:center;font-size:2.6vw">
+  <div id="opening" style="font-family:Antonio;text-align:center;font-size:2.6vw">
     <h1> Curriculum Vitae </h1>
   </div>
   <p style="margin:-0vh 8vw 2vh 8vw;text-align:center;color:#666666;font-size:1.4vw"> 
     This page is specifically about my career. You can see my interests, pubblication, old experiences and my skill. You can also find a summary of all of this in the PDF version of my <a target="_blank" href="files/Curriculum_Vitae.pdf">CV</a>.
   </p>
 
-  <b id="opening" style="font-size:1.6vw">Hello everyone! I am a Ph.D. student at Szczecin University, in the <a href="http://cosmo.usz.edu.pl" >cosmology group</a>. </b>
+  <b style="font-size:1.6vw">Hello everyone! I am a Ph.D. student at Szczecin University, in the <a href="http://cosmo.usz.edu.pl" >cosmology group</a>. </b>
 
   <p style="font-size:1.2vw"><b>Go to</b> : 
     <a target="_blank" href="files/Curriculum_Vitae.pdf">Curriculum Vitae (PDF)</a> |
@@ -356,6 +361,12 @@ span.label{
   <ul>
     <p>
     <li>
+      <b><a href="https://indico.cern.ch/event/853904/overview" style="color:black">First EuCAPT Annual Symposium</a></b></br> 
+      <em>online</em></br>
+      May 5-7, 2021
+    </li>	
+    </br>
+    <li>
       <b><a href="https://grams-815673.wixsite.com/gravityworkshop" style="color:black">Current challenges in gravitational physics</a></b></br> 
       <em>online</em></br>
       April 21-28, 2021
@@ -365,7 +376,7 @@ span.label{
        <b><a href="https://ibericos2021.math.tecnico.ulisboa.pt/" style="color:black">Ibericos 2021</a></b></br> 
        <em>online</em></br>
        March 29-April 1, 2021</br>
-       <u>Talk given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.0755</a></u>
+       <u><a target="blank" href="files/Ibericos-presentation.pdf">Talk</a> given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.0755</a></u>
     </li>	
     </br>
     <li>
@@ -513,7 +524,7 @@ span.label{
   <canvas id="myChart2" style=""></canvas>
   </div>
 
-  <ul style="list-style-type:none">
+  <ul style="list-style-type:none;margin-left:-30px">
     <li>
   <svg width="20" height="20">
   <rect width="20" height="20" style="fill:#0074D9;stroke-width:0;stroke:rgb(0,0,0)" />
