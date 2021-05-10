@@ -1,38 +1,292 @@
 <html>
 <head>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-</head>
-
+<link rel="preconnect" href="https://fonts.gstatic.com"> 
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> --> 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
+<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
 <style>
+/* color: #d9d9d9; */
+body {
+  background-color: white;
+  color: black;
+  margin: 0;
+}
+
+h3 {
+  font-size: 27px;
+  color:grey;
+  text-align: center;
+  }
+
+ul li{
+  font-size: 18px;
+  }
+
+p {
+  font-size: 20px;
+  font-family: Open Sans;
+  text-align:justify;
+  }
+
+a:link {
+  color: #595959;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #595959;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+img.al {
+            float: left;
+            margin: 5%;
+       }
+
+img.portrait {
+  width: 200px;
+}
+
+img.lands {
+  width: 300px;
+}
+
+.header {
+ /* background-image: url('../images/mexico1.jpg');
+  background-position: 50% 78%;*/
+  padding: 10px;
+  text-align: center;
+  background: black;
+  width: 100%;
+  top: 0;
+  color: white;
+  font-size: 30px;
+  font-family: Knewave;
+}
+
+figure.al {
+  float:left;
+  margin: 0 3% 1% 0;
+  }
+
+figure.ar {
+  float:right;
+  margin: 0 0 1% 3%;
+  }
+
+nav {
+  float: left;
+  position: fixed;
+  max-width: 10%;
+/*  height: 50%;  only for demonstration, should be removed */
+  background: none;
+  padding: 0 3px 20px 10px;
+  color: black;
+  margin: 0 0 -30px 0;
+  bottom: 0;
+  text-align:left;
+}
+
+button2 {
+  border: none;
+  outline: 0;
+  display: inline-block;
+/*  padding: 0.6vw; */
+  width: 160px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  padding:2px;
+  font-size: 5vh; /*1.5vw*/
+  text-align:center;
+}
+
+figcaption{
+    font-size: 15px;
+    margin-top: 10px;    
+}
+
+div.main {
+  margin: 50px 30vw 200px 30vw;
+}
+
 a.ico {
   text-decoration: none;
-  font-size: 3.5vh;/*3vw;*/
-  color: black;
+  font-size: 3.5vh;
+  color:black;
 }
-</style>  
-  
-<body >
 
-  <center style="font-size:40px;padding:100px">
-    Coming soon...</br>
-    How soon? I don't know.
+@media only screen and (max-device-width: 700px) {
+  p {
+    text-align:left;
+    }
+}
+
+/* put button on bottom on mobile - 1366px */
+@media only screen and (max-device-width: 1360px) {
+
+  div.main{
+    margin:50px 8vw 200px 8vw;
+  }
+  
+  button2 {
+/*    padding: 5px; */
+    width:17%;
+    background-color: rgba(44, 62, 80, 0.6);
+    font-size: 2vh;
+    color:white;
+    }
+
+  nav {
+    background-image: url("../images/space.jpg");
+    background-color: rgba(0,0,0,0.5);
+    background-blend-mode: lighten;
+    /* 
+  https://wallup.net/space-stars-40/ 
+  https://wallup.net/wp-content/uploads/2016/01/168595-space-stars.jpg 
+  */
+    background-position: 50% 45%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    float: bottom;
+    position: fixed;
+    width: 100%;
+    max-width: 100%;
+    text-align:center;
+    padding: -10px 0 10px 0;
+ }
+
+  img.portrait
+    {
+    width: 300px;
+    }
+  
+  img.lands
+    {
+    width: 400px;
+    }
+
+  figure.al {
+    margin: 0 5% 1% 0 ;
+    }
+  
+  figure.ar {
+    margin: 0 0 1% 5%;
+    }
+
+  figcaption{
+    font-size: 20px;
+    margin-top:10px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav id="footer" > 
+  <p style="text-align:center"> <!--style="font-size:3vw"> -->
+    <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
+    <a href="../index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
+    <a href="../personal_info.html" style="font-family:Zen Dots"><button2>cv</button2></a>
+    <a href="../album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
+    <a href="../blog.html" style="font-family:Zen Dots"><button2>blog</button2></a> 
+  </p>
+</nav>
+
+<div class="header"><h1>My first solo trip: Mexico</h1>
+  <p style="color:#666666;font-size:20px;font-family:Zen Dots;text-align:center"> 
+    Blog #1 - May 10, 2021
+  </p>
+</div>
+
+<div class="main" style="font-family:Antonio"> 
+  
+  <h3>#theVIEW</h3>
+    
+    <p>
+      I climbed up the stairs. The weather was moist and cloudy. And hot, of course. For sure it was going to rain very soon. The common, light, summer rain.
+The staircase was pretty narrow and the walls precluded the view of the surroundings. I thought I had an idea of what was waiting for me on top of the house. It turned out I was quite wrong.
+    </p>
+   <figure class="al">
+      <img class="lands" src="../images/mexico3.jpg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">the house in the forest</figcaption>
+    </figure>
+   <p>
+      It had been a long day. I had a three hours trip by bus, then I walked around the city for a couple of hours and I was not used to the Mexican hot. Yet (I never got used to it). My host was really friendly and cool. An old Californian guy who decided to live in Mexico after his retirement and to rent a room in his home to round up. He came to pick me up in the city center of Valladolid, a city in the Yucatan peninsula, in the south of Mexico. We drove for 15 km south-west of the city, stopping for some delicious and spicy tacos. Then, we left the main road and drove for another 5km inside the forest. We arrived at a small Mayan village, where he was living and I was staying for the night.
+    </p>
+    <p>
+      He showed me around, I put down my stuff in my room and we chatted a little bit. He told me that he built the house himself, at least the upper floors. He said he kept on adding floors (four, eventually) so that, from the top floor, one could see everything around, above the forest. Needless to say, I had to see it.
+    </p>
+    <figure class="ar">
+      <img class="lands" src="../images/mexico1.jpg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">the view</br>amazon forest close to Valladolid</figcaption>
+    </figure>
+    <p>
+      The picture I am showing here is from that moment. It is not the best picture, I know. I am particularly affectionate about this one, though, as you could imagine by now: that very moment was the highlight of my journey. On top of the stairs I was expecting to find an amazing view, but it was actually much more. I was overwhelmed. But I also felt I was in some way part of that overwhelming vastness. It was simply one of the best experiences in my life.
+    </p>
+  
+    <h3>#theJOURNEY</h3>
+    <p>
+      My journey started four days before, in Cancun. The idea of a solo trip, though, came almost one year before. After my graduation, I wanted to celebrate having a nice and long journey someplace far away. I wanted it to be a solo trip because I never had one, yet. It is a different experience. I wanted to see if I could make it on my own and enjoying every place the way I felt most appropriate. I did not have the money at that time and so the trip was postponed until the following summer, in 2018.
+    </p>
+    <figure class="al">
+      <img class="portrait" src="../images/mexico2.jpg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">Cancun, beach</figcaption>
+    </figure>
+    <p>
+      I arrived in Cancun after twelve hours of flight. I clearly remember how thick and wet was the air when I stepped out of the airport. Cancun is a lovely place. There are plenty of paradisiacal beaches and nice hotels. I guess, I wasn't staying in one but I could see many of them. The "problem" was it was very little like I was imaging Mexico in a non positive way, mostly. This city was way too touristic. Nevertheless, I enjoyed my stay there for 3 days and then I went more in the inside of the Yucatan peninsula.
+    </p>
+    <p>
+    Here is when I arrived in Valladolid and had an amazing time in the Mayan village. The day after I went to see <a target="blank" href="https://www.instagram.com/p/Bl_Gk6jAGEq/?utm_source=ig_web_copy_link">Chichéz-Itzá</a>, another stunning place, and a very famous one. The city of Valladolid was much more Mexican than Cancun, I really liked it. My schedule was pretty tight, though, so I stayed only two days.
+    </p>
+
+    <p>
+      It was the time of Tulum. That was paradise. There was the right amount of tourists and it was truly stunning. I rent a bike and visited some beaches, relaxed there, saw a great sunset and had wonderful dinner. The restaurant was really cozy. The chef (and owner) was grilling the meat right next to the tables, in the open air. He was really kind and friendly. I felt sorry for him when a bunch of Italian guys came to have dinner and kept on going to him to tell him what to cook and how. Italians, why are we all so perfect? Let's just say my spanish was (still is) not great, but for sure I was not going to talk italian that night. The day after I went to see some Mayan ruins. Tulum is totally worth a visit.
+    </p>
+    <figure class="ar">
+      <img class="lands" src="../images/mexico4.jpg" alt="" /> <!-- 150vw -->
+      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">Merida</figcaption>
+    </figure>
+
+    <p>
+      Up next was a quick visit to Ek Balam, another Mayan site. There, there is a very high and accessible pyramid, meaning you can walk up the stairs of it. Of course I went up there, even though it was scarily steep, it just had rained heavily and I had the great idea to wear flippers that day. I survived. That night I arrived in Merida, probably my favourite city of Mexico so far. Merida felt Mexican, it was not super touristic and the food was really cheap and tasty. 
+    </p>
+
+    <p>
+      After another couple of days, I flew to Mexico City. I was strongly suggested to visit it and also warned by taxi drivers to be very careful. Mexico City is definitely the largest city I've ever visited. I was impressed by the gigantic Mexican flag in Plaza del Zócalo, the main square. The downtown is very nice and lively, full of people and tourists. Being alone and clearly a naive tourist, I did not explore much more than that. Honestly, though, I never felt in any kind of danger and I met really nice people there.   
+    </p>
+
+  <h3>#theEND</h3>
+    <p>
+      After that, I flew back to Cancun for the last night and, finally, back home. Eventually, I was really satisfied with how my first solo trip turned out to be. First of all, I survived. I lost a lot of time, probably, here and there for useless reasons and I missed a lot of things I could have seen, but I enjoyed my time very much, at my pace. I did not stress myself with an impossible schedule and took my time where I wanted to stay a little longer. 
+I left Italy with nothing planned, a part from the first couple of days and, still (or maybe exactly thanks to that), I was able to have an amazing journey. All of the places were truly incredible, and I met some nice, nice people. I felt like Mexico had much more to offer than I expected and I hope I will go back someday. I just scratched the surface of all the beauty in this country. 
+    </p>
     </br>
-    </br>
-    <a href="../blog.html">Go back</a>
-  </center>
+  <p style="text-align:center"><b>The end!</b></p>
+  
+  </br>
+  </br>
 
   <div style="text-align:center">
-    <p style="font-size:30px">Share on :</p>
-    </br>
+   </br>
+   <p style="font-size:15px;text-align:center;font-family:Zen Dots">Share on :</p>
    <a class="ico"target="blank "href="#" 
      onclick="
       window.open(
         'https://twitter.com/intent/tweet?text=&url='+encodeURIComponent(location.href)+',%20by%20@paolo_cre' ); 
       return false;">
       <i class="fa fa-twitter"></i>
-   </a>
+   </a> 
 &nbsp
-    <a class="ico" target="blank" href="#" 
+   <a class="ico" target="blank" href="#" 
       onclick="
         window.open(
           'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)/*, 
@@ -41,7 +295,7 @@ a.ico {
         return false;">
         <i class="fa fa-facebook"></i>
     </a>
-&nbsp
+ &nbsp
 
   <a class="ico"target="blank "href="#" 
     onclick="
@@ -49,25 +303,25 @@ a.ico {
         'https://telegram.me/share/url?text=&url='+encodeURIComponent(location.href) ); 
       return false;">
       <i class="fa fa-telegram"></i>
-  </a>
-
+  </a> 
 &nbsp
+
   <a class="ico"target="blank "href="#" 
     onclick="
       window.open(
         'whatsapp://send?text='+encodeURIComponent(location.href) ); 
       return false;">
       <i class="fa fa-whatsapp"></i>
-  </a>
+  </a> 
 &nbsp
-
-<a class="ico"target="blank "href="#" 
+  
+  <a class="ico"target="blank "href="#" 
     onclick="
       window.open(
         'https://www.reddit.com/submit?title=Blog%20by%20u/paolo_cre&url='+encodeURIComponent(location.href) ); 
       return false;">
       <i class="fa fa-reddit"></i>
-  </a>
+  </a> 
 &nbsp
 
   <a class="ico"target="blank "href="#" 
@@ -76,8 +330,17 @@ a.ico {
         'mailto:?subject=I found an article you could like from https://paolocremo.github.io/blog.html&amp;body='+encodeURIComponent(location.href) ); 
       return false;">
       <i class="fa fa-envelope"></i>
-  </a>
+  </a> 
   </div>
+</div>
+
+<script>
+
+var clicks = 0;
+        function updateClickCount() {
+            document.getElementById("clickCount").innerHTML = clicks;
+        }
+</script>
 
 </body>
 </html>
