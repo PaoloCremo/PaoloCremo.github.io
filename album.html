@@ -2,11 +2,27 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
+<title>Album</title>
 <link rel="icon" href= "images/autumn_1_LQ.jpeg"> 
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- preview FB -->
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:fb="http://ogp.me/ns/fb#">
+
+<meta property="og:image" content="images/sunset_3_LQ.jpeg" />
+<meta property="og:description" content="Take a look at my pictures" />
+
+<!-- preview twitter -->
+<meta name="twitter:card" content="summary" />
+<meta name="tiwtter:creator" content="@paolo_cre" />
+<meta property="twitter:title" content="Album">
+<meta property="twitter:image" content="https://paolocremo.github.io/images/sunset_3_LQ.jpeg" />
+<meta property="twitter:description" content="Take a look at my pictures" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FYRRY5SZC"></script>
@@ -237,11 +253,15 @@ button2 {
   font-size: 2vh; /*1.5vw*/
 }
 
+  </style>
 
-</style>
+<script type="text/javascript">
+    var number = 10; /* number of pictures*/
+</script>
+
 </head>
 
-<body>
+<body onload="figNum()">
 
 <nav class="bottom">
   <p style="margin:0.4vh 0 2vh 0;font-size:3vh">
@@ -256,6 +276,7 @@ button2 {
 <p>
 I use my phone (Huawei-P20pro) or my camera (Nikon D90) to take them. </br>
 All the pictures you see here, are taken by me.</br>
+You can find more on my instagram: <a target="blank" style="color:black" href="https://www.instagram.com/pablo_cremo/"> @pablo_cremo</a> </br> <!--<i class="fa fa-instagram"></i>-->
 Click on the image for full view high resolution and info!</p>
 </div>
 
@@ -289,52 +310,52 @@ Click on the image for full view high resolution and info!</p>
   <div class="modal-content">
 
     <div class="mySlides">
-      <div class="numbertext">1 / 10</div>
+      <div class="numbertext">1 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/autumn_1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">2 / 10</div>
+	    <div class="numbertext">2 / <script type="text/javascript">document.write(number) </script></div> 
       <img class="center-fit" src="images/moon_2.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">3 / 10</div>
+      <div class="numbertext">3 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit"src="images/sunset_2.jpeg" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">4 / 10</div>
+      <div class="numbertext">4 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/xmaslights_2.jpg" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">5 / 10</div>
+      <div class="numbertext">5 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/moon_3.jpeg" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">6 / 10</div>
+      <div class="numbertext">6 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/xmaslights_1.jpeg" style="width:100%">
     </div>
     
     <div class="mySlides">
-      <div class="numbertext">7 / 10</div>
+      <div class="numbertext">7 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/fox_oslo.jpg" style="width:100%">
     </div>
   
     <div class="mySlides">
-      <div class="numbertext">8 / 10</div>
+      <div class="numbertext">8 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/sunset_1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">9 / 10</div>
+      <div class="numbertext">9 / <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/moon_1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
-      <div class="numbertext">10/ 10</div>
+      <div class="numbertext">10/ <script type="text/javascript">document.write(number) </script></div>
       <img class="center-fit" src="images/sunset_3.jpeg" style="width:100%">
     </div>
 
