@@ -112,6 +112,12 @@ div.main {
   margin: 50px 30vw 200px 30vw;
 }
 
+a.ico {
+  text-decoration: none;
+  font-size: 3.5vh;
+  color:black;
+}
+
 @media only screen and (max-device-width: 700px) {
   p {
     text-align:left;
@@ -119,7 +125,7 @@ div.main {
 }
 
 /* put button on bottom on mobile - 1366px */
-@media only screen and (max-device-width: 1366px) {
+@media only screen and (max-device-width: 1360px) {
 
   div.main{
     margin:50px 8vw 200px 8vw;
@@ -184,7 +190,7 @@ div.main {
   <p style="text-align:center"> <!--style="font-size:3vw"> -->
     <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
     <a href="../index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
-    <a href="../personal_info.html" style="font-family:Zen Dots"><button2>career</button2></a>
+    <a href="../personal_info.html" style="font-family:Zen Dots"><button2>cv</button2></a>
     <a href="../album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
     <a href="../blog.html" style="font-family:Zen Dots"><button2>blog</button2></a> 
   </p>
@@ -208,7 +214,7 @@ div.main {
     </p>
     <h3>#plotTwist</h3>
    <figure class="ar">
-      <img class="lands" src="../images/autumn_1_LQ.jpeg" alt="" /> <!-- 150vw -->
+      <img class="lands" src="../images/LQ/autumn_1_LQ.jpeg" alt="" /> <!-- 150vw -->
       <figcaption style="text-align:center;font-family:Zen Dots;color:grey"></br>leaf in Szczecin</figcaption>
    </figure>
    <p>
@@ -235,6 +241,64 @@ div.main {
     <a style="font-size:2.5vh;display:inline-block;text-decoration:none" href="javascript:updateClickCount()">
       <div style="display:inline-block" id="clickCount">0</div> likes
     </a>
+  </div>
+
+  <div style="text-align:center">
+   </br>
+   <p style="font-size:15px;text-align:center;font-family:Zen Dots">Share on :</p>
+   <a class="ico"target="blank "href="#" 
+     onclick="
+      window.open(
+        'https://twitter.com/intent/tweet?text=&url='+encodeURIComponent(location.href)+',%20by%20@paolo_cre' ); 
+      return false;">
+      <i class="fa fa-twitter"></i>
+   </a> 
+&nbsp
+   <a class="ico" target="blank" href="#" 
+      onclick="
+        window.open(
+          'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href)/*, 
+        'facebook-share-dialog', 
+        'width=626,height=436'*/); 
+        return false;">
+        <i class="fa fa-facebook"></i>
+    </a>
+ &nbsp
+
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'https://telegram.me/share/url?text=&url='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-telegram"></i>
+  </a> 
+&nbsp
+
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'whatsapp://send?text='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-whatsapp"></i>
+  </a> 
+&nbsp
+  
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'https://www.reddit.com/submit?title=Blog%20by%20u/paolo_cre&url='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-reddit"></i>
+  </a> 
+&nbsp
+
+  <a class="ico"target="blank "href="#" 
+    onclick="
+      window.open(
+        'mailto:?subject=I found an article you could like from https://paolocremo.github.io/blog.html&amp;body='+encodeURIComponent(location.href) ); 
+      return false;">
+      <i class="fa fa-envelope"></i>
+  </a> 
   </div>
 </div>
 
