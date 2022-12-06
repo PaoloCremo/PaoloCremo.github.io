@@ -42,8 +42,8 @@ dates = [di+(dt*i) for i in cf.index]
 # [print(i) for i in dates]
 
 #%% for 3 months period
-ida = pd.to_datetime('2022-08-13')
-fda = pd.to_datetime('2022-11-13')
+ida = pd.to_datetime('2022-09-04')
+fda = pd.to_datetime('2022-12-04')
 
 for n,i in enumerate(dates):
      if i==ida:
@@ -77,7 +77,8 @@ plt.ylabel('visit #', fontsize=fontsz)
 ax = fig.get_axes()[0]
 legend = ax.legend(framealpha=0., prop={'family': 'monospace', 'size':fontsz})  #title="page name", title_fontsize='xx-large', loc=9 loc='upper center', 
 
-path_fig = path_home+'/Dropbox/PhD/html/web-page/images/page_view.jpg'
+# path_fig = path_home+'/Dropbox/PhD/html/web-page/images/page_view.jpg'
+path_fig = path_home+'/Documents/git/PaoloCremo.github.io/images/page_view.jpg'
 #'''
 plt.savefig(path_fig, dpi=300, format='png', bbox_inches="tight", transparent=True)
 plt.close()
@@ -89,10 +90,10 @@ plt.show()
 
 #%% for single month
 
-month = 'October'
-mn = '10'
+month = 'November'
+mn = '11'
 ida = pd.to_datetime('2022-'+mn+'-01')
-fda = pd.to_datetime('2022-'+mn+'-31')
+fda = pd.to_datetime('2022-'+mn+'-30')
 
 for n,i in enumerate(dates):
      if i==ida:
@@ -144,7 +145,8 @@ for t in legend.get_texts():
 #plt.legend(fontsize=fontssz, framealpha=0., loc='upper left')  # month
 # plt.legend(ncol=3,loc='upper center',bbox_to_anchor=(0.5,1.15),fontsize=fontsz,framealpha=0.)
 
-path_fig = path_home+'/Dropbox/PhD/html/web-page/images/page_view_22'+mn+'.jpg'
+# path_fig = path_home+'/Dropbox/PhD/html/web-page/images/page_view_22'+mn+'.jpg'
+path_fig = path_home+'/Documents/git/PaoloCremo.github.io/images/page_view_22'+mn+'.jpg'
 
 plt.savefig(path_fig, dpi=300, format='png', bbox_inches="tight", transparent=True)
 plt.close()
