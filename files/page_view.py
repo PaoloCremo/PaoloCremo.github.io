@@ -42,8 +42,8 @@ dates = [di+(dt*i) for i in cf.index]
 # [print(i) for i in dates]
 
 #%% for 3 months period
-ida = pd.to_datetime('2022-10-07')
-fda = pd.to_datetime('2023-01-07')
+ida = pd.to_datetime('2022-10-30')
+fda = pd.to_datetime('2023-01-30')
 
 for n,i in enumerate(dates):
      if i==ida:
@@ -88,12 +88,15 @@ plt.show()
 
 # sys.exit(0)
 
-#%% for single month
+######################
+## for single month ##
+######################
 
-month = 'December'
-mn = '12'
-ida = pd.to_datetime('2022-'+mn+'-01')
-fda = pd.to_datetime('2022-'+mn+'-30')
+months = ['January', 'February']
+mn = '01'
+month = months[int(mn)-1] 
+ida = pd.to_datetime('2023-'+mn+'-01')
+fda = pd.to_datetime('2023-'+mn+'-31')
 
 for n,i in enumerate(dates):
      if i==ida:
@@ -146,7 +149,7 @@ for t in legend.get_texts():
 # plt.legend(ncol=3,loc='upper center',bbox_to_anchor=(0.5,1.15),fontsize=fontsz,framealpha=0.)
 
 # path_fig = path_home+'/Dropbox/PhD/html/web-page/images/page_view_22'+mn+'.jpg'
-path_fig = path_home+'/Documents/git/PaoloCremo.github.io/images/page_view_22'+mn+'.jpg'
+path_fig = path_home+'/Documents/git/PaoloCremo.github.io/images/page_view_23'+mn+'.jpg'
 
 plt.savefig(path_fig, dpi=300, format='png', bbox_inches="tight", transparent=True)
 plt.close()
