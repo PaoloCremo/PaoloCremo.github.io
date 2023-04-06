@@ -42,8 +42,8 @@ dates = [di+(dt*i) for i in cf.index]
 # [print(i) for i in dates]
 
 #%% for 3 months period
-ida = pd.to_datetime('2022-10-30')
-fda = pd.to_datetime('2023-01-30')
+ida = pd.to_datetime('2023-01-04')
+fda = pd.to_datetime('2023-04-03')
 
 for n,i in enumerate(dates):
      if i==ida:
@@ -92,8 +92,8 @@ plt.show()
 ## for single month ##
 ######################
 
-months = ['January', 'February']
-mn = '01'
+months = ['January', 'February', 'March']
+mn = '02'
 month = months[int(mn)-1] 
 ida = pd.to_datetime('2023-'+mn+'-01')
 fda = pd.to_datetime('2023-'+mn+'-31')
