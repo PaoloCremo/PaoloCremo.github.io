@@ -133,9 +133,9 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
                latlon=True, linewidth=1.5, 
                color='firebrick')
     m.drawlsmask(land_color='coral',ocean_color='aqua',lakes=True)
-    m.drawcountries(color='k', linewidth=1)
+    m.drawcountries(color='sienna', linewidth=1)
     m.drawstates(color='dimgray', linewidth=1)
-    m.drawcoastlines(color='k')
+    m.drawcoastlines(color='sienna')
     m.scatter(longitude_list, latitude_list, 
                   latlon=True, s=25, color='firebrick')
     texts = []
@@ -145,7 +145,8 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
         if not place in str(texts):
             x,y = m(longitude_list[n], latitude_list[n]) # *1.005)
             # plt.plot(x, y, 'ok', markersize=5)
-            texts.append(plt.text(x, y, place, fontsize=10))
+            texts.append(plt.text(x, y, str(n+1)+'. '+place, fontsize=10, 
+                                  color='k'))
     adjust_text(texts, only_move={'points':'y', 'texts':'y'}, 
                 arrowprops=dict(arrowstyle="->", color='firebrick', lw=0.5))
 
@@ -153,9 +154,8 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
         plt.savefig('data/map.png', bbox_inches='tight', 
                     transparent=True, dpi=400)
     else:
-        # plt.show()
-        return texts
-# make_plot_basemap(34.495207, -114.320239, False)
+        plt.show()
+make_plot_basemap(34.495207, -114.320239, True)
 
 def get_prices(expense='other', print_recap=False):
     # if expense == 'nights':
@@ -179,6 +179,64 @@ def get_prices(expense='other', print_recap=False):
               .format(tn, tp, to, tn+tp+to))
     else:
         return trip_exp_value, total_price
+
+def get_durations(print_all=True):
+    durations_in_minutes = []
+    for duration in trip.travel_time:
+        h,m = duration.split(':')
+        durations_in_minutes.append(int(h)*60+int(m))
+    car_trips = durations_in_minutes[3:-1]
+    total_car_minutes = np.array(car_trips).sum()
+    mean_per_day = total_car_minutes/12
+    hour_min_total = str(total_car_minutes//60) + ':' + str(total_car_minutes%60)
+    hour_min_mean = str(int(mean_per_day//60)) + ':' + str(int(mean_per_day%60))
+    if print_all:
+        print('Total minutes: {}\
+              \nMinutes/day: {}\
+              \nTotal hours: {}\
+              \nHours/day: {}'\
+              .format(total_car_minutes, mean_per_day, hour_min_total, hour_min_mean))
+    else:
+        return total_car_minutes, mean_per_day, hour_min_total, hour_min_mean
+
+def get_daily_info(print_all=True, save=False):
+    start_date = '2023-08-07'
+    end_date = '2023-08-19'
+    current_date = start_date
+    if not print_all:
+        df = pd.DataFrame(columns=['Expenses', 'Time', 'Distance'])
+    while current_date < end_date:
+        year,month,day = current_date.split('-')
+        tomorrow = '{}-{}-{:02}'.format(year,month,int(day)+1)
+        df_day = trip[current_date:tomorrow]
+
+        durations_in_minutes = []
+        for duration in df_day.travel_time:
+            h,m = duration.split(':')
+            durations_in_minutes.append(int(h)*60+int(m))
+        total_car_minutes = np.array(durations_in_minutes).sum()
+        hour_min_total = '{:02}:{:02}'.format(total_car_minutes//60,total_car_minutes%60)
+        if print_all:
+            print('{}\nTotal expenses: {}\
+                \nTotal Travel Time: {}\
+                \nTotal Trave Distance: {}\n'\
+                .format(current_date,
+                        df_day.prices.sum(),
+                        hour_min_total,
+                        df_day.distances.sum()))
+        else:
+            today_df = pd.DataFrame({'Expenses':df_day.prices.sum(),
+                                     'Time':hour_min_total,
+                                     'Distance':df_day.distances.sum()},
+                                     index=[current_date])
+            df = pd.concat((df,today_df))
+        current_date = tomorrow
+    if not print_all and save:
+        df.to_html('data/recap_days.html')
+    else:
+        return df
+df = get_daily_info(False, True)        
+
 
 def main():
     print_itinerary(all=False)
