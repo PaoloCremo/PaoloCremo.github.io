@@ -16,6 +16,7 @@ import geopandas as gpd
 from geopy.geocoders import Nominatim
 from mpl_toolkits.basemap import Basemap
 
+from adjustText import adjust_text
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
@@ -28,7 +29,7 @@ import data.data as data
 # define variables
 
 trip = data.trip
-print(trip)
+# print(trip)
 kmtoml = 1.60934
 dolpermil_tesla = 0.05
 dolpermil_ice = 0.17
@@ -62,6 +63,9 @@ def print_itinerary(all=False):
                         trip.index[n]))
             print('{}\n{}'.format(trip['where'].iloc[n], trip['what'].iloc[n]))
             print(get_lat_long_from_address(trip['where'].iloc[n]))
+    
+    print(trip)
+    
     total_distance = trip['distances'].sum()
     distance_per_day = total_distance/12
     print('\nTotal distance: {} miles - {} miles/day\
@@ -120,8 +124,8 @@ def make_plot(lat=0, long=0, zoom = 3, ptype = 'minimal'):
 # make_plot(34.495207, -114.320239, zoom=7, ptype='gmaps')
 
 
-def make_plot_basemap(lat=0, long=0, save=False):
-    fig = plt.figure(figsize=(10, 8))
+def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
+    fig = plt.figure(figsize=(10, 6))
     m = Basemap(projection='lcc', resolution='f', 
                     lat_0=lat, lon_0=long,
                     width=1.05E6, height=8.E5)
@@ -134,11 +138,47 @@ def make_plot_basemap(lat=0, long=0, save=False):
     m.drawcoastlines(color='k')
     m.scatter(longitude_list, latitude_list, 
                   latlon=True, s=25, color='firebrick')
+    texts = []
+    for n,place in enumerate(trip['where']):
+        if len(place) > 30:
+            place = trip['what'].iloc[n]
+        if not place in str(texts):
+            x,y = m(longitude_list[n], latitude_list[n]) # *1.005)
+            # plt.plot(x, y, 'ok', markersize=5)
+            texts.append(plt.text(x, y, place, fontsize=10))
+    adjust_text(texts, only_move={'points':'y', 'texts':'y'}, 
+                arrowprops=dict(arrowstyle="->", color='firebrick', lw=0.5))
+
     if save:
-        plt.savefig('data/map.png', bbox_inches='tight', transparent=True, dpi=400)
+        plt.savefig('data/map.png', bbox_inches='tight', 
+                    transparent=True, dpi=400)
     else:
-        plt.show()
-# make_plot_basemap(34.495207, -114.320239)
+        # plt.show()
+        return texts
+# make_plot_basemap(34.495207, -114.320239, False)
+
+def get_prices(expense='other', print_recap=False):
+    # if expense == 'nights':
+    expenses = ['Night', 'Park' , 'other']
+    if not expense in expenses :
+        raise ValueError("expense must be one of {}".format(expenses))
+    if expense == 'other':
+        mask = [not ('Park' in whats or 'Night' in whats) for whats in  trip['what'].values]
+    else:
+        mask = [expense in whats for whats in  trip['what'].values]
+    trip_exp_value = trip[mask]
+    total_price = trip_exp_value.prices.sum()
+    if print_recap:
+        _, tn = get_prices('Night', False)
+        _, tp = get_prices('Park', False)
+        _, to = get_prices('other', False)
+        print('Total nights :  {} $\
+             \nTotal parks  :  {} $\
+             \nTotal other  : {} $\
+           \n\nTotal        : {} $'\
+              .format(tn, tp, to, tn+tp+to))
+    else:
+        return trip_exp_value, total_price
 
 def main():
     print_itinerary(all=False)
@@ -147,4 +187,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    # print('Hola')
