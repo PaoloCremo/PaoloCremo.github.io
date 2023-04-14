@@ -155,7 +155,7 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
                     transparent=True, dpi=400)
     else:
         plt.show()
-make_plot_basemap(34.495207, -114.320239, True)
+# make_plot_basemap(34.495207, -114.320239, True)
 
 def get_prices(expense='other', print_recap=False):
     # if expense == 'nights':
@@ -201,10 +201,10 @@ def get_durations(print_all=True):
 
 def get_daily_info(print_all=True, save=False):
     start_date = '2023-08-07'
-    end_date = '2023-08-19'
+    end_date = '2023-08-18'
     current_date = start_date
-    if not print_all:
-        df = pd.DataFrame(columns=['Expenses', 'Time', 'Distance'])
+    # if not print_all:
+    df = pd.DataFrame(columns=['Expenses', 'Time', 'Distance'])
     while current_date < end_date:
         year,month,day = current_date.split('-')
         tomorrow = '{}-{}-{:02}'.format(year,month,int(day)+1)
@@ -235,7 +235,7 @@ def get_daily_info(print_all=True, save=False):
         df.to_html('data/recap_days.html')
     else:
         return df
-df = get_daily_info(False, True)        
+# df = get_daily_info(False, True)        
 
 
 def main():
