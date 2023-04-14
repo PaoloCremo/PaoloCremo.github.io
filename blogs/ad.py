@@ -53,7 +53,7 @@ longitude_list, latitude_list = lat_long_v(trip['where'], to_plot=True)
 
 # prove
 
-def print_itinerary(all=False):
+def print_itinerary(all=False, recap_only=True):
 # for n,where in enumerate(trip['where'].values):
     if all:
         for n in range(len(trip)):
@@ -64,24 +64,25 @@ def print_itinerary(all=False):
             print('{}\n{}'.format(trip['where'].iloc[n], trip['what'].iloc[n]))
             print(get_lat_long_from_address(trip['where'].iloc[n]))
     
-    print(trip)
-    
-    total_distance = trip['distances'].sum()
-    distance_per_day = total_distance/12
-    print('\nTotal distance: {} miles - {} miles/day\
-           \n {:>22} km - {} km/day\
-           \nTotal Time: {}\
-           \nCost Tesla: {:.2f} $ w/ {:.2f} $/mile\
-           \nCost ICE: {:>8.2f} $ w/ {:.2f} $/mile'\
-        .format(total_distance, 
-                distance_per_day,
-                round(total_distance*kmtoml,2), 
-                round(distance_per_day*kmtoml,2), 
-                'TBD',
-                total_distance * dolpermil_tesla,
-                dolpermil_tesla,
-                total_distance * dolpermil_ice,
-                dolpermil_ice))
+    if not recap_only:
+        print(trip)
+    else:
+        total_distance = trip['distances'].sum()
+        distance_per_day = total_distance/12
+        print('\nTotal distance: {} miles - {} miles/day\
+            \n {:>22} km - {} km/day\
+            \nTotal Time: {}\
+            \nCost Tesla: {:.2f} $ w/ {:.2f} $/mile\
+            \nCost ICE: {:>8.2f} $ w/ {:.2f} $/mile'\
+            .format(total_distance, 
+                    distance_per_day,
+                    round(total_distance*kmtoml,2), 
+                    round(distance_per_day*kmtoml,2), 
+                    'TBD',
+                    total_distance * dolpermil_tesla,
+                    dolpermil_tesla,
+                    total_distance * dolpermil_ice,
+                    dolpermil_ice))
 
 def save_itinerary():
     trip.to_html('data/recap_stops.html')
@@ -240,8 +241,13 @@ def get_daily_info(print_all=True, save=False):
 
 def main():
     print_itinerary(all=False)
-    # make_plot_basemap(34.495207, -114.320239)
-    # make_plot()
+    print()
+    make_plot_basemap(34.495207, -114.320239, True)
+    save_itinerary()
+    get_daily_info(save=True, print_all=False)
+    get_durations(print_all=True)
+    print()
+    get_prices(print_recap=True)
 
 if __name__ == "__main__":
     main()
