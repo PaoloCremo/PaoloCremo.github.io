@@ -130,9 +130,16 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
     m = Basemap(projection='lcc', resolution='f', 
                     lat_0=lat, lon_0=long,
                     width=1.05E6, height=8.E5)
-    m.plot(longitude_list, latitude_list, 
-               latlon=True, linewidth=1.5, 
-               color='firebrick')
+    # plot road trips
+    all_trips = get_list_paths()
+    for this_trip in all_trips:
+        m.plot(this_trip[0], this_trip[1],
+               latlon=True, linewidth=1.5,)
+        # m.scatter(this_trip[0][0], this_trip[1][0])
+        # m.scatter(this_trip[0][-1], this_trip[1][-1]) 
+    # m.plot(longitude_list, latitude_list, 
+            #    latlon=True, linewidth=1.5, 
+            #    color='firebrick')
     m.drawlsmask(land_color='coral',ocean_color='aqua',lakes=True)
     m.drawcountries(color='sienna', linewidth=1)
     m.drawstates(color='dimgray', linewidth=1)
@@ -140,6 +147,7 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
     m.scatter(longitude_list, latitude_list, 
                   latlon=True, s=25, color='firebrick')
     texts = []
+        
     for n,place in enumerate(trip['where']):
         if len(place) > 30:
             place = trip['what'].iloc[n]
@@ -156,7 +164,7 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
                     transparent=True, dpi=400)
     else:
         plt.show()
-# make_plot_basemap(34.495207, -114.320239, True)
+# make_plot_basemap(34.495207, -114.320239, False)
 
 def get_prices(expense='other', print_recap=False):
     # if expense == 'nights':
@@ -237,6 +245,19 @@ def get_daily_info(print_all=True, save=False):
     else:
         return df
 # df = get_daily_info(False, True)        
+
+def get_list_paths():
+    all_trips_imported = np.load('data/trip_paths.npy', allow_pickle=True)
+    return all_trips_imported
+
+def plot_paths():
+    all_trips = get_list_paths()
+    plt.figure()
+    for trip in all_trips:
+        plt.plot(trip[0], trip[1])
+        plt.scatter(trip[0][0], trip[1][0])
+        plt.scatter(trip[0][-1], trip[1][-1])
+    plt.show()
 
 
 def main():
