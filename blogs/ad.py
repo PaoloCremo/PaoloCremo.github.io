@@ -21,6 +21,18 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 
+path_home = os.getenv("HOME")
+print('$ %matplotlib inline')
+if 'paolocremonese' in path_home:
+    print("We're on Mac!")
+from matplotlib.ticker import ScalarFormatter
+#To activate 
+print("$ %config InlineBackend.figure_format = 'retina'")
+
+fontSz = 15
+fontsz = 13
+fontssz = 11
+
 import data.data as data
 # %load_ext autoreload
 # %autoreload 2
@@ -107,6 +119,7 @@ def make_plot(lat=0, long=0, zoom = 3, ptype = 'minimal'):
         gmap1.draw('/Users/paolocremonese/Documents/gmplot.html')
     
     elif ptype == 'basemap':
+
         fig = plt.figure(figsize=(8, 8))
         m = Basemap(projection='lcc', resolution='f', 
                     lat_0=lat, lon_0=long,
@@ -122,19 +135,25 @@ def make_plot(lat=0, long=0, zoom = 3, ptype = 'minimal'):
         m.drawcoastlines(color='coral')
         m.scatter(longitude_list, latitude_list, 
                   latlon=True, s=25, color='firebrick')
-# make_plot(34.495207, -114.320239, zoom=7, ptype='gmaps')
 
 
-def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
+def make_plot_basemap(lat=35.2, long=-112.8, save=False):    
     fig = plt.figure(figsize=(10, 6))
     m = Basemap(projection='lcc', resolution='f', 
                     lat_0=lat, lon_0=long,
-                    width=1.05E6, height=8.E5)
+                    width=.8E6, height=7.5E5)
     # plot road trips
+    # cmap = = mpl.cm.get_cmap('Spectral')
+    norm = mpl.colors.Normalize(vmin=0,vmax=len(trip))
+    c_m = mpl.cm.hsv # cool
+    s_m = mpl.cm.ScalarMappable(cmap=c_m, norm=norm)
+    s_m.set_array([])
     all_trips = get_list_paths()
-    for this_trip in all_trips:
+    for nt,this_trip in enumerate(all_trips):
         m.plot(this_trip[0], this_trip[1],
-               latlon=True, linewidth=1.5,)
+               latlon=True, linewidth=1.5,
+               color=s_m.to_rgba(nt),
+               alpha=1, dashes=[1,1])#linestyle='--')
         # m.scatter(this_trip[0][0], this_trip[1][0])
         # m.scatter(this_trip[0][-1], this_trip[1][-1]) 
     # m.plot(longitude_list, latitude_list, 
@@ -143,7 +162,7 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
     m.drawlsmask(land_color='coral',ocean_color='aqua',lakes=True)
     m.drawcountries(color='sienna', linewidth=1)
     m.drawstates(color='dimgray', linewidth=1)
-    m.drawcoastlines(color='sienna')
+    # m.drawcoastlines(color='sienna')
     m.scatter(longitude_list, latitude_list, 
                   latlon=True, s=25, color='firebrick')
     texts = []
@@ -154,8 +173,8 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
         if not place in str(texts):
             x,y = m(longitude_list[n], latitude_list[n]) # *1.005)
             # plt.plot(x, y, 'ok', markersize=5)
-            texts.append(plt.text(x, y, str(n+1)+'. '+place, fontsize=10, 
-                                  color='k'))
+            texts.append(plt.text(x, y, str(n+1)+'. '+place, fontsize=7, 
+                                  color=s_m.to_rgba(n))) # 'k'
     adjust_text(texts, only_move={'points':'y', 'texts':'y'}, 
                 arrowprops=dict(arrowstyle="->", color='firebrick', lw=0.5))
 
@@ -164,7 +183,7 @@ def make_plot_basemap(lat=34.495207, long= -114.320239, save=False):
                     transparent=True, dpi=400)
     else:
         plt.show()
-# make_plot_basemap(34.495207, -114.320239, False)
+# make_plot_basemap(35., -112.8, True)
 
 def get_prices(expense='other', print_recap=False):
     # if expense == 'nights':
