@@ -175,7 +175,7 @@ def make_plot_basemap(lat=35.2, long=-112.8, save=False):
             # plt.plot(x, y, 'ok', markersize=5)
             texts.append(plt.text(x, y, str(n+1)+'. '+place, fontsize=7, 
                                   color=s_m.to_rgba(n))) # 'k'
-    adjust_text(texts, only_move={'points':'y', 'texts':'y'}, 
+    adjust_text(texts, # only_move={'points':'y', 'texts':'y'}, 
                 arrowprops=dict(arrowstyle="->", color='firebrick', lw=0.5))
 
     if save:
@@ -183,7 +183,7 @@ def make_plot_basemap(lat=35.2, long=-112.8, save=False):
                     transparent=True, dpi=400)
     else:
         plt.show()
-# make_plot_basemap(35., -112.8, True)
+# make_plot_basemap(35., -112.8, False)
 
 def get_prices(expense='other', print_recap=False):
     # if expense == 'nights':
@@ -282,7 +282,8 @@ def plot_paths():
 def main():
     print_itinerary(all=False)
     print()
-    make_plot_basemap(34.495207, -114.320239, True)
+    make_plot_basemap(35., -112.8, True)
+    # make_plot_basemap(34.495207, -114.320239, True)
     save_itinerary()
     get_daily_info(save=True, print_all=False)
     get_durations(print_all=True)
