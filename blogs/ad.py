@@ -60,8 +60,13 @@ def get_lat_long_from_address(address, to_plot=False):
 # other variables
 
 lat_long_v = np.vectorize(get_lat_long_from_address)
-longitude_list, latitude_list = lat_long_v(trip['where'], to_plot=True)
-
+longitude_list, latitude_list = lat_long_v(trip['addresses'], to_plot=True)
+# '''
+for add in trip['addresses']:
+    print(add)
+    print(get_lat_long_from_address(add))
+    print()
+# '''
 
 # prove
 
@@ -97,7 +102,7 @@ def print_itinerary(all=False, recap_only=True):
                     dolpermil_ice))
 
 def save_itinerary():
-    trip.to_html('data/recap_stops.html')
+    trip.drop(columns='addresses').to_html('data/recap_stops.html')
 
 def make_plot(lat=0, long=0, zoom = 3, ptype = 'minimal'):
     '''
