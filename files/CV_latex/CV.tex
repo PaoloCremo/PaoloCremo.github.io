@@ -1,0 +1,260 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Twenty Seconds Resume/CV
+% LaTeX Template
+% Version 1.1 (8/1/17)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Vel (vel@LaTeXTemplates.com)
+%
+% License:
+% The MIT License (see included LICENSE file)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+%----------------------------------------------------------------------------------------
+%	 PERSONAL INFORMATION
+%----------------------------------------------------------------------------------------
+
+% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+
+\profilepic{io.jpg} % Profile picture
+
+\cvname{Paolo Cremonese} % Your name
+\cvjobtitle{PostDoc Researcher} % Job title/career
+
+\cvdate{} % Date of birth
+% \vspace{5cm}
+\cvaddress{UIB @ Palma, Spain} % Short address/location, use \newline if more than 1 line is required
+\cvnumberphone{} % Phone number
+\cvsite{\href{https://www.paolocremonese.com}{paolocremonese.com}} % Personal website
+\cvmail{cremoensep25@gmail.com} % Email address
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	 ABOUT ME
+%----------------------------------------------------------------------------------------
+
+\aboutme{I am a PostDoc researcher at the Universitat de las Illes Balears, in Palma, Spain.
+I work on gravitational lensing of gravitational waves.\\
+I am passionate about technologies, data analysis, travelling and learning new things.
+Like, for example, how to create a website! You can find it at \href{https://www.paolocremonese.com}{paolocremonese.com}, with more information about me.} % To have no About Me section, just remove all the text and leave \aboutme{}
+
+%----------------------------------------------------------------------------------------
+%	 SKILLS
+%----------------------------------------------------------------------------------------
+
+% Skill bar section, each skill must have a value between 0 an 6 (float)
+% \skills{{Linux},{Python/}}
+
+%------------------------------------------------
+
+% Skill text section, each skill must have a value between 0 an 6
+\skillstext{
+    {Python},
+    {Linux},
+    {\LaTeX},
+    {Git},
+    {HTML/CSS},
+    {MacOS},
+    {Mathematica},
+    {Slurm},
+    {Apple Keynotes}
+ }
+
+\languages{
+    {Italian {\footnotesize - Mother Tongue}},
+    {English {\footnotesize - Fluent}},
+    {Spanish {\footnotesize - Basics}},
+    {Polish  {\footnotesize - Very Basic}}
+}
+
+\interests{
+    {Gravitational Waves \& Lensing},
+    {Data Analysis}, 
+    % {Technology}, 
+    {Finance and Investments}, 
+    {Sports, Books \& Piano}. 
+}
+
+%----------------------------------------------------------------------------------------
+
+\makeprofile % Print the sidebar
+
+%----------------------------------------------------------------------------------------
+%	 PROJECTS
+%----------------------------------------------------------------------------------------
+
+\section{Projects}
+\quad\\
+\quad\\
+Coming soon.
+%My work consists in \dots . \\
+%In my free time, \dots . \\
+%KEEP IT BRIEF AND CATCHY!
+
+%----------------------------------------------------------------------------------------
+%	 EXPERIENCE
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience}
+
+\begin{twenty} % Environment for a list with descriptions
+    \twentyitem{Current}{PostDoc Researcher}{UIB, Palma, Spain}{Member of LIGO collaboration. \\
+    Working on Lensing of Gravitational Waves}
+	\twentyitem{2018}{Internship as Data Scientist}{DBA Group, Italy}{I worked in a group developing methods and knowledge on how to record and elaborate different type of data, from meteorological to industrial}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 INTERESTS
+%----------------------------------------------------------------------------------------
+
+% \section{Interests}
+% 
+% Gravitational Waves and Lensing. Data Analysis. Technology. Finance and investments. Sports, books and piano. 
+
+%----------------------------------------------------------------------------------------
+%	 EDUCATION
+%----------------------------------------------------------------------------------------
+
+\section{Education}
+
+\begin{twenty} % Environment for a list with descriptions
+	\twentyitem{2022}{Ph.D. {\normalfont in Physics}}{Szczecin, Poland}{\emph{Gravitational lensing of Gravitational Waves}}
+	\twentyitem{2017}{M.Sc. in Astronomy}{Padua \& Stockholm}{}
+	\twentyitem{2015}{B.Sc. in Astronomy}{Padua}{}
+	% \twentyitem{1856-1861}{High school}{Wonderland}{Specializing in mathematics and physics.}
+	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+\end{twenty}
+
+%----------------------------------------------------------------------------------------
+%	 PUBLICATIONS
+%----------------------------------------------------------------------------------------
+
+\section{Main Publications}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	% \twentyitemshort{}{Follow-up Analyses to the O3 LIGO-Virgo-KAGRA Lensing Searches}
+	\twentyitemshort{\#4}{Characteristic features of Gravitational Wave lensing as probe of lens mass model}
+	\twentyitemshort{\#3}{Breaking the mass-sheet degeneracy with gravitational wave interference in lensed events}
+	\twentyitemshort{\#2}{High accuracy on H₀ measurements from gravitational wave lensing events}
+	\twentyitemshort{\#1}{The lensing time delay between gravitational and electromagnetic waves}
+	%\twentyitemshort{<dates>}{<title/description>}
+\end{twentyshort}
+\quad\\
+{\footnotesize The complete list at \href{https://inspirehep.net/authors/1859874}{inspirehep.net}}
+
+%----------------------------------------------------------------------------------------
+%	 MENTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Mentions}
+
+\begin{twentyshort} % Environment for a short list with no descriptions
+	\twentyitemshort{\#2}{Top ArXiv papers from week15, 2021 - S.Vagnozzi \href{https://www.sunnyvagnozzi.com/blog/top-arxiv-week-15-2021}{Linktoarticle}}
+    \twentyitemshort{\#1}{Constraining the Hubble Constant with Lensed Gravitational Wave Events - K. Shin - 2019 - \href{https://astrobites.org/2019/12/02/constraining-the-hubble-constant-with-lensed-gravitational-wave-events/}{Link to article}
+    }
+\end{twentyshort}
+
+%----------------------------------------------------------------------------------------
+%	 CONFERENCES AND SCHOOLS
+%----------------------------------------------------------------------------------------
+
+\section{Main Conferences}
+\subsection{Talks \& Posters}
+\iffalse
+\begin{itemize}
+    \item \textbf{``Wave-optics in Gravitational Waves lensed events''} @ UIB Relativity and Gravity group seminar, 2021/11 
+    \item \textbf{Presented paper \#3} @ GWverse, 2021/09; 
+                                         Gravitex 2021, 2021/08;
+                                         COSMO '21, 2021/08;
+                                         Amaldi 14, 2021/07
+                                         Cosmology from Home, 2021/07;
+                                         Ibericos 2021/04
+    \item \textbf{Presented paper \#2} @ Cosmoc controversies, 2019/10
+    \item \textbf{Member of organizing commitee} @ The 6th Conference of the Polish Society on Relativity, 2019/09
+\end{itemize}
+\fi
+$\bullet$ \textbf{``Wave-optics in Gravitational Waves lensed events''} @ UIB Relativity and Gravity group seminar, 2021/11\\
+$\bullet$ \textbf{Presented paper \#3} @ GWverse, 2021/09; 
+    Gravitex 2021, 2021/08;
+    COSMO '21, 2021/08;
+    Amaldi 14, 2021/07
+    Cosmology from Home, 2021/07;
+    Ibericos 2021/04
+    \\
+$\bullet$ \textbf{Presented paper \#2} @ Cosmoc controversies, 2019/10\\
+$\bullet$ \textbf{Member of organizing commitee} @ The 6th Conference of the Polish Society on Relativity, 2019/09
+
+
+\subsection{Participation}
+{\small
+    \textbf{LVK meeting}, 2023/03 - 
+    \textbf{12$^{\rm th}$ Iberian Gravitational Waves Meeting}, 2022/06 - 
+    \textbf{The 16$^{\rm th}$ Iberian Cosmology Meeting}, 2022/05 - 
+    \textbf{XIV Tonale Winter School on Cosmology}, 2021/12 - 
+    \textbf{4$^{\rm th}$ Azores school on Observational Cosmology}, 2021/09 - 
+    % \textbf{AlteCosmoFun '21}, 2021/09 
+    \textbf{GW Open Data Workshop \#4}, 2021/05 - 
+    \textbf{11$^{\rm th}$ Iberian Gravitational Waves Meeting}, 2021/06 -  
+    \textbf{Workshop on Gravitational Wave Astrophysics for Early Career Scientists}, 2021/05 - 
+    \textbf{First EuCAPT Annual Symposium}, May 2021 - 
+    \textbf{Current challenges in gravitational physics}, April 2021 - 
+    % \textbf{Ibericos 2021}, 2021/03 - 
+    \textbf{IPARCOS School on Cosmology}, 2019/12 - 
+    \textbf{XIII Tonale Winter School on Cosmology}, December 2019
+    % \textbf{Cosmic controversies}, 2019/10 
+    %\textbf{The 6th Conference of the Polish Society on Relativity}, September 2019
+}
+
+{\footnotesize The complete list with slides and link to conferences at \href[pdfnewwindow=true]{https://www.paolocremonese.com/CV.html#conferences}{paolocremonese.com/CV}}
+
+%----------------------------------------------------------------------------------------
+%	 OTHER INFORMATION
+%----------------------------------------------------------------------------------------
+
+% \section{Other information}
+% 
+% \subsection{Review}
+% 
+% ???
+
+%----------------------------------------------------------------------------------------
+%	 SECOND PAGE EXAMPLE
+%----------------------------------------------------------------------------------------
+
+%\newpage % Start a new page
+
+%\makeprofile % Print the sidebar
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%\section{Other information}
+
+%\subsection{Review}
+
+%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
+
+%----------------------------------------------------------------------------------------
+
+\end{document} 
