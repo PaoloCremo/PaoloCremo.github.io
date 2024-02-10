@@ -160,7 +160,7 @@
 
 		%------------------------------------------------
 
-		{\Huge\color{mainblue}\cvname}
+		{\LARGE\color{mainblue}\cvname} %Huge
 
 		%------------------------------------------------
 
@@ -174,7 +174,7 @@
 			\ifthenelse{\equal{\cvaddress}{}}{}{\textsc{\Large\icon{\Letter}} & \cvaddress\\}
 			\ifthenelse{\equal{\cvnumberphone}{}}{}{\textsc{\Large\icon{\Telefon}} & \cvnumberphone\\}
 			\ifthenelse{\equal{\cvsite}{}}{}{\textsc{\Large\icon{\Mundus}} & \cvsite\\} % 
-			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large\icon{@}} & \href{mailto:\cvmail}{\cvmail}\\}
+			\ifthenelse{\equal{\cvmail}{}}{}{\textsc{\Large\icon{@}} & \href{mailto:cremonesep25@gmail.com}{\cvmail}\\}
 			\ifthenelse{\equal{\gitpage}{}}{}{\textsc{\large\icon{\faGithub}} & \gitpage} % 
 		\end{tabular}
 
