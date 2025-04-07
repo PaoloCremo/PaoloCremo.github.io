@@ -72,11 +72,23 @@ body {
     line-height: 2;
 }
 
+.description a{
+    text-decoration: none;
+    color: var(--secondary-color); /* Primary color for links */
+}
+
+.description a:hover {
+    /* color: #8f1402; */
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 2px 4px; 
+    border-radius: 4px; 
+}
+
 /* Navigation */
 .navigation {
     display: flex; /* Use Flexbox for centering */
     justify-content: center; /* Center navigation items vertically */
-    /* margin: 20px 0; */
     align-items: center; /* Center navigation items horizontally */
 }
 
@@ -100,7 +112,10 @@ body {
 }
 
 .navigation a:hover {
-    text-decoration: underline;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 
 /* Footer */
@@ -125,7 +140,10 @@ body {
 }
 
 .about-link:hover {
-    text-decoration: underline;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 
 .social-links {
@@ -141,7 +159,10 @@ body {
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+    background-color: var(--primary-color);
+    color: var(--dark-bg);
+    padding: 2px 4px; 
+    border-radius: 4px; 
 }
 
 .fade-out {
@@ -188,7 +209,6 @@ Media Queries for Mobile Optimization
         margin-top: 20px; 
         margin-bottom: 20px; 
         background-color:
-            /* rgba(236,144,5.,);Slightly darker readability */
             rgba(0, 0, 0, 0); /* Semi-transparent overlay for readability */
         
 }
