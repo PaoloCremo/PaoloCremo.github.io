@@ -13,12 +13,14 @@
 html, body {
     height: 100%;
     display: flex;
-    flex-direction: column;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 body {
     margin: 0;
-        font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
     color: var(--text-color);
     justify-content: center;
     align-items: center;
@@ -34,8 +36,7 @@ body {
 .container {
     display: flex; /* Use Flexbox inside the container */
     flex-direction: column; /* Stack content vertically */
-    flex: 1;
-    justify-content: space-evenly; /* Center content vertically */
+    justify-content: center; /* space-evenly; /* Center content vertically */
     align-items: center;
     min-height: 100vh;
     text-align: center;
@@ -44,12 +45,13 @@ body {
 
 /* Header */
 .main-header {
-    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center; /* Center content vertically */
     align-items: center; /* Center content horizontally */
     text-align: center;
+    margin-top: 25%;
+    margin-bottom: 15%;
 }
 
 .main-header h1 {
@@ -74,7 +76,7 @@ body {
 .navigation {
     display: flex; /* Use Flexbox for centering */
     justify-content: center; /* Center navigation items vertically */
-    margin: 20px 0;
+    /* margin: 20px 0; */
     align-items: center; /* Center navigation items horizontally */
 }
 
@@ -105,8 +107,42 @@ body {
 .footer {
     text-align: center;
     padding: 10px 0;
+    font-size: 0.75rem;
 }
 
+.about-socials {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-link {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
 /* Media Queries for Mobile Optimization */
 @media (max-width: 768px) {
     
@@ -142,11 +178,17 @@ body {
         color: var(--primary-color); /* Makes the fill transparent #B85042 */
         -webkit-text-stroke: 3px transparent; /* Adds a cyan outline to the text */
     }
+    .main-header {
+        margin-top: 60%; 
+        margin-bottom: 35%;
+        
+    }
 
     .main-header h1 {
         font-size: 3rem; /* Reduce title size on smaller screens */
         line-height: 1.2; /* Adjust line height for better spacing on mobile devices */
         -webkit-text-stroke-width: 1.5px; /* Thin out the text stroke slightly for better scaling on small screens */
+        
     }
 
     .description {
@@ -155,7 +197,13 @@ body {
         margin-bottom: 15px; /* Add spacing below the description text */
         color: var(--secondary-color); /* Ensure consistent color */
 }
-    
+   .navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+
     .navigation a {
     text-decoration: none;
     color: var(--primary-color); /* Primaryvar(--primary-color)or for links */
