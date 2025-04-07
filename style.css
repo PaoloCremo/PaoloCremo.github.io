@@ -2,7 +2,7 @@
 :root {
     --primary-color: silver;
     --secondary-color: white;
-    --background-img: url('images/HQ/IMG_4024.png'); /* Replace with your image path */
+    --background-img: url('images/HQ/antelope.png'); /* Replace with your image path */
     --dark-bg: #121212;
     --overlay-color: rgba(0, 0, 0, 0.15);
     --overlay-color-media: rgba(0, 0, 0, 0.5);
