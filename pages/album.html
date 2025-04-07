@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <head>
 <title>Album</title>
-<link rel="icon" href= "images/LQ/autumn_1_LQ.jpeg"> 
+<link rel="icon" href= "../images/LQ/autumn_1_LQ.jpeg"> 
 <link rel="preconnect" href="https://fonts.gstatic.com"> 
 <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
@@ -15,7 +15,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:fb="http://ogp.me/ns/fb#">
 
-<meta property="og:image" content="images/LQ/sunset_3_LQ.jpeg" />
+<meta property="og:image" content="../images/LQ/sunset_3_LQ.jpeg" />
 <meta property="og:description" content="Take a look at my pictures" />
 
 <!-- preview twitter -->
@@ -124,15 +124,16 @@ clear: both;
 }
 
 .mySlides {
- <!-- display: none; -->
+ /* display: none; */
   display: grid;
   height: 100%;
 }
-
+/*
 {
             margin: 0;
             padding: 0;
         }
+*/
         .imgbox {
             display: grid;
             height: 100%;
@@ -219,7 +220,7 @@ img.hover-shadow {
 }
 
 nav.bottom {
-  background-image: url("images/space.jpg");
+  background-image: url("../images/space.jpg");
   background-color: rgba(255,255,255,0.2);
   background-blend-mode: lighten;
   /* 
@@ -267,13 +268,13 @@ button2 {
 
 <nav class="bottom">
   <p style="margin:0.4vh 0 2vh 0;font-size:3vh">
-    <a href="index.html" style="font-family:Zen Dots"><button2>home</button2></a>
-    <a href="index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
-    <a href="CV.html" style="font-family:Zen Dots"><button2>cv</button2></a>
+    <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a>
+    <a href="../index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
+    <a href="../CV.html" style="font-family:Zen Dots"><button2>cv</button2></a>
     <a href="blog.html" style="font-family:Zen Dots"><button2>blog</button2></a>
   </p>
 </nav>
-<div style="font-family:Antonio;text-align:center;background-image:url('images/HQ/scotland_BN.jpeg');background-position:30% 55%;background-size:cover">
+<div style="font-family:Antonio;text-align:center;background-image:url('../images/HQ/scotland_BN.jpeg');background-position:30% 55%;background-size:cover">
 &nbsp
 <h2>My album</h2>
 <p style="color:white">
@@ -286,39 +287,39 @@ Click on the image for full view high resolution and info!</p>
 <div class="row">
   <div class="column"> <!-- red -->
     <!--center style="font-family:Zen Dots;color:#C22600"> r e d </center-->
-    <img src="images/LQ/sunset_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
-    <img src="images/LQ/sunset_4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
-    <img src="images/LQ/lisbon-lights.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
-    <img src="images/LQ/duck.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
-    <img src="images/LQ/moon_2_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
+    <img src="../images/LQ/sunset_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <img src="../images/LQ/sunset_4.jpg" style="width:100%" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <img src="../images/LQ/lisbon-lights.jpg" style="width:100%" onclick="openModal();currentSlide(9)" class="hover-shadow cursor">
+    <img src="../images/LQ/duck.jpg" style="width:100%" onclick="openModal();currentSlide(12)" class="hover-shadow cursor">
+    <img src="../images/LQ/moon_2_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(16)" class="hover-shadow cursor">
   </div>
     
   <div class="column"> <!-- yellow -->
     <!--center style="font-family:Zen Dots;color:#F5C300"> y e l l o w </center-->
-    <img src="images/LQ/autumn_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"> 
-    <img src="images/LQ/tram.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
-    <img src="images/LQ/sunset_3_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
-    <img src="images/LQ/sunset_5.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
-    <img src="images/LQ/zakopane_or.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
-    <img src="images/LQ/fox_oslo_LQ.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
+    <img src="../images/LQ/autumn_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor"> 
+    <img src="../images/LQ/tram.jpg" style="width:100%" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    <img src="../images/LQ/sunset_3_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(10)" class="hover-shadow cursor">
+    <img src="../images/LQ/sunset_5.jpg" style="width:100%" onclick="openModal();currentSlide(13)" class="hover-shadow cursor">
+    <img src="../images/LQ/zakopane_or.jpg" style="width:100%" onclick="openModal();currentSlide(17)" class="hover-shadow cursor">
+    <img src="../images/LQ/fox_oslo_LQ.jpg" style="width:100%" onclick="openModal();currentSlide(18)" class="hover-shadow cursor">
   </div>
 
   <div class="column"> <!-- green -->
     <!--center style="font-family:Zen Dots;color:#375300"> g r e e n </center-->
-    <img src="images/LQ/temple.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
-    <img src="images/LQ/karpacz.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
-    <img src="images/LQ/xmaslights_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
-    <img src="images/LQ/xmaslights_2_LQ.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
+    <img src="../images/LQ/temple.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <img src="../images/LQ/karpacz.jpg" style="width:100%" onclick="openModal();currentSlide(7)" class="hover-shadow cursor">
+    <img src="../images/LQ/xmaslights_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(14)" class="hover-shadow cursor">
+    <img src="../images/LQ/xmaslights_2_LQ.jpg" style="width:100%" onclick="openModal();currentSlide(19)" class="hover-shadow cursor">
   </div>
 
   <div class="column"> <!-- blue -->
     <!--center style="font-family:Zen Dots;color:#003082"> b l u e </center> <!-- 003082 -->
-    <img src="images/LQ/scotland_BN.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
-    <img src="images/LQ/the-old-man_and_the-lagoon.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
-    <img src="images/LQ/sunset_2_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
-    <img src="images/LQ/moon_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
-    <img src="images/LQ/ny_1.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
-    <img src="images/LQ/moon_3_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
+    <img src="../images/LQ/scotland_BN.jpeg" style="width:100%" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <img src="../images/LQ/the-old-man_and_the-lagoon.jpg" style="width:100%" onclick="openModal();currentSlide(8)" class="hover-shadow cursor">
+    <img src="../images/LQ/sunset_2_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(11)" class="hover-shadow cursor">
+    <img src="../images/LQ/moon_1_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(15)" class="hover-shadow cursor">
+    <img src="../images/LQ/ny_1.jpg" style="width:100%" onclick="openModal();currentSlide(20)" class="hover-shadow cursor">
+    <img src="../images/LQ/moon_3_LQ.jpeg" style="width:100%" onclick="openModal();currentSlide(21)" class="hover-shadow cursor">
   </div>
 
 
@@ -330,107 +331,107 @@ Click on the image for full view high resolution and info!</p>
 
     <div class="mySlides">
       <div class="numbertext">1 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/sunset_1.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/sunset_1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">2 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/autumn_1.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/autumn_1.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">3/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/temple.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/temple.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">4/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/scotland_BN.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/scotland_BN.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">5/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/sunset_4.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/sunset_4.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">6/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/tram.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/tram.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">7/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/karpacz.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/karpacz.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">8 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit"src="images/HQ/the-old-man_and_the-lagoon.jpeg" style="width:100%">
+      <img class="center-fit"src="../images/HQ/the-old-man_and_the-lagoon.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">9/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/lisbon-lights.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/lisbon-lights.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">10/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/sunset_3.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/sunset_3.jpeg" style="width:100%">
     </div>
   
     <div class="mySlides">
       <div class="numbertext">11 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/sunset_2.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/sunset_2.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">12/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/duck.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/duck.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">13/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/sunset_5.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/sunset_5.jpeg" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">14 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/xmaslights_1.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/xmaslights_1.jpeg" style="width:100%">
     </div>   
    
     <div class="mySlides">
       <div class="numbertext">15/ <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/moon_1.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/moon_1.jpeg" style="width:100%">
     </div>   
 
     <div class="mySlides">
 	    <div class="numbertext">16 / <script type="text/javascript">document.write(number) </script></div> 
-      <img class="center-fit" src="images/HQ/moon_2.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/moon_2.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">17 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/zakopane_or.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/zakopane_or.jpeg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">18 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/fox_oslo.jpg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/fox_oslo.jpg" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">19 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/xmaslights_2.jpg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/xmaslights_2.jpg" style="width:100%">
     </div>
     
     <div class="mySlides">
       <div class="numbertext">20 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/ny_1.jpg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/ny_1.jpg" style="width:100%">
     </div>
 
     <div class="mySlides">
       <div class="numbertext">20 / <script type="text/javascript">document.write(number) </script></div>
-      <img class="center-fit" src="images/HQ/moon_3.jpeg" style="width:100%">
+      <img class="center-fit" src="../images/HQ/moon_3.jpeg" style="width:100%">
     </div>
  
 
@@ -442,87 +443,87 @@ Click on the image for full view high resolution and info!</p>
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/sunset_1_LQ.jpeg" style="width:100%" onclick="currentSlide(1)" alt="sunset #2, 01/2021 @Rovarè - &copy PC">
+      <img class="demo cursor" src="../images/LQ/sunset_1_LQ.jpeg" style="width:100%" onclick="currentSlide(1)" alt="sunset #2, 01/2021 @Rovarè - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/autumn_1_LQ.jpeg" style="width:100%" onclick="currentSlide(2)" alt="autumn #1, 11/2020 @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/autumn_1_LQ.jpeg" style="width:100%" onclick="currentSlide(2)" alt="autumn #1, 11/2020 @Szczecin - &copy PC">
     </div>
  
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/temple.jpg" style="width:100%" onclick="currentSlide(3)" alt="temple #1, 04/2021 @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/temple.jpg" style="width:100%" onclick="currentSlide(3)" alt="temple #1, 04/2021 @Szczecin - &copy PC">
     </div>   
      
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/scotland_BN.jpeg" style="width:100%" onclick="currentSlide(4)" alt="highlands #1, 09/2022 @Scotland - &copy PC">
+      <img class="demo cursor" src="../images/LQ/scotland_BN.jpeg" style="width:100%" onclick="currentSlide(4)" alt="highlands #1, 09/2022 @Scotland - &copy PC">
     </div>   
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/sunset_4.jpg" style="width:100%" onclick="currentSlide(5)" alt="sunset #4, 10/2021 @Palma - &copy PC">
+      <img class="demo cursor" src="../images/LQ/sunset_4.jpg" style="width:100%" onclick="currentSlide(5)" alt="sunset #4, 10/2021 @Palma - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/tram.jpg" style="width:100%" onclick="currentSlide(6)" alt="tram #1, 05/2021 @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/tram.jpg" style="width:100%" onclick="currentSlide(6)" alt="tram #1, 05/2021 @Szczecin - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/karpacz.jpg" style="width:100%" onclick="currentSlide(7)" alt="misty waters #1, 06/2021 @Karpacz - &copy PC">
+      <img class="demo cursor" src="../images/LQ/karpacz.jpg" style="width:100%" onclick="currentSlide(7)" alt="misty waters #1, 06/2021 @Karpacz - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/the-old-man_and_the-lagoon.jpg" style="width:100%" onclick="currentSlide(8)" alt="the old man and the lagoon, 09/2021 @Venezia - &copy PC">
+      <img class="demo cursor" src="../images/LQ/the-old-man_and_the-lagoon.jpg" style="width:100%" onclick="currentSlide(8)" alt="the old man and the lagoon, 09/2021 @Venezia - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/lisbon-lights.jpg" style="width:100%" onclick="currentSlide(9)" alt="lights #1, 09/2021 @Lisbon - &copy PC">
+      <img class="demo cursor" src="../images/LQ/lisbon-lights.jpg" style="width:100%" onclick="currentSlide(9)" alt="lights #1, 09/2021 @Lisbon - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/sunset_3_LQ.jpeg" style="width:100%" onclick="currentSlide(10)" alt="sunset #3, 02/2021 @Zakopane - &copy PC">
+      <img class="demo cursor" src="../images/LQ/sunset_3_LQ.jpeg" style="width:100%" onclick="currentSlide(10)" alt="sunset #3, 02/2021 @Zakopane - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/sunset_2_LQ.jpeg" style="width:100%" onclick="currentSlide(11)" alt="sunset #1, 11/2020 @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/sunset_2_LQ.jpeg" style="width:100%" onclick="currentSlide(11)" alt="sunset #1, 11/2020 @Szczecin - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/duck.jpg" style="width:100%" onclick="currentSlide(12)" alt="Duck, 09/2021 @Sirmione - &copy PC">
+      <img class="demo cursor" src="../images/LQ/duck.jpg" style="width:100%" onclick="currentSlide(12)" alt="Duck, 09/2021 @Sirmione - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/sunset_5.jpg" style="width:100%" onclick="currentSlide(13)" alt="sunset #5, 10/2021 @Palma - &copy PC">
+      <img class="demo cursor" src="../images/LQ/sunset_5.jpg" style="width:100%" onclick="currentSlide(13)" alt="sunset #5, 10/2021 @Palma - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/xmaslights_1_LQ.jpeg" style="width:100%" onclick="currentSlide(14)" alt="xmas lights #2, 12/2020 @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/xmaslights_1_LQ.jpeg" style="width:100%" onclick="currentSlide(14)" alt="xmas lights #2, 12/2020 @Szczecin - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/moon_1_LQ.jpg" style="width:100%" onclick="currentSlide(15)" alt="moon #3, 01/2021 @Rovarè - &copy PC">
+      <img class="demo cursor" src="../images/LQ/moon_1_LQ.jpg" style="width:100%" onclick="currentSlide(15)" alt="moon #3, 01/2021 @Rovarè - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/moon_2_LQ.jpeg" style="width:100%" onclick="currentSlide(16)" alt="moon #1, 01/2020  @Rovarè - &copy PC">
+      <img class="demo cursor" src="../images/LQ/moon_2_LQ.jpeg" style="width:100%" onclick="currentSlide(16)" alt="moon #1, 01/2020  @Rovarè - &copy PC">
     </div>
      
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/zakopane_or.jpg" style="width:100%" onclick="currentSlide(17)" alt="fox, 02/2021  @Zakopane - &copy PC">
+      <img class="demo cursor" src="../images/LQ/zakopane_or.jpg" style="width:100%" onclick="currentSlide(17)" alt="fox, 02/2021  @Zakopane - &copy PC">
     </div>   
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/fox_oslo_LQ.jpg" style="width:100%" onclick="currentSlide(18)" alt="fox, 03/2020  @Oslo - &copy PC">
+      <img class="demo cursor" src="../images/LQ/fox_oslo_LQ.jpg" style="width:100%" onclick="currentSlide(18)" alt="fox, 03/2020  @Oslo - &copy PC">
     </div>
 
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/xmaslights_2_LQ.jpg" style="width:100%" onclick="currentSlide(19)" alt="xmas lights #1, 12/2019  @Bassano - &copy PC">
+      <img class="demo cursor" src="../images/LQ/xmaslights_2_LQ.jpg" style="width:100%" onclick="currentSlide(19)" alt="xmas lights #1, 12/2019  @Bassano - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/ny_1.jpg" style="width:100%" onclick="currentSlide(20)" alt="Sky line #1, 09/2019  @New York - &copy PC">
+      <img class="demo cursor" src="../images/LQ/ny_1.jpg" style="width:100%" onclick="currentSlide(20)" alt="Sky line #1, 09/2019  @New York - &copy PC">
     </div>
     
     <div class="columns">
-      <img class="demo cursor" src="images/LQ/moon_3_LQ.jpeg" style="width:100%" onclick="currentSlide(21)" alt="moon #2, 11/2020  @Szczecin - &copy PC">
+      <img class="demo cursor" src="../images/LQ/moon_3_LQ.jpeg" style="width:100%" onclick="currentSlide(21)" alt="moon #2, 11/2020  @Szczecin - &copy PC">
     </div>
 
 </div>
