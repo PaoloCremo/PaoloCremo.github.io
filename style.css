@@ -1,0 +1,231 @@
+/* General Styles */
+:root {
+    --primary-color: silver;
+    --secondary-color: white;
+    --background-img: url('images/HQ/antelope.png'); /* Replace with your image path */
+    --dark-bg: #121212;
+    --overlay-color: rgba(0, 0, 0, 0.15);
+    --overlay-color-media: rgba(0, 0, 0, 0.5);
+    --text-color: #e0e0e0;
+    --accent-color: #BB86FC;
+}
+
+html, body {
+    height: 100%;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color);
+    justify-content: center;
+    align-items: center;
+
+    /* Background Image */
+    background-image: linear-gradient(var(--overlay-color), var(--overlay-color)), var(--background-img);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* Container */
+.container {
+    display: flex; /* Use Flexbox inside the container */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: center; /* space-evenly; /* Center content vertically */
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;     
+}
+
+/* Header */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+    margin-top: 25%;
+    margin-bottom: 15%;
+}
+
+.main-header h1 {
+    font-size: 5rem;
+    margin: 0;
+}
+
+/* Outlined Text Effect */
+.outlined-text {
+    color: transparent; /* Makes the fill transparent */
+    -webkit-text-stroke: 2px var(--primary-color); /* Adds an outline to the text */
+}
+
+/* Description */
+.description {
+    font-size: 1rem;
+    color: var(--secondary-color); /* Muted color for the description */
+    line-height: 2;
+}
+
+/* Navigation */
+.navigation {
+    display: flex; /* Use Flexbox for centering */
+    justify-content: center; /* Center navigation items vertically */
+    /* margin: 20px 0; */
+    align-items: center; /* Center navigation items horizontally */
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation li {
+    display: inline-block;
+    margin: 10px 15px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.75rem;
+}
+
+.about-socials {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.about-link {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.about-link:hover {
+    text-decoration: underline;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-links a {
+    font-size: 1rem;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.fade-out {
+    opacity: 0.2;
+    transition: opacity 1.5s; /*ease-in-out;*/
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+
+
+
+
+
+/* 
+Media Queries for Mobile Optimization 
+*/
+
+@media (max-width: 768px) {
+    
+    body {
+        padding-top: 20px; /* Add padding for smaller screens */
+        overflow-y: auto; /* Enable scrolling if necessary */
+
+        /* Background Image adjustments for mobile screens */
+        background-image:
+            linear-gradient(var(--overlay-color-media), var(--overlay-color-media)),
+            var(--background-img);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        text-align: center; /* Center-align text on mobile */
+        overflow-y: auto; /* Enable scrolling if necessary */
+    }
+
+    .container {
+        max-width: 90%; /* Fit smaller screens better */
+        padding: 15px; 
+        border-radius: 5px; 
+        margin-top: 20px; 
+        margin-bottom: 20px; 
+        background-color:
+            /* rgba(236,144,5.,);Slightly darker readability */
+            rgba(0, 0, 0, 0); /* Semi-transparent overlay for readability */
+        
+}
+
+    .outlined-text {
+        color: var(--primary-color); /* Makes the fill transparent #B85042 */
+        -webkit-text-stroke: 3px transparent; /* Adds a cyan outline to the text */
+    }
+    .main-header {
+        margin-top: 60%; 
+        margin-bottom: 35%;
+        
+    }
+
+    .main-header h1 {
+        font-size: 3rem; /* Reduce title size on smaller screens */
+        line-height: 1.2; /* Adjust line height for better spacing on mobile devices */
+        -webkit-text-stroke-width: 1.5px; /* Thin out the text stroke slightly for better scaling on small screens */
+        
+    }
+
+    .description {
+        font-size: 0.9rem; /* Slightly reduce description size on mobile devices */
+        line-height: 2; /* Adjust line height for readability on smaller screens */
+        margin-bottom: 15px; /* Add spacing below the description text */
+        color: var(--secondary-color); /* Ensure consistent color */
+}
+   .navigation ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 8px;
+}
+
+    .navigation a {
+    text-decoration: none;
+    color: var(--primary-color); /* Primaryvar(--primary-color)or for links */
+    font-size: 1rem;
+}
+}
