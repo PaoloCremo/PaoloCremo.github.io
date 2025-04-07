@@ -51,5 +51,37 @@
             <p>&copy; 2025 Paolo Cremonese. All Rights Reserved.</p>
         </footer>
     </div>
+
+
+
+    <script>
+        let timeout;
+        
+        function fadeOutText() {
+            const elements = document.querySelectorAll('nav, div.about-socials, footer, p.description');
+            elements.forEach(el => {
+                el.classList.add('fade-out');
+                el.classList.remove('fade-in')
+        });
+            // element.forEach(el => el.classList.remove('fade-in'));
+        }
+        
+        function fadeInText() {
+            const elements = document.querySelectorAll('nav, div.about-socials, footer, p.description');
+            // elements.forEach(el => el.classList.add('fade-in'));
+            elements.forEach(el => {
+                el.classList.add('fade-in');
+                el.classList.remove('fade-out');
+        })
+        }
+        
+        // Initial fade-in effect
+        document.addEventListener('mousemove', () => {
+            clearTimeout(timeout);
+            fadeInText();
+            timeout = setTimeout(fadeOutText, 3000); // 3 seconds
+        });
+
+    </script>
 </body>
 </html>

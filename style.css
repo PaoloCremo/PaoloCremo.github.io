@@ -143,7 +143,26 @@ body {
 .social-links a:hover {
     text-decoration: underline;
 }
-/* Media Queries for Mobile Optimization */
+
+.fade-out {
+    opacity: 0.2;
+    transition: opacity 1.5s; /*ease-in-out;*/
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1.5s;
+}
+
+
+
+
+
+
+/* 
+Media Queries for Mobile Optimization 
+*/
+
 @media (max-width: 768px) {
     
     body {
