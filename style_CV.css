@@ -144,3 +144,33 @@ footer {
   color: #777;
   margin-top: 2rem;
 }
+
+.details {
+  /* display: block; */
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.3rem;
+  /* font-size: 0.8em; 
+  margin-left: 10px; 
+  vertical-align: middle; Aligns the text vertically with the title */
+}
+
+.two-columns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px; /* Adjust spacing between columns and rows */
+  list-style: none;
+  padding: 0;
+}
+
+.two-columns li {
+  margin: 0;
+}
+
+.two-columns .item {
+  /* border: 1px solid #ddd;  */
+  box-shadow: 0 0 5px #00ffe1a0;
+  padding: 10px;
+  border-radius: 5px;
+  /* background-color: #f9f9f9;  */
+}

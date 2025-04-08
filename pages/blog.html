@@ -1,330 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Blog</title>
-<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
-<link rel="icon" href= "https://www.miseancara.ie/wp-content/uploads/2018/08/Blog-Icon.png"> 
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0">
+    <title>Blog</title>
+    <link rel="icon" href="https://www.miseancara.ie/wp-content/uploads/2018/08/Blog-Icon.png">
+    <link rel="stylesheet" href="../style_projects.css">
+    <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@100&family=Zen+Dots&display=swap" rel="stylesheet">
 
-<!-- preview FB -->
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
+    <!-- preview FB -->
+    <html xmlns="http://www.w3.org/1999/xhtml"
+          xmlns:fb="http://ogp.me/ns/fb#">
 
-<meta property="og:image" content="../images/io_berlin.jpg" />
-<meta property="og:description" content="My stories, thoughts, hobbies, biases. Updates on my career and work" />
+    <meta property="og:image" content="../images/io_berlin.jpg" />
+    <meta property="og:description" content="My stories, thoughts, hobbies, biases. Updates on my career and work" />
 
-<!-- preview twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="tiwtter:creator" content="@paolo_cre" />
-<meta property="twitter:title" content="Blog">
-<meta property="twitter:image" content="https://paolocremo.github.io/images/io_berlin.jpg" />
-<meta property="twitter:description" content="My stories, thoughts, hobbies, biases. Updates on my career and work" />
+    <!-- preview twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="tiwtter:creator" content="@paolo_cre" />
+    <meta property="twitter:title" content="Blog">
+    <meta property="twitter:image" content="https://paolocremo.github.io/images/io_berlin.jpg" />
+    <meta property="twitter:description" content="My stories, thoughts, hobbies, biases. Updates on my career and work" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-2FYRRY5SZC"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FYRRY5SZC"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-  gtag('config', 'G-2FYRRY5SZC');
-</script>
-<!-- end google analytics -->
-
-<style>
-#main {
-  min-width: 100%;
-  width: 100%;
-}
-
-body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: black;
-  color:white;
-}
-
-.hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../images/zakopane.jpeg");
-  height: 40%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
- /* position: relative;*/
-  position: fixed;
-  top: 0;
-  width: 100%;
-  transition: 0.2s;
-/*  font-family: Zen Dots;
-  font-size: 3vw;
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);*/
-  text-align: center;
-  color: #ffad33;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  font-family: Zen Dots;
-  font-size: 50px; /*3.5vw;*/
-  padding: 5vh 0 4vh 0;
-}
-
-.hero-text button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 1vh 1.5vw;
-  color: black;
-  background-color: #ddd;
-  text-align: center;
-  cursor: pointer;
-  font-family: Antonio;
-}
-
-.hero-text button:hover {
-  background-color: #555;
-  color: white;
-}
-
-p.ti {
-   font-size:1.5vw;
-  }
-
-div.main {
-/*  margin: 400px 10% 7% 10%; */
-  font-family: Antonio;
-  font-size: 30px;
-  border: 5px solid white;
-  padding: 10px
-  }
-
-a {
-  text-decoration: none;
-  color: inherit;
-  }
-
-nav {
-  float: left;
-  position: fixed;
-  max-width: 10%;
-/*  height: 50%;  only for demonstration, should be removed */
-  background: none;
-  padding: 0 3px 20px 10px;
-  color: white;
-  margin: 0 0 -30px 0;
-  bottom: 0;
-  text-align:left;
-}
-
-button2 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-/*  padding: 0.6vw; */
-  width: 160px;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.2);
-  cursor: pointer;
-  padding:2px;
-  font-size: 5vh; /*1.5vw*/
-  text-align:center;
-}
-
-div.gen {
-  margin:500px 15% 100px 15%;
-}
-
-
-
-/* put button on bottom on mobile - 1366px */
-@media only screen and (max-device-width: 1360px) {
- 
-  h2 {
-    font-size: 30px;
-  } 
-  
-  div.gen {
-    margin:400px 10% 100px 10%;
-  }
-
-  button2 {
-/*    padding: 5px; */
-    width:21%;
-    background-color: rgba(44, 62, 80, 0.6);
-    font-size: 2.3vh;
-    }
-
-  nav {
-    background-image: url("../images/space.jpg");
-    background-color: rgba(0,0,0,0.5);
-    background-blend-mode: lighten;
-    /* 
-  https://wallup.net/space-stars-40/ 
-  https://wallup.net/wp-content/uploads/2016/01/168595-space-stars.jpg 
-  */
-    background-position: 50% 45%;
-    background-size: cover;
-    background-repeat:no-repeat;
-    float: bottom;
-    position: fixed;
-    width: 100%;
-    max-width:100%;
-    height: 5%; /*5% only for demonstration, should be removed */
-  /*  background: black; */
-    padding: -10px 0 10px 0;
-    color: white;
-    text-align:center;
-    margin: 0 auto;
-    bottom:0;
-  }
-}
-
-</style>
+      gtag('config', 'G-2FYRRY5SZC');
+    </script>
+    <!-- end google analytics -->
 </head>
 <body>
+    <header>
+        <h1>My Blog</h1>
+        <p>I am not a writer, but I enjoy reading and (trying) writing. That is all.</p>
+    </header>
 
-<div id="header" class="hero-image">
-  my blog
-<!--    <button>Comment</button> or what I say to my computer -->
-</div>
+    <div class="projects-container">
 
-<nav id="footer"> 
-  <p> <!--style="font-size:3vw"> -->
-    <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
-    <a href="../index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
-    <a href="../CV.html" style="font-family:Zen Dots"><button2>cv</button2></a>
-    <a href="album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
- <!--   <a href="" style="font-family:Zen Dots"><button2 style="background-color: rgba(255, 255, 255, 0.7)">blog</button2></a> --> 
-  </p>
-</nav>
-&nbsp
+        <!-- Blog Post 2 : about me -->
+        <div class="project-box">
+            <div class="title-overlay">
+                <h3>B#2 - About Me</h3>
+            </div>
+            <img src="../images/DSC_0915.JPG" alt="Chile">
+            <div class="overlay">
+                <p>
+                    My life so far. And my quest to understand the world.
+                </p>
+                <a href="../aboutme.html">Read the Blog</a>
+            </div>
+        </div> 
 
-<!--background-color:#D37F0C; -->
+        <!-- Blog Post 1 -->
+        <div class="project-box">
+            <div class="title-overlay">
+                <h3>B#1 - My First Solo Trip: Mexico</h3>
+            </div>
+            <img src="../images/mexico4.jpg" alt="Mexico">
+            <div class="overlay">
+                <p>In August 2018 I went to Mexico. It was hot. And moist. But amazing.</p>
+                <a href="../blogs/mexico.html">Read the Blog</a>
+            </div>
+        </div>
 
-<!-- <div style="margin:400px 15% 100px 15%"> -->
-<div class="gen">
-  <p style="text-align:center;font-family:Antonio;font-size:25px">
-    <b>I am not a writer</b>, but I enjoy reading and (trying) writing. That is all.
-    </br>
-  </p>
-  </br>
-  
-  <!-- 
-  blog 3
-  
+        <!-- Blog Post 2 (Placeholder for future posts) -->
+        <!-- 
+        <div class="project-box">
+            <div class="title-overlay">
+                <h3>B#2 - The Wonder of Chile</h3>
+            </div>
+            <img src="../images/chile.jpg" alt="Chile">
+            <div class="overlay">
+                <p>As an astronomer, I had to visit Chile. As a nature lover, it was incredible.</p>
+                <a href="#">Coming Soon →</a>
+            </div>
+        </div> 
+        -->
+    </div>
 
-  <div class="main">
-    <a href="blogs/coming_soon.html">
-      <h2>
-        <span style="font-size:25px;color:grey">
-	  B# - 
-	</span>
-       
-       The wonder of Chile
-
-	<span style="font-size:15px;color:grey">
-	  - TBA, 2021
-	</span>
-      </h2>
-    </a>
-    <p> 
-      As an astronomer, I had to visit Chile. As nature lover, it was incredible.
-    </p>
-    <a href="blogs/coming_soon.html">
-      <p style="font-size:15px;color:grey;font-family:Zen Dots">go to article</p>
-    </a>
-  </div>
-  
-  end b# 
-  -->
-  
-  </br>
-
-  <!-- 
-  blog #2
-  
-  <div class="main">
-    <a href="blogs/coming_soon.html">
-      <h2>
-        <span style="font-size:25px;color:grey">
-	  B#2 - 
-	</span>
-       
-       My work, so far
-
-	<span style="font-size:15px;color:grey">
-	  - TBA, 2021
-	</span>
-      </h2>
-    </a>
-    <p> 
-       What do I do all day? 
-    </p>
-    <a href="blogs/my_work.html">
-      <p style="font-size:15px;color:grey;font-family:Zen Dots">go to article</p>
-    </a>
-  </div>
-   
-  end b#2 
-  -->
-   
-  </br>
-
-  <!-- 
-  blog #1
-  -->
-
-  <div class="main">
-    <a href="blogs/mexico.html">
-      <h2>
-        <span style="font-size:25px;color:grey">
-	  B#1 - 
-	</span>
-       
-	My first solo trip: Mexico
-        
-	<span style="font-size:15px;color:grey">
-	  - May 10, 2021
-	</span>
-      </h2>
-    </a>
-    <p> 
-      In August 2018 I went to Mexico. It was hot. And moist. But amazing. 
-    </p>
-    <a href="blogs/mexico.html">
-      <p style="font-size:15px;color:grey;font-family:Zen Dots">go to article</p>
-    </a>
-  </div>
-  <!-- end b#1 -->
-
-</br>
-</br>
-</br>
-</br>
-
-</div>
-
-<script>
-// When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    document.getElementById("header").style.height = "5%";
-    document.getElementById("header").style.fontSize = "40px";
-  
-  } else {
-    document.getElementById("header").style.height = "40%";
-    document.getElementById("header").style.fontSize = "50px";
-  }
-}
-</script>
-
+    <footer>
+        <p>
+            <a href="../index.html">Home</a> |
+            <a href="../aboutme.html">Me</a> |
+            <a href="../CV.html">CV</a> | 
+            <a href="../pages/album.html">Album</a>
+        </p>
+    </footer>
 </body>
 </html>
