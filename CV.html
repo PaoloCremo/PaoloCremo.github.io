@@ -1,18 +1,14 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>CV</title>
-<link rel="icon" href= "https://image.flaticon.com/icons/png/512/1604/1604478.png"> 
-<link rel="preconnect" href="https://fonts.gstatic.com"> 
-<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-<meta charset="UTF-8">
-<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Paolo Cremonese | Curriculum Vitae</title>
+  <link rel="stylesheet" href="style_CV.css" />
 
-<!-- preview FB -->
+  <!-- preview FB -->
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:fb="http://ogp.me/ns/fb#">
+xmlns:fb="http://ogp.me/ns/fb#">
 
 <meta property="og:image" content="images/DSC_6888.jpg" />
 <meta property="og:description" content="Curriculum Vitae" />
@@ -27,942 +23,184 @@
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-2FYRRY5SZC"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
 
-  gtag('config', 'G-2FYRRY5SZC');
+gtag('config', 'G-2FYRRY5SZC');
 </script>
 <!-- end google analytics -->
-
-<style>
-
-body {
-  background-color: #f6f6ee /*#fcfce9  /* 75% of #ffffe6 -  white*/;
-  color: black;
-  margin: 0 !important;
-}
-html {
-  scroll-behavior: smooth;
-}
-
-.app_top {
-    display: table-cell;
-}
-.app_top img {
-    float: left;
-}
-
-.column {
-  float: left;
-  width: 48%;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.box {
-  float: left;
-  height: 20px;
-  width: 20px;
-  margin-bottom: 15px;
-  border: 1px solid black;
-  clear: both;
-}
-
-h3 {
-  font-size: 1.6vw;
-  font-family: Antonio;
-  }
-
-h4 {
-  font-size: 1.3vw;
-  font-family:Antonio; /* Zen Dots;*/
-  text-align: center;
-}
-
-ul li{
-  font-size: 1.4vw;
-  }
-
-ol { font-weight:bold;}
-
-ol li{
-  font-size: 1.4vw;
-}
-
-ol li span {font-weight: normal;}
-
-/*
-ol li:before {
-  content: counter(item) ". "; 
-  counter-increment: item; 
-  font-weight: bold;
-}
-*/
-p {
-font-size: 1.4vw;
-}
-
-a:link {
-  color: #595959;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #595959;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-img.al {
-            float: right;
-            margin: 5%;
-        }
-
-figure.al {
-            float: right;
-            padding:0px;
-            margin:1px;
-}
-/*
-nav {
-  float: left;
-  position: fixed;
-  width: 10%;
-  height: 100%; /* only for demonstration, should be removed *
-  background: black;
-  padding: 10px;
-  color: white;
-  text-align:center;
-  margin: 0 auto;
-}
-*/
-nav.bottom {
-  float: left;
-  position: fixed;
-  max-width: 10%;
-/*  height: 50%;  only for demonstration, should be removed */
-  background: none;
-  padding: 0 3px 0 10px;
-  color: white;
-  margin: 0 0 0 0;
-  bottom: 0;
-  text-align:left;
-  font-size:3vh;
-}
-
-button2 {
-  border: none;
-  outline: 0;
-  display: inline-block;
-/*  padding: 0.6vw; */
-  width: 160px;
-  color: black;
-  background-color: rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  padding:2px;
-  font-size: 5vh; /*1.5vw*/
-  text-align:center;
-}
-
-p.nav {
-  font-size:5vh;
-  }
-
-div.main {
-  margin: 5.5vh 25vw 14vh 25vw /*16 before*/
-  }
-
-.cskill {
-  width: 60%;
-  background-color: #f3f3f2 /*#f7f7ed/*#ddd*/;
-  }
-
-.skills {
-  text-align: right;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  color: white;
-  font-size: 15px;
-}
-
-p {
-  font-size:20px;
-}
-
-
-div.chart {
-  height: 150px;
-}
-
-span.label{
-  font-size:17px;
-}
-
-/*@media only screen and (max-device-width: 1366px) { */
-@media only screen and (max-device-width: 1200px) {
  
-  span.label{
-    font-size:10px;
-  }
-
-  div.chart {
-    margin-top: 70px;
-    height: 180px;
-  }
-
-  .cskill {
-    width: 55%;
-  }
-
-  .skills {
-    padding-top: 0.4vh;
-    padding-bottom: 0.4vh;
-    font-size:30px;
-  }
-
-  div.main {
-    margin: 5vh 10vw 12vh 10vw;
-  }
-
-  nav.bottom {
-    background-image: url("images/space.jpg");
-    background-color: rgba(255,255,255,0.2);
-    background-blend-mode: lighten;
-    /* 
-    https://wallup.net/space-stars-40/ 
-    https://wallup.net/wp-content/uploads/2016/01/168595-space-stars.jpg 
-    */
-    background-position: 50% 45%;
-    background-size: cover;
-    background-repeat:no-repeat;
-    float: bottom;
-    position: fixed;
-    width: 100%;
-    max-width:100%;
-    height: 5%; /*5% only for demonstration, should be removed */
-    padding: 20px 0 0 0 /*10px*/;
-    color: white;
-    text-align:center;
-    margin: 0 auto;
-    bottom:0;
-  }
-
-  button2 {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 0.6vw;
-    color: white;
-    background-color: rgba(44, 62, 80, 0.6);
-    text-align: center;
-    cursor: pointer;
-    width: 20%;
-    font-size: 2.5vh; /*1.5vw*/
-}
-  p.nav {
-    font-size:3vh;
-    }
-  
-  p {
-    font-size:1.5vh;
-  }
-}
-
-</style>
 </head>
-
 <body>
-<nav class="bottom"> 
-  <p class="nav" style="margin-top:0px">
-    <a href="index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
-    <a href="index.html#abtme" style="font-family:Zen Dots"><button2>me</button2></a>
-    <a href="album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
-    <a href="blog.html" style="font-family:Zen Dots"><button2>blog</button2></a>
-  </p>
-</nav>
-<!--
-&nbsp
--->
-<div class="main">
-  
-  <div id="opening" style="font-family:Antonio;text-align:center;font-size:2.6vw">
-    <h1> Curriculum Vitae </h1>
-  </div>
-  <p style="margin:-0vh 8vw 2vh 8vw;text-align:center;color:#666666;font-size:1.4vw"> 
-    This page is about my career. You can see my interests, work experiences, and skill. You can also find a summary of all of this in the PDF version of my <a target="_blank" href="files/CV_latex/CV.pdf">CV</a>.
-  </p>
+  <div class="container">
+    <header>
+      <p>on a quest to understand the world</p>
+      <h1>Paolo Cremonese</h1>
+      <p>Aspiring Quant Analyst | Fintech Enthusiast | Data Scientist </p>
+      <div class="contact">
+        <a href="mailto:cremonesep25@gmail.com">mail</a> | 
+        <a href="https://github.com/PaoloCremo" target="_blank">GitHub</a> | 
+        <a href="https://www.linkedin.com/in/paolo-cremonese/" target="_blank">LinkedIn</a>
+      </div>
+    </header>
 
-  <b style="font-size:1.6vw; display: block; text-align: center;">Hello everyone! I am a researcher - with strong background on data analysis - transitioning to industry. </b> </br>
-  <b style="display: block; text-align: center;">Give a look at my notion page at <a target="_blank" href="https://paolocremonese.com/notion">paolocremonese.com/notion</a>.</b>
-
-  <p style="font-size:1.2vw"><b>Go to</b> : 
-    <a target="_blank" href="files/CV_latex/CV.pdf"><i class="fa fa-file-pdf-o"></i>&nbsp Curriculum Vitae (PDF)</a> |
-    <a href="#contacts"><i class="fa fa-id-card"></i>&nbsp Contacts</a> | 
-    <a href="#workexp"><i class="fa fa-wrench"></i>&nbsp Work Experience</a> |
-    <a href="#CS"><i class="fa fa-desktop"></i>&nbsp Skill</a> |
-    <!-- <a href="#Research"><i class="fa fa-lightbulb-o"></i>&nbsp Research interests</a> | -->
-    <a href="#pub"><i class="fa fa-newspaper-o"></i>&nbsp Pubblication</a> |
-    <a href="#ment"><i class="fa fa-comments-o"></i>&nbsp Mention</a> |
-    <a href="#conferences"><i class="fa fa-university"></i>&nbsp Conferences &amp; school</a> |
-    <a href="#int"><i class="fa fa-plane"></i>&nbsp Interests</a> 
-  </p>
-
-  <figure class="al">
-    <img src="images/DSC_6888.jpg" width="200vw" alt="photo" />
-    <figcaption style="text-align:center">I'm happy at work</figcaption>
-  </figure>
-
-  <h3 id="contacts">Contacts <!-- -  <i class="fa fa-id-card"></i>--> </h3>
-  <ul style="font-size:20px">
-    <li> 
-      <i class="fa fa-envelope"></i>&nbsp -  <a href="mailto:cremonesep25@gmail.com">cremonesep25 [at] gmail.com</a> </br>
-      <!-- <i class="fa fa-envelope-o"></i>&nbsp - <a href="mailto:paolo.cremonese@uib.es">paolo.cremonese [at] uib.es</a> -->
-    </li>
-    <!-- <li> -->
-      <!-- <i class="fa fa-twitter"></i>&nbsp - <a href="https://twitter.com/paolo_cre"> @paolo_cre</a> -->
-    <!-- </li> -->
-    <li>
-      <i class="fa fa-linkedin"></i>&nbsp -  <a href="https://www.linkedin.com/in/paolo-cremonese/"> in/paolo-cremonese</a>
-    </li>
-    <li>
-      <i class="fa fa-github"></i>&nbsp -  <a href="https://github.com/PaoloCremo"> PaoloCremo</a>
-    </li>
-    <li>
-      <i class="fa fa-telegram"></i>&nbsp -  <a href="https://www.t.me/paul_crem"> @paul_crem</a>
-    </li>
-  </ul>
-  
-  <h3 id="workexp">Work experience</h3>
-
-  <div class="app_top">
-    <img src="images/uib-logo-only.png" style="width:13%" />
-    <p style="margin:0 0 0 170px">
-    <em>2022-2024</em></br>
-    <b><a href="https://grg.uib.es/people/index.php" style="color:black" target="blank" >University of Balearic Islands</a></b> </br> 
-    Postdoctoral researcher on Gravitational Waves</br> 
-    </p> 
-    </div>
-  </br>
-
-  <div class="app_top"> 
-     <img src="images/DBA_logo.png" style="width:23%" />
-    <p style="margin:0 0 0 170px">
-    <em>2018</em></br>
-    <b><a href="https://www.dbagroup.it/en/" style="color:black" target="blank" >DBA group</a></b> </br> 
-    Interniship as data scientist</br> 
-    </p>
-  </div>
-  
-  <h3 id="Research">Research interests</h3>
-  
-  <div class="chart "style="float:left">
-  <canvas id="myChart" style=""></canvas>
-  </div>
-
-  <ul style="list-style-type:none">
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#b91d47;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> Machine Learning
-    </li>
-    <!--li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#00aba9;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> Gravitational Lensing 
-    </li-->
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#2b5797;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> Data Analysis 
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#e8c3b9;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> Finances & Investments
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#1e7145;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> Gravitational Waves
-    </li>
-
-  </ul>
-
-  </br>
-  <h3 id="pub">Projects</h3>
-    
-    <h4>#personalfinance #appdevelop #sideprojects</h4>
+    <section>
+      <h2>About Me</h2>
       <p>
-        I am developing a mobile application to keep track of personal finance.</br>
-        This project involves the creation of a dedicated Python package designed to efficiently track expenses and investments. It will be openly accessible on my <a target="_blank" href="https://github.com/PaoloCremo">github page</a> in the near future. </br>
-        Along with it, I am having fun coding and will soon upload a package to control Spotify custom playlists (on GitHub @ <a target="_blank" href="https://github.com/PaoloCremo/spotify">PaoloCremo/spotify</a>) and a bot to get daily new papers from ArXiv based on user-defined topics (on GitHub @ <a target="_blank" href="https://github.com/PaoloCremo/paperbot">PaoloCremo/paperbot</a>).
+        I am a researcher with experience up to the Postdoctoral level, specialised in gravitational waves, with a strong background on data analysis. I have a passion for finance, technology, and continuous learning, complemented by a love for travel. I love tackling challenging problems and am now seeking to leverage my analytical skills and passion for innovation in a dynamic opportunity outside of academia, where I can combine my interests in finance and technology.
+        <!-- </br> -->
+        More about me? Click <a href="aboutme.html">here</a>.
       </p>
-    <h4>#website</h4>
-      <p>
-        I designed and coded my own website (this one!), where I keep my info, thoughts and different things (on GitHub @ <a target="_blank" href="https://github.com/PaoloCremo/PaoloCremo.github.io">PaoloCremo/PaoloCremo.github.io</a>).
-      </p>
-    <h4>#research</h4>
-      <p>
-      <ul>
-        <li>
-          I developed tools to analyse Gravitational Waves data, focusing on finding events that are bent and/or magnified by massive objects (i.e. lensing).
-        </li>
-        <li>
-          I studied degeneracies in the parameters of lensed gravitational waves events
-        </li>
-        <li>
-          I worked on a project to organise and automate the process of detecting these lensed events more efficiently.
-        </li>
-        <li>
-          I coded a pipeline to create setup files - for cluster computing - for bayesian parameter estimation of gravitational waves signals from google sheet table (on GitHub @ <a target="_blank" href="https://github.com/PaoloCremo/runtomation">PaoloCremo/runtomation</a>).
-        </li>
+    </section>
+
+    <section>
+      <h2>Projects</h2>
+      <div class="item">
+        <h3>P1</h3>
+        <span>2024 - present | detailed info at <a href="projects.html">paolocremonese.com/projects</a></span>
+        <p>
+          Doing a lot of stuff. E.g.? <a href="https://www.paolocremonese.com/tb" target="_blank">paolocremonese.com/tb</a>
+        </p>
+      </div>
+
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="item">
+        <h3>Postdoctoral Researcher – UIB, Palma, Spain</h3>
+        <span>2022 – 2024</span>
+        <p>
+          Data Scientist. Member of LIGO collaboration. </br>
+          (i) I developed models to analyze Gravitational Waves data, focusing on finding events that are bent or magnified by massive objects (i.e. lensing). </br>
+          (ii) I worked on a project to organize and automate the process of detecting these lensed events more efficiently. </br>
+          (iii) I coded a pipeline to automate the creation of setup files, for cluster computing, for bayesian parameter estimation.
+        </p>
+      </div>
+      <div class="item">
+        <h3>Ph.D. in Physics – University of Szczecin, Poland</h3>
+        <span>2018 – 2022</span>
+        <p>
+          Worked on gravitational lensing degeneracies and their impact on the parameter estimation of gravitational waves. In particular, I tackled the Hubble tension problem, a very hot topic in cosmology.
+        </p>
+      </div>
+      <div class="item">
+        <h3>Data Scientist internship – DBA Group, Treviso, Italy</h3>
+        <span>2018</span>
+        <p>
+          I worked in a team focused on developing methods to record and analyse diverse datasets, ranging from meteorological to industrial data, using machine learning techniques to predict outcomes and improve data-driven decision-making.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Volunteering</h2>
+      <div class="item">
+        <h3>Partnership Lead – Data for Good, Vancouver, Canada</h3>
+        <span>2025 – present</span>
+        <p>
+          I engage nonprofit organizations to identify their data needs, develop tailored strategies for impactful projects, and implement a CRM system to streamline client outreach and relationship management.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li data-tooltip="pandas, numpy, matplotlib, tensorflow, scikit-learn">Python</li>
+        <li data-tooltip="see certifications on my linkedin page">SQL</li>
+        <li data-tooltip="extensive use of linux through my career">Linux</li>
+        <li data-tooltip="Experience writing scientific papers and thesis in latex">Latex</li>
+        <li data-tooltip="Experience working both on personal project and collaborative ones using these tools">Git/GitHub/GitLab</li>
+        <li data-tooltip="Both in research and for personal projects">AI & Machine Learning</li> 
+        <!--- I wrote a divulgative paper on the use of machine learning for GW analysis - -->
+        <li data-tooltip="Used to solve particularly difficult equations in connection with Python">Mathematica</li>
+        <li data-tooltip="Used mostly to run extensive MCMC analyses for GW studies">Slurm/HTCondor</li>
       </ul>
-      </p>
+    </section>
 
-  </br>
+    <section>
+      <h2>Education</h2>
+      <div class="item">
+        <h3>M.Sc. Astrophysics – University of Padova</h3>
+        <span>2015 – 2017</span>
+      </div>
+      <div class="item">
+        <h3>B.Sc. Astrophysics – University of Padova</h3>
+        <span>2011 – 2015</span>
+      </div>
+    </section>
 
-  <h3 id="CS">Skills</h3>
+    <section>
+      <h2>Talks and Writing</h2>
+      <div class="item">
+        <h3>Talks</h3>
+        <!-- <span>2015 – present</span> -->
+        <p>
+          I gave various talks at international conference about my research on gravitational waves. Among them: ... .
+        </p>
+      </div>
+      <div class="item">
+        <h3>Writing</h3>
+        <!-- <span>2015 – present</span> -->
+        <p>
+          Apart from scientific papers, I wrote a divulgative paper on the use of machine learning for gravitational waves analysis. I also participatede in a YouTube video.
+        </p>
+      </div>
+    </section>
 
-  <ul style="font-family:Antonio;margin:0 0 0 -30px;"> <!--list-style-type:none-->
-    <li>
-      Python - <i>pandas, numpy, matplotlib, tensorflow, scikit-learn</i>
-    </li>
-    <li>
-      SQL
-    </li>
-    <li>
-      Latex
-    </li>
-    <li>
-      Git/GitHub/GitLab
-    </li>
-    <li>
-      HTML/CSS
-    </li>
-    <li>
-      Slurm/HTCondor
-    </li>
-    <li>
-      MacOS
-    </li>
-    <li>
-      Apple Keynotes 
-    </li>
-    <li>
-      Linux 
-    </li> 
-    <li>
-      Mathematica 
-    </li>
-    <li>
-      C
-    </li>
-  </ul>
-
-  <h3 id="pub">Pubblication</h3>
-  <p><strong>On line list</strong>:&nbsp;<a target="_blank" href="https://arxiv.org/search/?query=Cremonese%2C+P&searchtype=all&abstracts=show&order=-announced_date_first&size=50">arXiv</a> -&nbsp;<a target="_blank" href="https://inspirehep.net/authors/1859874">INSPIRE</a></p>
-  <p><strong>List</strong></p>
-  <ol reversed>
-    <li><span>
-      <p> 
-        <em>Invariance transformations in wave-optics lensing: implications for gravitational-wave astrophysics and cosmology</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/2408.03856">arXiv:2408.03856</a>,
-        <span style="font-size:1.2vw">
-          A. Chen, <b>P. C.</b>, J. M. Ezquiaga and D. Keitel 
-          - submitted to PRD
-          <!-- - published in <a target="blank" href="https://academic.oup.com/mnras/article/526/3/3832/7283182?login=false"><em>MNRAS 526 (2023) 3, 3832-3860</a></em> -->
-        </span>
-      </p>  
-    </span></li>
-    
-      <li><span>
-      <p> 
-        <em>Follow-up Analyses to the O3 LIGO-Virgo-KAGRA Lensing Searches</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/2306.03827">arXiv:2306.03827</a>,
-        <span style="font-size:1.2vw">
-           J. Janquart, M. Wrigth, S. Goyal et al. - as contributor 
-          - published in <a target="blank" href="https://academic.oup.com/mnras/article/526/3/3832/7283182?login=false"><em>MNRAS 526 (2023) 3, 3832-3860</a></em>
-        </span>
-      </p>
-    </span></li>
-
-      <li><span>
-      <p> 
-        <em>Characteristic features of Gravitational Wave lensing as probe of lens mass model</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/2111.01163">arXiv:2111.01163</a>,
-        <span style="font-size:1.2vw">
-           with D.F. Mota and V. Salzano
-        - published in <a target="blank" href="https://doi.org/10.1002/andp.202300040"><em>Annalen Phys. 535 (2023) 6, 2300040</a></em> 
-        </span>
-      </p>
-    </span></li>
-
-      <li><span>
-      <p> 
-        <em>Breaking the mass-sheet degeneracy with gravitational wave interference in lensed events</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a>,
-        <span style="font-size:1.2vw">
-           with J.M. Ezquiaga and V. Salzano
-          - published in <a target="blank" href="https://doi.org/10.1103/PhysRevD.104.023503"><em>Phys.Rev.D 104 (2021) 2, 023503</a></em>
-        </span>
-      </p>
-    </span></li>
-
-    <li><span>
-      <p> 
-        <em>High accuracy on H&#8320; measurements from gravitational wave lensing events</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a>,
-        <span style="font-size:1.2vw">
-          with V. Salzano
-	  -  published in <a href="https://doi.org/10.1016/j.dark.2020.100517"><em>Phys.Dark Univ. 28 (2020) 100517</a></em>
-        </span>
-      </p>
-    </span></li>
-    
-    <li><span>
-      <p> 
-        <em>The lensing time delay between gravitational and electromagnetic waves</em> - 
-        <a target="_blank" href="https://arxiv.org/abs/1808.05886">arXiv:1808.05886</a>, 
-        <span style="font-size:1.2vw">
-          with E. M&ouml;rtsell
-          - a reviewed copy of the master thesis work. 
-        </span>
-      </p>
-    </span></li>
-  </ol>
-  
-  <p id="ment"><strong>Mention</strong></p>
-  <ul>
-    <li>
-      <p>
-        Dr. <a target="_blank" href="https://www.sunnyvagnozzi.com/">S. Vagnozzi</a>, in his weekly <a target="_blank" href="https://www.sunnyvagnozzi.com/blog">blog</a> about new interesting article in ArXiv, published a <a target="_blank" href="https://www.sunnyvagnozzi.com/blog/top-arxiv-week-15-2021">summary</a> of my third paper - <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a>
-      </p>
-    </li>
-    <li>
-      <p>
-        <a target="_blank" href="https://astrobites.org/">Astrobites</a>, the astrophysical literature journal published an <a target="_blank" href="https://astrobites.org/2019/12/02/constraining-the-hubble-constant-with-lensed-gravitational-wave-events/">article</a> about my second paper - <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a>
-      </p>
-    </li>
-  </ul>
-
-  <h3 id="conferences">Conferences &amp; doctoral school</h3>
- 
-  <div class="row">
-  <div class="column" style="border-bottom:3px solid black;border-right:3px solid black">
-    <h4>Talks & poster</h4>
-  </div>
-  <div class="column" style="border-bottom:3px solid black">
-    <h4>Participated</h4>
-  </div>
-  <div class="column" style="border-right:3px solid black">
- 
-    <ol reversed>
-    <p>
-   
-      <li><span>
-        <b><a target="blank" href="" style="color:black">NBI - Strong Group seminars
-        </a></b></br> 
-        <em><a target="blank" href="https://maps.app.goo.gl/1djpG9pd1ojoKKPh8" style="color:black">Copenhagen, Denmark</a></em></br>
-        Dicember 07, 2023</br>
-         <u><a target="blank" href="files/NBIA_talk.pdf">Talk</a> given titled</u> <i>"Mass-Sheet Degeneracy in Gravitational Wave Lensing"</i>
-      </span></li>
-      </br>
-
-      <li><span>
-        <b><a target="blank" href="https://www.resceu.s.u-tokyo.ac.jp/symposium/LVK2023toyama/index.php" style="color:black">LVK meeting
-        </a></b></br> 
-        <em><a target="blank" href="https://maps.app.goo.gl/NcLp2ZGTniLKrniN9" style="color:black">Toyama, Japan</a></em></br>
-        September 11-15, 2023</br>
-         <u><a target="blank" href="files/LVK23_poster.pdf">Poster</a> presented titled</u> <i>"Mass-Sheet degeneracy in Gravitational Wave Lensing"</i>
-      </span></li>
-      </br>
-
-      <li><span>
-        <b><a target="blank" href="https://phas.ubc.ca/wave-optics-gravitational-wave-lensing" style="color:black">UBC - Gravity Seminar
-        </a></b></br> 
-        <em><a target="blank" href="https://maps.app.goo.gl/3bMPgh5M6BQucr6r8" style="color:black">Vancouver, Canada</a></em></br>
-        September 07, 2023</br>
-         <u><a target="blank" href="files/UBC_talk.pdf">Talk</a> given titled</u> <i>"Wave Optics in Gravitational Wave Lensing"</i>
-      </span></li>
-      </br>
-
-    <li><span>
-      <b><a target="blank" href="http://iac3.uib.es/no/gr-seminar-wave-optics-in-gravitational-waves-lensed-events-paolo-cremonese/" style="color:black">UIB Relativity and Gravitation group Seminar
-      </a></b></br> 
-      <em><a target="blank" href="https://goo.gl/maps/NZNyMMfJq2AdDn66A" style="color:black">Palma, Spain</a></em></br>
-      November 05, 2021</br>
-       <u><a target="blank" href="files/talk_palma.pdf">Talk</a> given titled</u> <i>"Wave-optics in Gravitational Waves lensed events"</i>
-    </span></li>
-    </br>
-
-
-    <li><span>
-      <b><a target="blank" href="https://gwverse.tecnico.ulisboa.pt/activities/global-meeting-gwverse-cost-action/" style="color:black">GWverse global meeting in Lisbon
-</a></b></br> 
-      <em><a target="blank" href="https://goo.gl/maps/5WEoXqhW2EieZJ1bA" style="color:black">Lisbon, Portugal</a></em></br>
-      August 30 - September 3, 2021</br>
-       <u><a target="blank" href="files/MSD_GWv.pdf">Talk</a> given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    </span></li>
-    </br>
-
-    <li><span>
-      <b><a target="blank" href="https://astro.ukzn.ac.za/~gravitex2021/" style="color:black">Gravitex 2021</a></b></br> 
-      <em>online</em></br>
-      August 9-12, 2021</br>
-       <u><a target="blank" href="files/CfH_MSD_slide.pdf">Talk</a> given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    </span></li>
-    </br>
-    <li><span>
-      <b><a target="blank" href="https://caps.ncsa.illinois.edu/conferences/cosmo21/" style="color:black">Cosmo '21</a></b></br> 
-      <em>online</em></br>
-      August 2-6, 2021</br>
-      <u><a target="blank" href="files/MSD_poster.pdf">Poster</a> presented based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    
-    </span></li>
-    </br>
-      
-    <li><span>
-      <b><a target="blank" href="https://www.amaldi14.org/" style="color:black">Amaldi 14</a></b></br> 
-      <em>online</em></br>
-      July 19-23, 2021</br>
-       <u><a target="blank" href="files/MSD_poster.pdf">Poster</a> presented based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    </span></li>
-    </br>
-    <li><span>
-      <b><a target="blank" href="https://www.cosmologyfromhome.com/" style="color:black">Cosmology from Home</a></b></br> 
-      <em>online</em></br>
-      July 5-16, 2021 </br>
-       <u><a target="blank" href="https://www.youtube.com/watch?v=3EfGoY6VAbg&t=3s">Talk</a> given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    </span></li>
-    </br>
-    <li><span>
-       <b><a target="blank" href="https://ibericos2021.math.tecnico.ulisboa.pt/" style="color:black">Ibericos 2021</a></b></br> 
-       <em>online</em></br>
-       March 29-April 1, 2021</br>
-       <u><a target="blank" href="files/Ibericos-presentation.pdf">Talk</a> given based on <a target="_blank" href="https://arxiv.org/abs/2104.07055">arXiv:2104.07055</a></u>
-    </span></li>	
-    </br>
-     <li><span>
-       <b><a target="blank" href="https://voices.uchicago.edu/cosmiccontroversies/" style="color:black">Cosmic controversies</a></b></br> 
-       <em>The University of Chicago, USA</em></br>
-       5-8 October, 2019</br>
-       <u><a target="blank" href="files/chicago_poster.pdf">Poster</a> presented based on <a target="_blank" href="https://arxiv.org/abs/1911.11786">arXiv:1911.11786</a></u>
-    </span></li>
-    </br>
-    <li><span>
-      <b><a target="blank" href="https://indico.cern.ch/event/773241/overview" style="color:black">The 6th Conference of the Polish Society on Relativity</a></b></br> 
-      <em>Szczecin University, Poland</em></br>
-      23-26 September, 2019</br>
-      <u>Mermber of organizing commitee</u>
-    </span></li>
-    </p>
-    </ol>
-  </div>
-  
-  <div class="column">
+    <section>
+      <h2>Resources</h2>
       <ul>
-     <p>
 
-      <li>
-        <b><a target="blank" href="https://sites.northwestern.edu/lvk2023ciera/" style="color:black">LVK meeting</a></b></br> 
-        <em>online</em></br>
-        13-16 March, 2023
-      </li>
-      </br>
-
-     <li>
-      <b><a target="blank" href="https://indico.cern.ch/event/1141427/" style="color:black">12th Iberian Gravitational Waves Meeting</a></b></br> 
-      <em>online</em></br>
-      6-8 June, 2022
-    </li>
-    </br>
-
-     <li>
-      <b><a target="blank" href="https://indico.ice.csic.es/event/27/" style="color:black">The 16th Iberian Cosmology Meeting</a></b></br> 
-      <em>online</em></br>
-      4-6 May, 2022
-    </li>
-    </br>
-
-     <li>
-      <b><a target="blank" href="https://indico.physi.uni-heidelberg.de/event/297/overview" style="color:black">XIV Tonale Winter School on Cosmology</a></b></br> 
-      <em><a target="blank" href="https://goo.gl/maps/gUDgLhtRZEf2vfVR8" style="color:black">Passo del Tonale, Italy</a></em></br>
-      5-10 December, 2021
-    </li>
-    </br>
-
-    <li>
-      <b><a target="blank" href="http://www.iastro.pt/research/conferences/azores21/" style="color:black">4th Azores school on Observational Cosmology</a></b></br> 
-      <em><a target="blank" href="https://goo.gl/maps/iBtTtbYjzZhEPXpj7" style="color:black">Angra do Heroísmo, Azores, Portugal</a></em></br>
-      September 6-12, 2021</br>
-    </li>
-    </br>
-    
-    <li>
-      <b><a target="blank" href="https://indico.cern.ch/event/873762/" style="color:black">AlteCosmoFun '21</a></b></br> 
-      <em>online</em></br>
-      September 6-10, 2021</br>
-    </li>
-    </br>
-    
-    <li>
-      <b><a target="blank" href="https://www.gw-openscience.org/s/workshop4/" style="color:black">GW Open Data Workshop #4</a></b></br> 
-      <em>LIGO - Virgo collaboration</em></br>
-      <em>online</em></br>
-      May 10-14, 2021</br>
-    </li>
-    </br>
-
-     <li>
-      <b><a target="blank" href="https://www.uv.es/igwm2021/index.html" style="color:black">11th Iberian Gravitational Waves Meeting</a></b></br> 
-      <em>online</em></br>
-      June 9-11, 2021
-    </li>
-    </br>
-    <li>
-      <b><a target="blank" href="https://www.lorentzcenter.nl/workshop-on-gravitational-wave-astrophysics-for-early-career-scientists.html" style="color:black">Workshop on Gravitational Wave Astrophysics for Early Career Scientists</a></b></br> 
-      <em>online</em></br>
-      May 3-7, 2021
-    </li>
-    </br>
-    <li>
-      <b><a target="blank" href="https://indico.cern.ch/event/853904/overview" style="color:black">First EuCAPT Annual Symposium</a></b></br> 
-      <em>online</em></br>
-      May 5-7, 2021
-    </li>	
-    </br>
-    <li>
-      <b><a target="blank" href="https://grams-815673.wixsite.com/gravityworkshop" style="color:black">Current challenges in gravitational physics</a></b></br> 
-      <em>online</em></br>
-      April 21-28, 2021
-    </li>	
-    </br>
-     <li>
-      <b><a href="https://indico.fis.ucm.es/event/11/" style="color:black">IPARCOS School on Gravitational Waves</a></b></br> 
-      <em>Universidad Compultense de Madrid, Spain</em></br>
-      18-20 December, 2019
-    </li>	
-    </br>
-    <li>
-      <b><a target="blank" href="https://indico.physi.uni-heidelberg.de/event/103/" style="color:black">XIII Tonale Winter School on Cosmology</a></b></br> 
-      <em><a target="blank" href="https://goo.gl/maps/gUDgLhtRZEf2vfVR8" style="color:black">Passo del Tonale, Italy</a></em></br>
-      9-13 December, 2019
-    </li>	
-    
-     </p>
-      </ul>
-  </div>
-  </div>
-
-  <h3>Research visits</h3>
-  
-  <ul>
-    
-    <li>
-    visit to <b> D. Keitel</b> @Universitat de les Illes Balears</em> </br>
-    <em>03/11-01/12/2021</em> </br>
-    GW lensing data analysis <!-- - set the procedure -->
-    </li>
-    
-    <li>
-    visited <b>D. Mota</b> @University of Oslo </br>
-    <em>08-15/03/2020</em> </br>
-    modeling lenses in the contex of GW lensed events   
-    </li>
-  </ul>
-
-  <h3 id="education">Education</h3>
-  
-  <div class="app_top">
-    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/8e/Uniwersytet_Szczeci%C5%84ski.png/220px-Uniwersytet_Szczeci%C5%84ski.png" style="width:28%" />
-    <p style="margin:0 0 0 170px">
-    <em>2018-2022</em></br>
-    <b>Szczecin University</b></br>
-    Ph.D. in cosmology</br> 
-    <u>Advisor</u>: V. Salzano & M. P. D&#261;browski 
-    </p>
-  </div> 
-  </br> 
-  <div style="margin-left:15px" class="app_top">
-    <div style="width:15%">
-    <img src="images/Logo_Università_Padova.svg.png" style="width:80%" />
-    <img src="https://armacad.info/images/organizations/530/logo_15edc7053145a38b.png" style="width:80%;margin-top:10px" />
-    </div>
-    <p style="margin:0 0 0 170px">
-    <em>2015-2017</em></br>
-    <b>Università degli studi di Padova</b> &amp;</br> 
-    <b>Stockholm University</b></br>
-    M.Sc. in Astronomy</br>
-    <u>Advisors</u>: E. M&ouml;rtsell & S. Matarrese</br>
-    <u><a target="blank" color="grey" href="files/Master_Thesis.pdf">Thesis</a></u>: Delay in arrival time between Gravitational Waves and Electromagnetic signal due to Gravitational Lensing
-    </p>
-  </div>
-  </br> 
-  <div class="app_top">
-    <img src="https://armacad.info/images/organizations/530/logo_15edc7053145a38b.png" style="width:15%" />
-    <p style="margin:0 0 0 170px">
-    <em>2016-2017</em></br>
-    <b>Stockholm University</b></br>
-    Erasmus
-    </p>
-  </div>
-  </br> 
-  <div class="app_top">
-    <img src="images/Logo_Università_Padova.svg.png" style="width:14%" />
-    <p style="margin:0 0 0 170px">
-    <em>2011-2015</em></br>
-    <b>Università degli studi di Padova</b></br> 
-    B.Sc. in Astronomy</br> 
-    <u>Advisor</u>: A. Pizzella</br>
-    <u>Thesis</u>: Dark matter in spiral galaxies 
-    </p>
-  </div>
-
-  <h3 id="languages">Languages</h3>
-  <ul style="font-family:Antonio;margin:0 0 0 -30px;list-style-type:none">
-    <li>
-      <div class="cskill" style="display:inline-block">
-        <div class="skills" style="width:100%;background-color:#009246">100%&nbsp</div>
+        <li>
+      <div class="item">
+        <h3>
+          <a href="files/CV_latex/CV.pdf" target="_blank">
+            Curriculum Vitae, PDF version
+          </a>
+        </h3>
       </div>
-      &nbsp Italian
     </li>
-    <li>
-      <div class="cskill" style="display:inline-block">
-        <div class="skills" style="width:80%;background-color:#ce1a28">80%&nbsp</div>
-      </div>
-      &nbsp English
-    </li>
-    <li>
-      <div class="cskill" style="display:inline-block">
-        <div class="skills" style="width:10%;background-color:#ffc500">10%&nbsp</div>
-      </div>
-      &nbsp Spanish 
-    </li>
-    <li>
-      <div class="cskill" style="display:inline-block">
-        <div class="skills" style="width:5%;background-color:#ffffff;color:black">5%&nbsp</div>
-      </div>
-      &nbsp Polish
-    </li>
-  </ul>
-  <h3 id="int">Interests</h3>
 
-  <div class="chart "style="width:60%;float:right;margin:0 0 65px 0">
-  <canvas id="myChart2" style=""></canvas>
+    <li>
+      <div class="item">
+        <h3>
+          <a href="https://inspirehep.net/authors/1859874" target="_blank">
+            Papers Published
+          </a>
+        </h3>
+      </div>
+
+    </li>
+    
+    <li>
+      <div class="item">
+        <h3>
+          back to
+          <a href="index.html">
+            paolocremonese.com
+          </a>
+        </h3>
+      </div>
+    </li>
+
+    <li>
+      <div class="item">
+        <h3>
+          <a href="projects.html">
+            projects
+          </a>
+        </h3>
+      </div>
+    </li>
+    </ul>
+
+    </section>
+    <footer>
+      <p>Updated: April 2025</p>
+    </footer>
   </div>
-
-  <ul style="list-style-type:none;margin-left:-30px">
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#0074D9;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Travelling</b>: <span class="label">discover and live new cultures and coutries is for sure one of my goal for the present and the future</span>
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#F2AB46;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Technologies</b>: <span class="label">I am interested in all technogies regarding both my field of study and not. I try to keep informed on this topic as much as I can. I like very much programming and getting to know the newest AI advancements and possibilities
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#50BEFF;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg><b> Data Analysis </b>: <span class="label">besides my academic work, I like to study and be informed about machine learning and data science in general</span>
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#C84B00;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Investments & Finance</b>: <span class="label">Well, everyone should care about money, they are important to live well. Personally, I got fascinated by all this world since I started studying it and I would love to find a living in this sector. It seems to be very impactful and fun</span>
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#85144b;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Sports</b>: <span class="label">I played football (soccer) for many years in a team, and I still play it sometimes. I also love lots of other sport and physical activities. I run my first half marathon in October 2023 and I am always training to run more</span> 
-    </li>
-    <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#FF851B;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Books</b>: <span class="label">reading has always been vital to me. To learn always new stuff and plunge into books is my thing</span>
-    </li>
-   <li>
-  <svg width="20" height="20">
-  <rect width="20" height="20" style="fill:#BA8C63;stroke-width:0;stroke:rgb(0,0,0)" />
-  </svg> <b>Piano</b>: <span class="label">I took piano lessons for several years, since I was a kid, and it is still a special thing for me</span>
-    </li>
-
-  </ul>
-
-  </br>
-  </br>
-  <a style="font-size:1.4vw" href="#opening">Go back to the top.</a>
-</div>
-
-
-<script>
-
-var xValues = ["Machine Learning", "Data Analysis", "Finance & Investments", "Gravitational Waves"]; 
-
-var yValues = [30, 30, 30, 10];
-var barColors = [
-  "#b91d47",
-  "#2b5797",
-  "#e8c3b9",
-  "#1e7145"
-];
-
-new Chart("myChart", {
-  type: "doughnut",
-  data: {  
-      labels: xValues,
-      datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-      },
-  options: {
-    legend:{
-      display:false,
-      position: "bottom"
-      },
-  }
-});
-Chart.defaults.global.defaultFontSize = 14;
-
-var xValues2 = ["Travelling", "Technologies", "Data Analysis", "Investments", "Sports", "Books", "Piano"];
-
-var yValues2 = [15, 15, 15, 20, 15, 15, 5]; 
-/*  https://clrs.cc/  */
-var barColors2 = [
-  "#0074D9",
-  "#F2AB46",/*3D9970",*/
-  "#50BEFF",
-  "#C84B00",
-  "#85144b",
-  "#FF851B",
-  "#BA8C63",
-];
-
-new Chart("myChart2", {
-  type: "doughnut",
-  data: {  
-      labels: xValues2,
-      datasets: [{
-        backgroundColor: barColors2,
-        data: yValues2
-        }]
-      },
-  options: {
-    legend:{
-      display:false,
-      position: "bottom"
-      },
-  }
-});
-
-</script>
 </body>
 </html>
