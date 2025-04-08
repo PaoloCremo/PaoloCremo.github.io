@@ -2,7 +2,8 @@
 :root {
     --primary-color: silver;
     --secondary-color: white;
-    --background-img: url('images/HQ/antelope.png'); /* Replace with your image path */
+    --background-img: url('images/HQ/antelope.png'); 
+    --background-img-lq: url('images/LQ/antelope.png'); 
     --dark-bg: #121212;
     --overlay-color: rgba(0, 0, 0, 0.15);
     --overlay-color-media: rgba(0, 0, 0, 0.5);
@@ -193,7 +194,7 @@ Media Queries for Mobile Optimization
         /* Background Image adjustments for mobile screens */
         background-image:
             linear-gradient(var(--overlay-color-media), var(--overlay-color-media)),
-            var(--background-img);
+            var(--background-img-lq);
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
