@@ -218,3 +218,77 @@
 .project-box:hover .overlay {
   bottom: 0;
 }
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) {
+  .projects-container {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px;
+    padding: 1rem;
+  }
+
+  .project-box {
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.2);
+  }
+
+  .overlay {
+    padding: 15px;
+  }
+
+  h3 {
+    font-size: 1.2em; /* Adjust font size for smaller screens */
+  }
+
+  .overlay p {
+    font-size: 0.9em;
+  }
+
+  .overlay a {
+    font-size: 1.2em;
+    padding: 5px 8px;
+  }
+
+  header h1 {
+    font-size: 2rem; /* Adjust header size */
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects-container {
+    padding: 0.5rem;
+  }
+
+  .overlay {
+    padding: 10px;
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  .overlay a {
+    font-size: 1em;
+    padding: 4px 6px;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  footer {
+    font-size: 0.6rem;
+  }
+}
