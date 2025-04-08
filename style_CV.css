@@ -1,0 +1,146 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #0e0e0e;
+  color: #e0e0e0;
+  line-height: 1.6;
+  padding: 2rem;
+}
+
+a {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+a:hover {
+  /* text-decoration: underline; */
+  background-color: #00ffe1;
+  color:  white;
+  padding: 2px 4px; 
+  border-radius: 4px; 
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid #1f1f1f;
+  border-radius: 12px;
+  background: #111;
+  box-shadow: 0 0 10px #00ffe1a0;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #00ffe1;
+  letter-spacing: 2px;
+}
+
+header p {
+  font-size: 1rem;
+  color: #a0a0a0;
+  margin-top: 0.5rem;
+}
+
+.contact {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #00ffe1;
+  border-bottom: 1px solid #333;
+  padding-bottom: 0.3rem;
+  margin-bottom: 1rem;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+.item h3 {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.item span {
+  display: block;
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 0.3rem;
+}
+
+.skills {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.skills li {
+  position: relative;
+  background: #1f1f1f;
+  border: 1px solid #00ffe1;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.skills li:hover {
+  transform: scale(1.1);
+  background-color: #d1e7ff;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+
+}
+
+.skills li::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 0.9em;
+  z-index: 10;
+}
+
+.skills li:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-5px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 2rem;
+}
