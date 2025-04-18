@@ -39,8 +39,16 @@
 
 <style>
 /* color: #d9d9d9; */
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../files/Myfont3-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
 body {
   background-color: white;
+  font-family: 'MyCustomFont', sans-serif;
   color: black;
   margin: 0;
 }
@@ -57,7 +65,8 @@ ul li{
 
 p {
   font-size: 20px;
-  font-family: Open Sans;
+  /* font-family: Open Sans; */
+  font-family: "MyCustomFont", sans-serif;
   text-align:justify;
   }
 
@@ -96,7 +105,8 @@ img.lands {
   top: 0;
   color: white;
   font-size: 30px;
-  font-family: Knewave;
+  /* font-family: Knewave; */
+  font-family: "MyCustomFont", sans-serif;
 }
 
 figure.al {
@@ -120,6 +130,7 @@ nav {
   margin: 0 0 -30px 0;
   bottom: 0;
   text-align:left;
+  font-family: "MyCustomFont", sans-serif;
 }
 
 button2 {
@@ -139,6 +150,7 @@ button2 {
 figcaption{
     font-size: 15px;
     margin-top: 10px;    
+    font-family: "MyCustomFont", sans-serif;
 }
 
 div.main {
@@ -221,22 +233,24 @@ a.ico {
 <body>
 
 <nav id="footer" > 
-  <p style="text-align:center"> <!--style="font-size:3vw"> -->
-    <a href="../index.html" style="font-family:Zen Dots"><button2>home</button2></a> 
-    <a href="../aboutme.html" style="font-family:Zen Dots"><button2>me</button2></a>
-    <a href="../CV.html" style="font-family:Zen Dots"><button2>cv</button2></a>
-    <a href="../pages/album.html" style="font-family:Zen Dots"><button2>album</button2></a> 
-    <a href="../pages/blog.html" style="font-family:Zen Dots"><button2>blog</button2></a> 
+  <p style="text-align:center;font-weight: bold;"> <!--style="font-size:3vw";font-family:Zen Dots> -->
+    <a href="../index.html"><button2>home</button2></a> 
+    <a href="../aboutme.html"><button2>me</button2></a>
+    <a href="../CV.html"><button2>cv</button2></a>
+    <a href="../pages/album.html"><button2>album</button2></a> 
+    <a href="../pages/blog.html"><button2>blog</button2></a> 
   </p>
 </nav>
 
 <div class="header"><h1>My first solo trip: Mexico</h1>
-  <p style="color:#666666;font-size:20px;font-family:Zen Dots;text-align:center"> 
+  <!-- <p style="color:#666666;font-size:20px;font-family:Zen Dots;text-align:center">  -->
+  <p style="color:#666666;font-size:20px;font-family:MyCustomFont;text-align:center">
     Blog #1 - May 10, 2021
   </p>
 </div>
 
-<div class="main" style="font-family:Antonio"> 
+<!--div class="main" style="font-family:Antonio"--> 
+<div class="main" style="font-family:MyCustomFont">   
   
   <h3>#theVIEW</h3>
     
@@ -246,7 +260,8 @@ The staircase was pretty narrow and the walls precluded the view of the surround
     </p>
    <figure class="al">
       <img class="lands" src="../images/mexico3.jpg" alt="" /> <!-- 150vw -->
-      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">the house in the forest</figcaption>
+      <!-- <figcaption style="text-align:center;font-family:Zen Dots;color:grey">the house in the forest</figcaption> -->
+      <figcaption style="text-align:center;color:grey">the house in the forest</figcaption>
     </figure>
    <p>
       It had been a long day. I had a three hours trip by bus, then I walked around the city for a couple of hours and I was not used to the Mexican hot. Yet (I never got used to it). My host was really friendly and cool. An old Californian guy who decided to live in Mexico after his retirement and to rent a room in his home to round up. He came to pick me up in the city center of Valladolid, a city in the Yucatan peninsula, in the south of Mexico. We drove for 15 km south-west of the city, stopping for some delicious and spicy tacos. Then, we left the main road and drove for another 5km inside the forest. We arrived at a small Mayan village, where he was living and I was staying for the night.
@@ -256,7 +271,7 @@ The staircase was pretty narrow and the walls precluded the view of the surround
     </p>
     <figure class="ar">
       <img class="lands" src="../images/mexico1.jpg" alt="" /> <!-- 150vw -->
-      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">the view</br>amazon forest close to Valladolid</figcaption>
+      <figcaption style="text-align:center;color:grey">the view</br>amazon forest close to Valladolid</figcaption>
     </figure>
     <p>
       The picture I am showing here is from that moment. It is not the best picture, I know. I am particularly affectionate about this one, though, as you could imagine by now: that very moment was the highlight of my journey. On top of the stairs I was expecting to find an amazing view, but it was actually much more. I was overwhelmed. But I also felt I was in some way part of that overwhelming vastness. It was simply one of the best experiences in my life.
@@ -268,7 +283,7 @@ The staircase was pretty narrow and the walls precluded the view of the surround
     </p>
     <figure class="al">
       <img class="portrait" src="../images/mexico2.jpg" alt="" /> <!-- 150vw -->
-      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">Cancun, beach</figcaption>
+      <figcaption style="text-align:center;color:grey">Cancun, beach</figcaption>
     </figure>
     <p>
       I arrived in Cancun after twelve hours of flight. I clearly remember how thick and wet was the air when I stepped out of the airport. Cancun is a lovely place. There are plenty of paradisiacal beaches and nice hotels. I guess, I wasn't staying in one but I could see many of them. The "problem" was it was very little like I was imaging Mexico in a non positive way, mostly. This city was way too touristic. Nevertheless, I enjoyed my stay there for 3 days and then I went more in the inside of the Yucatan peninsula.
@@ -282,7 +297,7 @@ The staircase was pretty narrow and the walls precluded the view of the surround
     </p>
     <figure class="ar">
       <img class="lands" src="../images/mexico4.jpg" alt="" /> <!-- 150vw -->
-      <figcaption style="text-align:center;font-family:Zen Dots;color:grey">Merida</figcaption>
+      <figcaption style="text-align:center;color:grey">Merida</figcaption>
     </figure>
 
     <p>
@@ -306,7 +321,7 @@ I left Italy with nothing planned, a part from the first couple of days and, sti
 
   <div style="text-align:center">
    </br>
-   <p style="font-size:15px;text-align:center;font-family:Zen Dots">Share on :</p>
+   <p style="font-size:15px;text-align:center;font-family:MyCustomFont">Share on :</p>
    <a class="ico"target="blank "href="#" 
      onclick="
       window.open(
