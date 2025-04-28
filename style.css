@@ -176,6 +176,21 @@ body {
     transition: opacity 1.5s;
 }
 
+#rotating-description {
+    display: inline-block;
+    font-size: 1rem;
+    color: var(--primary-color);
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflowing text */
+     border-right: 2px solid var(--primary-color); /*Simulate a typing cursor */
+    animation: blink 1s step-end infinite; /* Blinking cursor effect */
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
 
 
 

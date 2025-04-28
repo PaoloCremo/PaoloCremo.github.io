@@ -54,9 +54,10 @@
                 </a>
             </p>
             <h1 class="outlined-text">Paolo Cremonese</h1>
-            <p class="description fade-out">
-                Aspiring Quant Analyst | Fintech Enthusiast | Data Scientist 
-            </p>
+            <p class="description fade-out" id="rotating-description"></p>
+            <!-- <p class="description fade-out"> -->
+                <!-- Aspiring Quant Analyst | Fintech Enthusiast | Data Scientist  -->
+            <!-- </p> -->
         </header>
 
         <nav class="navigation fade-out">
@@ -115,6 +116,49 @@
             fadeInText();
             timeout = setTimeout(fadeOutText, 3000); // 3 seconds
         });
+
+        
+        // rotating text effect
+        const descriptions = [
+        " Aspiring Quant Analyst ",
+        " Fintech Enthusiast ",
+        " Data Scientist ",
+        " Runner ",
+        " Curious "
+    ];
+    let currentIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function updateDescription() {
+        const descriptionElement = document.getElementById("rotating-description");
+        const currentText = descriptions[currentIndex];
+
+        if (isDeleting) {
+            // Remove one character at a time
+            descriptionElement.textContent = currentText.substring(0, charIndex--);
+        } else {
+            // Add one character at a time
+            descriptionElement.textContent = currentText.substring(0, charIndex++);
+        }
+
+        // If the text is fully written, start deleting after a delay
+        if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            setTimeout(updateDescription, 2000); // Pause before deleting
+        }
+        // If the text is fully deleted, move to the next description
+        else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            currentIndex = (currentIndex + 1) % descriptions.length; // Cycle through the array
+            setTimeout(updateDescription, 100); // Pause before typing the next text
+        } else {
+            setTimeout(updateDescription, isDeleting ? 50 : 100); // Typing speed
+        }
+    }
+
+    // Start the typing effect
+    updateDescription();
 
     </script>
 </body>
