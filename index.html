@@ -105,11 +105,14 @@
         }
         
         // Initial fade-in effect
-        document.addEventListener('mousemove', () => {
+        function handleActivity() {
             clearTimeout(timeout);
             fadeInText();
             timeout = setTimeout(fadeOutText, 3000); // 3 seconds
-        });
+        }
+        document.addEventListener('mousemove', handleActivity);
+        document.addEventListener('touchstart', handleActivity);
+        document.addEventListener('touchmove', handleActivity);
 
         
         // rotating text effect

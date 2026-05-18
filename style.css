@@ -234,9 +234,9 @@ Media Queries for Mobile Optimization
         -webkit-text-stroke: 3px transparent; /* Adds a cyan outline to the text */
     }
     .main-header {
-        margin-top: 60%; 
-        margin-bottom: 35%;
-        
+        margin-top: 45%;
+        margin-bottom: 20%;
+
     }
 
     .main-header h1 {
