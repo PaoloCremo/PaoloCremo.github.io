@@ -1,316 +1,250 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Twenty Seconds Resume/CV
-% LaTeX Template
-% Version 1.1 (8/1/17)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
-% Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ─────────────────────────────────────────────────────────────────────────────
+%  REFERENCE CV — Paolo Cremonese
+%  Single-column, ATS-readable. This is the COMPLETE master version.
+%  Shorten/reframe per role; never edit this file for a specific application.
+%  Last updated: May 2026
+% ─────────────────────────────────────────────────────────────────────────────
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
-\documentclass[letterpaper]{twentysecondcv} % a4paper for A4
+\documentclass[10pt,a4paper]{article}
 
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-% \usepackage{fontspec}
-% \usepackage{FontAwesome}
-% \usepackage{fontawesome}
-\usepackage{fontawesome5}
+\usepackage[left=0.65in, right=0.65in, top=0.55in, bottom=0.55in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{parskip}
 
-%----------------------------------------------------------------------------------------
-%	 PERSONAL INFORMATION
-%----------------------------------------------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
 
-% If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
+\titleformat{\section}{\bfseries\normalsize}{}{0em}{\uppercase}[\vspace{-4pt}\rule{\linewidth}{0.4pt}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
 
-\profilepic{io.jpg} % Profile picture
-
-\cvname{Paolo Cremonese, Ph.D.} % Your name
-\cvjobtitle{Researcher} % Job title/career
-
-\cvdate{} % Date of birth
-% \vspace{5cm}
-\cvaddress{Vancouver, BC}
-% \aboutme{UIB @ Palma, Spain} % Short address/location, use \newline if more than 1 line is required
-\cvnumberphone{} % +1 (672) 962-7888} % Phone number
-\cvsite{\href{https://www.paolocremonese.com}{paolocremonese.com}} % Personal website
-\cvmail{cremonesep25 [at] gmail.com} % Email address
-% \gitpage{Hello}
-\gitpage{\href{https://github.com/PaoloCremo}{PaoloCremo}} % Phone number
-
-%----------------------------------------------------------------------------------------
+% \cventry{Title}{Dates}{Organisation}{Location}
+\newcommand{\cventry}[4]{%
+  {\textbf{#1}} \hfill {\small #2}\\[-3pt]
+  {\textit{\small #3}} \hfill {\textit{\small #4}}%
+}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	 ABOUT ME
-%----------------------------------------------------------------------------------------
+% ─── HEADER ──────────────────────────────────────────────────────────────────
+\begin{center}
+  {\Large\bfseries Paolo Cremonese, Ph.D.}\\[4pt]
+  {\small
+    Vancouver, BC $\rightarrow$ Europe (Jul/Aug 2026 start) \quad$\cdot$\quad
+    Italian citizen — full EU work authorisation
+  }\\[2pt]
+  {\small
+    \href{mailto:cremonesep25@gmail.com}{cremonesep25@gmail.com}
+    \,$\cdot$\,
+    +1 (672) 962-7888
+    \,$\cdot$\,
+    \href{https://paolocremonese.com}{paolocremonese.com}
+    \,$\cdot$\,
+    \href{https://github.com/PaoloCremo}{github.com/PaoloCremo}
+    \,$\cdot$\,
+    \href{https://www.linkedin.com/in/paolo-cremonese/}{linkedin.com/in/paolo-cremonese}
+  }
+\end{center}
 
-\aboutme{
-Data Scientist with a Postdoctoral research background in gravitational waves and a strong foundation in data analysis, machine learning, and AI. Passionate about fintech, technology, and continuous learning. Based in Vancouver, actively exploring the next career move.
-} % To have no About Me section, just remove all the text and leave \aboutme{}
+\vspace{2pt}
 
-%----------------------------------------------------------------------------------------
-%	 SKILLS
-%----------------------------------------------------------------------------------------
+% ─── SUMMARY ─────────────────────────────────────────────────────────────────
+\section{Summary}
 
-% Skill bar section, each skill must have a value between 0 an 6 (float)
-% \skills{{Linux},{Python/}}
+Ph.D. physicist with a decade of research experience, specialising in \textbf{Bayesian statistical
+modelling, MCMC, uncertainty quantification, and large-scale data analysis} within the LIGO Scientific
+Collaboration. Track record of leading research end-to-end: problem formulation, model design,
+implementation, validation, and publication in top peer-reviewed journals. Hands-on experience with
+deep learning (TensorFlow, PyTorch), distributed HPC computing (Slurm, HTCondor), and production
+pipeline engineering. 35+ peer-reviewed publications, 1,300+ citations. Currently transitioning from
+academia to industry; target roles in quantitative research, data science, fintech, and AI/ML.
 
-%------------------------------------------------
-
-% Skill text section, each skill must have a value between 0 an 6
-\skillstext{
-    {Python {\footnotesize - 
-             pandas, 
-             numpy,
-             matplotlib,
-             tensorflow,
-             scikit-learn
-             }},
-    {SQL},
-    {Linux},
-    {\LaTeX},
-    {Git},
-    {HTML/CSS},
-    % {macOS},
-    {Mathematica},
-    {Slurm - HTCondor}
-    % {Apple Keynotes}
- }
-
-\languages{
-    {Italian {\footnotesize - Mother Tongue}},
-    {English {\footnotesize - Fluent}},
-    {Spanish {\footnotesize - Basics}},
-    % {Polish  {\footnotesize - Very Basic}}
-}
-
-\interests{
-    % {Gravitational Waves \& Lensing},
-    {Technology},
-    {AI/ML},
-    {Data Analysis}, 
-    % {Technology}, 
-    {Finance and Investments}, 
-    {Sports, Books \& Piano}. 
-}
-
-%----------------------------------------------------------------------------------------
-
-\makeprofile % Print the sidebar
-
-%----------------------------------------------------------------------------------------
-%	 EXPERIENCE
-%----------------------------------------------------------------------------------------
-
+% ─── WORK EXPERIENCE ─────────────────────────────────────────────────────────
 \section{Work Experience}
 
-\begin{twenty} % Environment for a list with descriptions
-    \twentyitem{2026-now}{Physics SME}{Mercor, Remote}{Contract role contributing to AI model improvement. Evaluated AI-generated physics content for technical accuracy, provided domain-specific corrections, and refined evaluation criteria and quality standards.}
-    \twentyitem{2022-2024}{PostDoc Researcher}{UIB, Palma, Spain}{Data Scientist. Member of LIGO collaboration. \\
-    %Gravitational Waves Data Analysis
-    (i) I \textbf{developed models to analyze Gravitational Waves data}.%, focusing on finding events that are bent or magnified by massive objects (i.e. lensing). 
-    (ii) I co-led a project to \textbf{automate the process of studying lensed events} more efficiently.
-    (iii) I coded \textbf{a pipeline to automate the creation of setup files}, for cluster computing, for bayesian parameter estimation %of gravitational waves signals from google sheet table 
-    (\href{https://github.com/PaoloCremo/runtomation}{PaoloCremo/runtomation}).
-    }
-	\twentyitem{2018}{Internship as Data Scientist}{DBA Group, Italy}{
-        %I worked in a group developing methods and knowledge on how to record and elaborate different type of data, from meteorological to industrial
-        I worked on developing methods to record and analyse diverse datasets, from meteorological to industrial data, \textbf{using machine learning techniques to predict outcomes and improve data-driven decision-making}
-        }
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\cventry{Physics Subject Matter Expert (Contract, part-time)}{Jan 2026 -- present}{Mercor}{Remote}
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=1.2em]
+  \item Evaluated AI-generated physics content for technical accuracy across a broad range of topics.
+  \item Identified systematic failure modes in model outputs; provided domain-specific corrections.
+  \item Collaborated with cross-functional teams to define and refine quantitative evaluation criteria
+        and quality standards.
+\end{itemize}
 
-%----------------------------------------------------------------------------------------
-%	 EDUCATION
-%----------------------------------------------------------------------------------------
+\vspace{4pt}
+\cventry{Postdoctoral Researcher — Lead Researcher, LIGO Scientific Collaboration}{Oct 2022 -- Oct 2024}{Universitat de les Illes Balears (UIB)}{Palma de Mallorca, Spain}
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=1.2em]
+  \item Led independent research programme on gravitational-wave lensing: detection, characterisation,
+        and Bayesian parameter estimation of lensed events.
+  \item \textbf{Built, tested, and validated Bayesian statistical models} for GW parameter estimation —
+        assessing conceptual soundness, numerical implementation, and consistency with theoretical
+        predictions; identified and corrected systematic biases.
+  \item \textbf{Applied deep learning models} (TensorFlow, PyTorch) for signal detection across
+        multi-TB astrophysical datasets, improving sensitivity benchmarks.
+  \item \textbf{Co-led an automation project} for end-to-end lensing event detection, reducing manual
+        analysis time by $\sim$70\%.
+  \item \textbf{Engineered and deployed \href{https://github.com/PaoloCremo/runtomation}{runtomation}},
+        a production pipeline automating Bayesian parameter estimation at scale — 100+ concurrent jobs
+        on distributed HPC infrastructure (Slurm/HTCondor).
+  \item Contributed to large international collaboration (1,000+ members); co-authored LIGO
+        collaboration papers; presented at 10+ international conferences.
+\end{itemize}
 
+\vspace{4pt}
+\cventry{Ph.D. Researcher — Gravitational Wave Cosmology}{Oct 2018 -- Oct 2022}{University of Szczecin, Cosmology Group}{Szczecin, Poland}
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=1.2em]
+  \item Conducted original research on gravitational lensing degeneracies and their impact on
+        gravitational-wave parameter estimation.
+  \item Developed Bayesian and analytical models to tackle the Hubble tension problem using
+        gravitational-wave standard sirens.
+  \item Published 3 lead-author papers; presented at 5+ international conferences; co-organised
+        one international conference.
+\end{itemize}
+
+\vspace{4pt}
+\cventry{Data Scientist Intern}{2018}{DBA Group}{Treviso, Italy}
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=1.2em]
+  \item Developed ML models for multi-domain datasets (meteorological, industrial) using
+        scikit-learn and Python.
+  \item Shipped production-grade predictive analytics tools to support data-driven business decisions.
+\end{itemize}
+
+% ─── EDUCATION ───────────────────────────────────────────────────────────────
 \section{Education}
 
-\begin{twenty} % Environment for a list with descriptions
-	\twentyitem{2022}{Ph.D. in Physics}{Szczecin, Poland}{\emph{Gravitational lensing of Gravitational Waves}}
-	\twentyitem{2017}{M.Sc. in Astronomy}{Padova, Italy \& Stockholm, Sweden}{Thesis on lensing of gravitational waves done at Stockholm university}
-    % \twentyitem{2017}{M.Sc. in Astronomy}{Padova, Italy\\\hspace*{8.2cm} Stockholm, Sweden}{}
-	\twentyitem{2015}{B.Sc. in Astronomy}{Padova, Italy}{Thesis on dark matter in spiral galaxies}
-	% \twentyitem{1856-1861}{High school}{Wonderland}{Specializing in mathematics and physics.}
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+\cventry{Ph.D. in Physics --- Gravitational Lensing of Gravitational Waves}{Oct 2018 -- Oct 2022}{University of Szczecin}{Poland}\\[1pt]
+{\small Supervisor: Prof.\ Vincenzo Salzano. Cosmology Group (\href{http://cosmo.usz.edu.pl/}{cosmo.usz.edu.pl}).
+Thesis: lensing degeneracies, mass-sheet degeneracy breaking with GW interference, and Hubble constant
+constraints from lensed GW events.}
 
-%----------------------------------------------------------------------------------------
-%	 PROJECTS
-%----------------------------------------------------------------------------------------
+\vspace{4pt}
+\cventry{M.Sc. in Astronomy}{Sep 2015 -- Sep 2017}{University of Padova / Stockholm University}{Italy \& Sweden}\\[1pt]
+{\small Erasmus year at Stockholm University (2016--2017). Master thesis on gravitational lensing of
+gravitational waves (Stockholm).}
 
+\vspace{4pt}
+\cventry{B.Sc. in Astronomy}{Sep 2011 -- Sep 2015}{University of Padova}{Italy}\\[1pt]
+{\small Thesis on dark matter in spiral galaxies.}
+
+% ─── PUBLICATIONS ────────────────────────────────────────────────────────────
+\section{Publications}
+
+\textbf{39 publications, 1,300+ citations} (LIGO Collaboration member). Selected lead-author and
+key collaboration papers:
+
+\vspace{3pt}
+\begin{itemize}[noitemsep, topsep=0pt, leftmargin=1.2em]
+  \item \href{https://arxiv.org/abs/2507.20256}{\textbf{LensingFlow: An Automated Workflow for
+        Gravitational Wave Lensing Analyses}} (2025) — pipeline paper for the O4 lensing search.
+  \item \href{https://arxiv.org/abs/2408.03856}{\textbf{Invariance transformations in wave-optics
+        lensing: implications for GW astrophysics and cosmology}} — Phys.\ Rev.\ D (2024).
+  \item \href{https://academic.oup.com/mnras/article/526/3/3832/7283182?login=false}{\textbf{Follow-up
+        Analyses to the O3 LIGO-Virgo-KAGRA Lensing Searches}} — MNRAS 526 (2023). LIGO Collaboration.
+  \item \href{https://doi.org/10.1002/andp.202300040}{\textbf{Characteristic features of GW lensing
+        as probe of lens mass model}} — Annalen der Physik (2021). 22 citations.
+  \item \href{https://doi.org/10.1103/PhysRevD.104.023503}{\textbf{Breaking the mass-sheet degeneracy
+        with gravitational wave interference in lensed events}} — Phys.\ Rev.\ D 104 (2021). 63 citations.
+  \item \href{https://doi.org/10.1016/j.dark.2020.100654}{\textbf{High accuracy on $H_0$ constraints
+        from gravitational wave lensing events}} — Phys.\ Dark Universe (2019). 11 citations.
+\end{itemize}
+
+\vspace{3pt}
+{\small Full list:
+  \href{https://inspirehep.net/authors/1859874}{inspirehep.net/authors/1859874}
+  $\cdot$
+  \href{https://scholar.google.com/citations?user=MDkJARoAAAAJ&hl=en}{Google Scholar}
+}
+
+\vspace{3pt}
+\textbf{Science communication:} \href{https://astrobites.org/2022/07/27/gravitational-waves-deep-learning/}{``Gravitational Waves and Deep Learning''}, Astrobites (Jul 2022). Divulgative talk: \href{https://www.youtube.com/watch?v=C_XUue2sDwg}{Dark energy and dark matter}, YouTube (Oct 2022).
+
+% ─── CONFERENCES & TALKS ─────────────────────────────────────────────────────
+\section{Conferences \& Talks (15+)}
+
+\begin{itemize}[noitemsep, topsep=3pt, leftmargin=1.2em]
+  \item \textbf{``Mass-Sheet Degeneracy in Gravitational Wave Lensing''} ---
+        NBI Strong Lensing Group seminar, Copenhagen (Dec 2023);
+        LVK Collaboration Meeting (Sep 2023).
+  \item \textbf{``Wave Optics in Gravitational Wave Lensing''} ---
+        UBC Gravity Group seminar, Vancouver (Sep 2023).
+  \item \textbf{``Breaking the mass-sheet degeneracy / GW lensing searches''} ---
+        GWverse (Sep 2021); Gravitex 2021 (Aug 2021); COSMO'21 (Aug 2021);
+        Amaldi 14 (Jul 2021); Ibericos (Apr 2021).
+  \item \textbf{Member of organising committee} ---
+        The 6th Conference of the Polish Society on Relativity, Szczecin (Sep 2019).
+\end{itemize}
+
+{\small Full list: \href{https://www.paolocremonese.com/CV.html\#conferences}{paolocremonese.com/CV\#conferences}}
+
+% ─── PROJECTS ────────────────────────────────────────────────────────────────
 \section{Projects}
 
-\iffalse
-\begin{twentymedium} % Environment for a list with descriptions
-    \twentyitemmedium{research}{PostDoc Researcher \dots .}{}{}
-    \twentyitemmedium{website}{I created \dots .}{}{}
-    \twentyitemmedium{app}{I am developing.}{}{}
-    \twentyitemmedium{personal\\finance}{I created a package \dots .}{}{}
-\end{twentymedium}
-\fi
+\textbf{\href{https://github.com/PaoloCremo/runtomation}{runtomation}} \hfill \textit{Python, Google Sheets API, Slurm/HTCondor}\\
+{\small Production pipeline automating the generation of setup files for cluster-scale Bayesian
+parameter estimation of GW signals. Deployed across 100+ concurrent HPC jobs; adopted by UIB
+lensing group.}
 
-%$\bullet$ \texttt{\#research}  
-%          {\small 
-%          I developed tools to analyze Gravitational Waves data, focusing on finding events that are bent or magnified by massive objects (i.e. lensing). I also worked on a project to organize and automate the process of detecting these lensed events more efficiently.
-%          }\\ 
+\vspace{4pt}
+\textbf{\href{https://github.com/PaoloCremo/paperbot}{paperbot}} \hfill \textit{Python, ArXiv API, Telegram API}\\
+{\small Python package for systematic literature discovery: monitors ArXiv by keyword/author and
+delivers daily digests via Telegram. Actively used for research tracking.}
+
+\vspace{4pt}
+\textbf{\href{https://paolocremonese.com/tb}{Travel Buddy}} \hfill \textit{Python, LLMs, RAG, full-stack, HTML/CSS}\\
+{\small Built during the VAM AI programme. Full-stack agentic AI application that generates
+personalised city-trip itineraries using LLM APIs, RAG pipelines, prompt engineering, and
+Google Maps integration.}
+
+\vspace{4pt}
+\textbf{\href{https://github.com/PaoloCremo/myfinances}{myFinances}} \hfill \textit{Swift, SwiftUI, C++, SQL, REST API}\\
+{\small iOS personal finance tracker: expense/income/investment logging, REST API, SQL backend
+(C++/Swift), SwiftUI frontend.}
+
+\vspace{4pt}
+\textbf{\href{https://github.com/PaoloCremo/spotify}{Spotify Playlist Manager}} \hfill \textit{Python, Spotify API}\\
+{\small Automated tool for managing Spotify playlists and podcast queues via the Spotify API.}
+
+\vspace{4pt}
+\textbf{\href{https://github.com/PaoloCremo/noProfit_dataBase}{NoProfit Database}} \hfill \textit{Python, AI web scraping, SQLite}\\
+{\small AI-powered scraper that builds and maintains a structured database of nonprofit organisations —
+built for use in Data For Good partnership work.}
+
+\vspace{4pt}
+\textbf{\href{https://github.com/PaoloCremo/lensing}{lensing}} \hfill \textit{Python, Jupyter, numerical methods}\\
+{\small Research code for computing gravitational lensing of GW signals (developed with V.\ Salzano);
+public research artifact.}
+
+\vspace{4pt}
+\textbf{\href{https://paolocremonese.com}{paolocremonese.com}} \hfill \textit{HTML, CSS, JavaScript}\\
+{\small Personal website — hand-coded and self-maintained. Hosts CV, project pages, and blog.}
+
+% ─── SKILLS ──────────────────────────────────────────────────────────────────
+\section{Skills}
+
 {\small
-\href{https://github.com/PaoloCremo/myfinances}{myFinances} — iOS app (SwiftUI, C++, SQL) to track personal finances. \quad \\
-\href{https://paolocremonese.com/tb}{Travel Buddy} — full-stack AI app using Agentic LLMs, RAG, and prompt engineering. \quad  \\
-\href{https://github.com/PaoloCremo/paperbot}{Paperbot} — Python bot for daily ArXiv paper updates via Telegram. \quad \\
-\href{https://github.com/PaoloCremo/PaoloCremo.github.io}{paolocremonese.com} — personal website, self-coded and maintained.
+\textbf{Programming:} Python (pandas, numpy, scipy, matplotlib, TensorFlow, PyTorch, scikit-learn,
+flask), SQL, C++, Swift/SwiftUI, HTML/CSS, JavaScript, Mathematica\\[2pt]
+\textbf{ML \& Statistics:} Bayesian inference, MCMC, uncertainty quantification, stochastic modelling,
+deep learning, LLMs, RAG, prompt engineering, agentic AI\\[2pt]
+\textbf{Infrastructure \& Tools:} Git/GitHub/GitLab, Linux, \LaTeX, Slurm, HTCondor, Google Sheets API,
+REST APIs, Telegram API, Spotify API\\[2pt]
+\textbf{Languages:} Italian (native), English (fluent), Spanish (basic), Polish (basic)
 }
 
-% KEEP IT BRIEF AND CATCHY!
-
-%----------------------------------------------------------------------------------------
-%	 INTERESTS
-%----------------------------------------------------------------------------------------
-
-% \section{Interests}
-% 
-% Gravitational Waves and Lensing. Data Analysis. Technology. Finance and investments. Sports, books and piano. 
-
-%----------------------------------------------------------------------------------------
-%	 VOLUNTEERING
-%----------------------------------------------------------------------------------------
-
+% ─── VOLUNTEERING ────────────────────────────────────────────────────────────
 \section{Volunteering}
 
-\begin{twenty} 
-    \twentyitem{2025}{%
-        %Client Development Representative
-        % Analytics Program Development Manager
-        Partnerships Lead
-        }{Data For Good, Vancouver, Canada}{
-        I engage nonprofit organizations to identify their data needs, develop tailored strategies for impactful projects, and implement a CRM system to streamline client outreach and relationship management.
-        % This experience has enhanced my skills in data strategy, stakeholder engagement, and project scoping while contributing to expanding DFG's nonprofit partnerships and social impact in Vancouver's nonprofit sector.
-    }
+\cventry{Partnerships Lead}{2025}{Data For Good}{Vancouver, Canada}\\[1pt]
+{\small Engaged nonprofit organisations to identify data needs and develop impactful project strategies.
+Built and deployed a CRM system to streamline client outreach and relationship management.}
 
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
-\end{twenty}
+% ─── INTERESTS ───────────────────────────────────────────────────────────────
+\section{Interests}
 
-%----------------------------------------------------------------------------------------
-%	 PUBLICATIONS
-%----------------------------------------------------------------------------------------
+{\small Quantitative finance \& investments $\cdot$ Deep learning \& LLMs $\cdot$ Football \& sports analytics
+$\cdot$ Running (half-marathons) $\cdot$ Piano $\cdot$ Philosophy \& cosmology $\cdot$ Travel}
 
-\section{Main Publications}
-
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{\#6}{\href{https://arxiv.org/abs/2408.03856}{Invariance transformations in wave-optics lensing: implications for gravitational-wave astrophysics and cosmology}}
-	\twentyitemshort{\#5}{\href{https://academic.oup.com/mnras/article/526/3/3832/7283182?login=false}{Follow-up Analyses to the O3 LIGO-Virgo-KAGRA Lensing Searches}}
-    \twentyitemshort{\#4}{\href{https://doi.org/10.1002/andp.202300040}{Characteristic features of Gravitational Wave lensing as probe of lens mass model}}
-	\twentyitemshort{\#3}{\href{https://doi.org/10.1103/PhysRevD.104.023503}{Breaking the mass-sheet degeneracy with gravitational wave interference in lensed events}}
-\end{twentyshort}
-\quad\\
-{\footnotesize 35+ papers, 1300+ citations. Full list: \href{https://inspirehep.net/authors/1859874}{inspirehep.net} $|$ \href{https://scholar.google.com/citations?user=MDkJARoAAAAJ&hl=en}{Google Scholar}}
-
-%----------------------------------------------------------------------------------------
-%	 MENTIONS
-%----------------------------------------------------------------------------------------
-\iffalse
-
-\section{Mentions}
-
-\begin{twentyshort} % Environment for a short list with no descriptions
-	\twentyitemshort{\#2}{Top ArXiv papers from week15, 2021 - S.Vagnozzi - \href{https://www.sunnyvagnozzi.com/blog/top-arxiv-week-15-2021}{Link to article}}
-    \twentyitemshort{\#1}{Constraining the Hubble Constant with Lensed Gravitational Wave Events, 2019 - K. Shin - \href{https://astrobites.org/2019/12/02/constraining-the-hubble-constant-with-lensed-gravitational-wave-events/}{Link to article}
-    }
-\end{twentyshort}
-\fi
-%----------------------------------------------------------------------------------------
-%	 CONFERENCES AND SCHOOLS
-%----------------------------------------------------------------------------------------
-
-\section{Conferences Presentations}
-% \subsection{Talks \& Posters}
-
-%% START IGNORING
-\iffalse
-\begin{itemize}
-    \item \textbf{``Wave-optics in Gravitational Waves lensed events''} @ UIB Relativity and Gravity group seminar, 2021/11; 
-    \item \textbf{Presented paper \#3} @ GWverse, 2021/09; 
-                                         Gravitex 2021, 2021/08;
-                                         COSMO '21, 2021/08;
-                                         Amaldi 14, 2021/07;
-                                         Cosmology from Home, 2021/07;
-                                         Ibericos 2021/04;
-    \item \textbf{Presented paper \#2} @ Cosmic controversies, 2019/10;
-    \item \textbf{Member of organizing commitee} @ The 6th Conference of the Polish Society on Relativity, 2019/09.
-\end{itemize}
-\fi
-% END IGNORING
-
-Presented my research on gravitational wave lensing at 10+ international conferences and seminars (2019--2023), including LVK meetings, GWverse, COSMO '21, and Amaldi 14. Also gave a public divulgative talk on dark matter (\href{https://www.youtube.com/watch?v=C_XUue2sDwg}{YouTube}, 2022).
-
-\iffalse
-\subsection{Participation}
-{\small
-    \textbf{LVK meeting}, 2023/03 
-    - \textbf{12$^{\rm th}$ Iberian Gravitational Waves Meeting}, 2022/06
-    - \textbf{The 16$^{\rm th}$ Iberian Cosmology Meeting}, 2022/05
-    - \textbf{XIV Tonale Winter School on Cosmology}, 2021/12
-    - \textbf{4$^{\rm th}$ Azores school on Observational Cosmology}, 2021/09
-    % - \textbf{AlteCosmoFun '21}, 2021/09 
-    - \textbf{GW Open Data Workshop \#4}, 2021/05
-    - \textbf{11$^{\rm th}$ Iberian Gravitational Waves Meeting}, 2021/06
-    - \textbf{Workshop on Gravitational Wave Astrophysics for Early Career Scientists}, 2021/05
-    - \textbf{First EuCAPT Annual Symposium}, May 2021
-    - \textbf{Current challenges in gravitational physics}, April 2021
-    % - \textbf{Ibericos 2021}, 2021/03 
-    - \textbf{IPARCOS School on Cosmology}, 2019/12
-    - \textbf{XIII Tonale Winter School on Cosmology}, December 2019
-    % - \textbf{Cosmic controversies}, 2019/10 
-    % - \textbf{The 6th Conference of the Polish Society on Relativity}, September 2019
-}
-
-\fi
-
-\end{document} 
-
-%----------------------------------------------------------------------------------------
-%	 OTHER INFORMATION
-%----------------------------------------------------------------------------------------
-
-% \section{Other information}
-% 
-% \subsection{Review}
-% 
-% ???
-
-%----------------------------------------------------------------------------------------
-%	 SECOND PAGE EXAMPLE
-%----------------------------------------------------------------------------------------
-
-%\newpage % Start a new page
-
-%\makeprofile % Print the sidebar
-
-%\section{Other information}
-
-%\subsection{Review}
-
-%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
-
-%\section{Other information}
-
-%\subsection{Review}
-
-%Alice approaches Wonderland as an anthropologist, but maintains a strong sense of noblesse oblige that comes with her class status. She has confidence in her social position, education, and the Victorian virtue of good manners. Alice has a feeling of entitlement, particularly when comparing herself to Mabel, whom she declares has a ``poky little house," and no toys. Additionally, she flaunts her limited information base with anyone who will listen and becomes increasingly obsessed with the importance of good manners as she deals with the rude creatures of Wonderland. Alice maintains a superior attitude and behaves with solicitous indulgence toward those she believes are less privileged.
-
-%----------------------------------------------------------------------------------------
-
-
+\end{document}
